@@ -13,7 +13,7 @@ On total failure the merge still proceeds with whatever parsed.
 
 Output: SuperMerge.yaml next to this script (or SUPER_OUT_DIR if set, e.g. CI).
 """
-import os, sys, io, base64, ssl, json, re, time, urllib.parse, urllib.request
+import os, sys, io, base64, ssl, json, re, time, ipaddress, urllib.parse, urllib.request
 
 WS = os.path.dirname(os.path.abspath(__file__))
 # In CI, github.workspace (repo root). Locally, beside this script.
@@ -23,6 +23,25 @@ SOURCES_FILE = os.path.join(WS, "sources.txt")
 
 PROTO_PREFIXES = ("vmess://", "vless://", "trojan://", "ss://", "ssr://",
                   "hysteria2://", "hy2://", "tuic://", "socks://", "socks5://")
+
+# Shadowsocks ciphers mihomo/Clash.Meta actually accepts. Validated against
+# Mihomo Meta v1.19.29 (`verge-mihomo -t`): a single unknown name makes the core
+# reject the ENTIRE config -- "proxy N: ss ... initialize error: unknown method"
+# -- which is exactly how one junk node ("i5p") killed a 14k-node subscription.
+# Aliases are repaired rather than dropped; anything else is dropped at build time.
+SS_ALIASES = {
+    "chacha20-poly1305": "chacha20-ietf-poly1305",
+    "chacha20-poly1305-ietf": "chacha20-ietf-poly1305",
+    "xchacha20-poly1305": "xchacha20-ietf-poly1305",
+    "xchacha20-ietf": "xchacha20-ietf-poly1305",
+}
+SS_CIPHERS = {
+    "aes-128-gcm", "aes-192-gcm", "aes-256-gcm",
+    "aes-128-cfb", "aes-192-cfb", "aes-256-cfb",
+    "aes-128-ctr", "aes-192-ctr", "aes-256-ctr",
+    "rc4-md5", "chacha20-ietf", "chacha20-ietf-poly1305",
+    "xchacha20", "xchacha20-ietf-poly1305", "none",
+}
 
 
 def ssl_create():
@@ -213,6 +232,11 @@ def to_clash(link):
                 return None
         else:
             host, port = hostport, 443
+        # Normalize the cipher before it is written out: mihomo matches the name
+        # exactly (lower case, hyphenated). Common short forms are repaired via
+        # SS_ALIASES; genuinely unknown names are rejected by valid_node.
+        method = (method or "").strip().lower()
+        method = SS_ALIASES.get(method, method)
         # Skip SS 2022 ciphers entirely: free sources often have invalid base64
         # keys and Clash rejects them. The loss is tiny (~0.2% of nodes).
         if method.startswith("2022-"):
@@ -394,18 +418,57 @@ def yaml_str(v):
     return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
 
-def valid_node(n):
-    """Drop nodes missing the credential their protocol requires.
+DROP = {}          # reason -> count; printed once at the end as build diagnostics
 
-    They can never connect, they only bloat the file and slow client startup.
+
+def _drop(reason):
+    DROP[reason] = DROP.get(reason, 0) + 1
+    return False
+
+
+def bad_server(host):
+    """True when `host` can never be a real proxy endpoint.
+
+    Free lists pad themselves with placeholders rather than leaving a gap. Our
+    17-source merge produced RFC5737 documentation addresses (192.0.2.1:1) and
+    systemd-resolved stubs (127.0.0.53) dressed up as nodes; they can never
+    connect, they only lengthen url-test rounds.
     """
+    h = (host or "").strip()
+    if not h or len(h) > 253 or " " in h or "\t" in h:
+        return True
+    try:
+        ip = ipaddress.ip_address(h.strip("[]"))
+    except ValueError:
+        return False            # a domain name -- nothing to judge statically
+    return (ip.is_private or ip.is_loopback or ip.is_reserved
+            or ip.is_multicast or ip.is_link_local or ip.is_unspecified)
+
+
+def valid_node(n):
+    """Drop nodes that cannot connect or that a strict core would reject.
+
+    Two classes, both observed in real free-list payloads:
+      * placeholder / credential-less entries (see bad_server, port 0-1);
+      * parameters mihomo refuses at parse time -- one unknown ss cipher name
+        ("i5p", "chacha20-poly1305") makes Clash reject the WHOLE subscription
+        with "initialize error: unknown method".
+    """
+    if bad_server(n.get("server")):
+        return _drop("bad-server")
+    p = n.get("port")
+    if not isinstance(p, int) or not 2 <= p <= 65535:
+        return _drop("bad-port")
     t = n.get("type")
     if t in ("vless", "vmess") and not n.get("uuid"):
-        return False
+        return _drop("no-uuid")
     if t in ("trojan", "hysteria2") and not n.get("password"):
-        return False
-    if t == "ss" and not (n.get("cipher") and n.get("password")):
-        return False
+        return _drop("no-password")
+    if t == "ss":
+        if not n.get("password"):
+            return _drop("no-password")
+        if n.get("cipher") not in SS_CIPHERS:
+            return _drop("ss-unknown-cipher")
     return True
 
 
@@ -569,6 +632,8 @@ def main():
     print(f"[done] total={len(uniq)} (deduped from {len(all_nodes)}) "
           f"failed_sources={len(skipped)} -> {OUT_FILE}")
     print("[dist]", " ".join(f"{k}={v}" for k, v in sorted(dist.items())))
+    if DROP:
+        print("[drop]", " ".join(f"{k}={v}" for k, v in sorted(DROP.items())))
 
 
 if __name__ == "__main__":

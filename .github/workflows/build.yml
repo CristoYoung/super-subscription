@@ -35,3 +35,8 @@ jobs:
             git commit -m "chore: auto-update $(TZ=Asia/Shanghai date +%Y-%m-%d_%H:%M)"
             git push
           fi
+      - name: Purge jsDelivr cache
+        run: |
+          # jsDelivr caches branch refs for hours; purge so phones get the fresh file.
+          curl -sf "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/SuperMerge.yaml" \
+            && echo "jsDelivr cache purged" || echo "purge request failed (non-fatal)"

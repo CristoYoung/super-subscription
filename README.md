@@ -15,6 +15,10 @@
 导入后，想刷新节点只需在 App 里点「更新订阅」即可，无需开电脑。
 （若两个链接都被墙，再考虑加一层 Cloudflare Worker 反代，按需再加。）
 
+> jsDelivr 对分支引用有数小时缓存，构建后 workflow 会自动调用 purge 接口刷新，
+> 因此手机拉到的始终是最新一版。若发现手机端仍是旧节点，手动访问一次
+> `https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml` 即可强刷。
+
 ## 文件说明
 - `super_merge.py`：合并脚本（零第三方依赖），输出 `SuperMerge.yaml`
 - `sources.txt`：订阅源列表，一行一个 URL，`#` 开头为注释
@@ -25,7 +29,8 @@
 1. 在 GitHub 注册账号（免费，邮箱即可）。
 2. 新建一个 **空** 公开仓库（名字随意，如 `super-subscription`）。
 3. 生成 PAT：GitHub → Settings → Developer settings → Personal access tokens →
-   Tokens (classic) → Generate new token (勾选 `repo`) → 复制令牌。
+   Tokens (classic) → Generate new token（**同时勾选 `repo` 和 `workflow`**）→ 复制令牌。
+   （`workflow` 是必须的：只勾 `repo` 时推送 `.github/workflows/` 会被服务端拒绝。）
 4. 编辑 `publish.bat`，把 `USER` / `REPO` / `TOKEN` 改成你自己的，双击运行。
    （TOKEN 用完可在第 3 步页面吊销，不影响已发布的仓库。）
 5. 推送成功后，GitHub 会自动跑一次 Actions 生成 `SuperMerge.yaml`。

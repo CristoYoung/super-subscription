@@ -1,104 +1,15 @@
-# SuperMerge - aggregated free nodes (auto-generated)
+# SuperMerge - aggregated free nodes (FULL)
+# auto-generated - do not edit by hand
 proxies:
-  - name: "美国+V2CROSS.COM"
-    type: vless
-    server: "153.76.208.232"
-    port: 443
-    uuid: "c87e551b-3999-4b76-b3bf-bdfd6ef176fd"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "kCKXYcvEQ2cz4d0jBmBjyzbesUZ3AHQBukhqXWPiRlA"
-      sni: "yandex.com.am"
-  - name: "广东省广州市+UCloud"
-    type: vless
-    server: "jp.sofast.live"
-    port: 52683
-    uuid: "399b6b23-cc40-4831-a494-61948e2df133"
-    network: "tcp"
-    tls: false
+  - name: "丹麦+V2CROSS.COM"
+    type: ss
+    server: "158.173.221.214"
+    port: 11001
+    password: "c58d16e593d44f42"
+    cipher: "chacha20-ietf-poly1305"
   - name: "美国+CloudFlare节点"
     type: trojan
-    server: "172.67.217.240"
-    port: 443
-    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
-    network: "ws"
-    tls: true
-    sni: "id1.nathaya.web.id"
-    client-fingerprint: "unsafe"
-    ws-opts:
-      path: "/trojan"
-      headers:
-        Host: "id1.nathaya.web.id"
-  - name: "美国+CloudFlare节点-1"
-    type: trojan
-    server: "104.26.14.137"
-    port: 443
-    password: "humanity"
-    network: "ws"
-    tls: true
-    sni: "www.ignitelimit.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
-  - name: "美国+华盛顿Cogent通信公司"
-    type: hysteria2
-    server: "38.54.6.46"
-    port: 36712
-    password: "CompanyHy2_2026%21"
-    sni: "www.microsoft.com"
-    skip-cert-verify: true
-  - name: "广东省广州市+UCloud-1"
-    type: vless
-    server: "us22.sofast.live"
-    port: 58011
-    uuid: "0afc6426-606c-48e7-bd70-3c424a416842"
-    network: "tcp"
-    tls: false
-  - name: "巴西圣保罗+CloudFlare节点"
-    type: trojan
-    server: "188.114.97.7"
-    port: 443
-    password: "humanity"
-    network: "ws"
-    tls: true
-    sni: "www.ignitelimit.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
-  - name: "美国+乔治亚洲亚特兰大Fastly节点"
-    type: trojan
-    server: "151.101.56.101"
-    port: 443
-    password: "MiTiVPN"
-    network: "ws"
-    tls: true
-    sni: "ssl.fastly.com"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "@bored_vpn"
-      headers:
-        Host: "mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net"
-    alpn:
-      - "http/1.1"
-  - name: "英国+V2CROSS.COM"
-    type: vless
-    server: "2.26.93.130"
-    port: 443
-    uuid: "d6b59299-2f48-4e9b-9130-b9e9cb5d0a51"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "0q-auqEPBR3lETnoHLdm7OVbM0DWZQq74z_JV7WznUk"
-      sni: "se1.hat.onl"
-  - name: "美国+CloudFlare节点-2"
-    type: trojan
-    server: "104.20.6.134"
+    server: "www.speedtest.org"
     port: 443
     password: "humanity"
     network: "ws"
@@ -120,7 +31,93 @@ proxies:
     reality-opts:
       public-key: "jnu0rNHECTe_v7H9Fmgg0iUSepHz4QQQRPW0XpX5URs"
       sni: "store.storeimages.cdn-apple.com"
+  - name: "美国+CloudFlare节点-1"
+    type: vless
+    server: "104.21.5.156"
+    port: 443
+    uuid: "1aa96574-c28b-4ee9-855d-ebdbbf1f7e90"
+    network: "ws"
+    tls: true
+    udp: true
+    sni: "5-M13.1332afdc-0737-4BB1-8CA8-EE4F0cd20Bc6.KdNs.FR"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/ED3ZQPu7lqyeDGD58KabZ"
+      headers:
+        Host: "5-m13.1332aFDC-0737-4bB1-8cA8-Ee4f0cD20bC6.Kdns.fR"
+  - name: "美国+CloudFlare节点-2"
+    type: vless
+    server: "104.21.27.240"
+    port: 443
+    uuid: "7e26fd8f-d75a-473d-84ba-9f4e3f47d086"
+    network: "ws"
+    tls: true
+    udp: true
+    sni: "4-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/8qMLgNapWf6SBxo8fhQlVPYO"
+      headers:
+        Host: "4-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc"
+  - name: "英国+V2CROSS.COM"
+    type: hysteria2
+    server: "31.76.71.252"
+    port: 443
+    password: "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj"
+    sni: "gta.internet-card.sbs"
+    skip-cert-verify: true
+  - name: "捷克+V2CROSS.COM"
+    type: vless
+    server: "95.85.228.65"
+    port: 443
+    uuid: "d6b59299-2f48-4e9b-9130-b9e9cb5d0a51"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "PfG1V1-ODHD8CegoTVg8m4G4mw5S1QiA751yWKCkhBc"
+      sni: "nl1.hat.onl"
   - name: "美国+CloudFlare节点-3"
+    type: trojan
+    server: "172.67.74.2"
+    port: 443
+    password: "humanity"
+    network: "ws"
+    tls: true
+    sni: "www.ignitelimit.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "美国+CloudFlare节点-4"
+    type: vless
+    server: "deepl.com"
+    port: 8880
+    uuid: "b1b99d33-8df1-4c74-b140-28941b43a4d2"
+    network: "ws"
+    tls: false
+    udp: true
+    ws-opts:
+      path: "/pyip=ProxyIP.KR.CMLiussss.net"
+      headers:
+        Host: "nameless-poetry-cc33.268-910.workers.dev"
+  - name: "美国+CloudFlare节点-5"
+    type: vless
+    server: "172.67.205.153"
+    port: 443
+    uuid: "7e26fd8f-d75a-473d-84ba-9f4e3f47d086"
+    network: "ws"
+    tls: true
+    udp: true
+    sni: "4-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/8qMLgNapWf6SBxo8fhQlVPYO"
+      headers:
+        Host: "4-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr"
+  - name: "美国+CloudFlare节点-6"
     type: trojan
     server: "172.67.149.60"
     port: 443
@@ -132,9 +129,9 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.ignitelimit.com"
-  - name: "美国+V2CROSS.COM-1"
+  - name: "英国+V2CROSS.COM-1"
     type: vless
-    server: "144.31.219.193"
+    server: "2.26.93.130"
     port: 443
     uuid: "d6b59299-2f48-4e9b-9130-b9e9cb5d0a51"
     flow: "xtls-rprx-vision"
@@ -142,21 +139,23 @@ proxies:
     tls: true
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc"
-      sni: "be1.hat.onl"
-  - name: "爱沙尼亚+V2CROSS.COM"
+      public-key: "0q-auqEPBR3lETnoHLdm7OVbM0DWZQq74z_JV7WznUk"
+      sni: "se1.hat.onl"
+  - name: "美国+CloudFlare节点-7"
     type: vless
-    server: "ee-node.usel.pro"
-    port: 443
-    uuid: "6fb79584-30b8-4888-b358-98f7ef6b8697"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
+    server: "104.18.40.152"
+    port: 2083
+    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
+    network: "ws"
     tls: true
+    udp: true
+    sni: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "NiCJO84l7l--GJ10ggvb6HcOS8qLR30pWTphwvWozhg"
-      sni: "mail.protech-plus.ee"
-  - name: "英国+V2CROSS.COM-1"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "英国+V2CROSS.COM-2"
     type: vless
     server: "31.76.7.238"
     port: 443
@@ -6652,6 +6651,21 @@ proxies:
     reality-opts:
       public-key: "j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA"
       sni: "www.cloudflare.com"
+  - name: "US 🇺🇸 | @Raydikalx | C3C114"
+    type: trojan
+    server: "151.101.56.101"
+    port: 443
+    password: "MiTiVPN"
+    network: "ws"
+    tls: true
+    sni: "ssl.fastly.com"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "@bored_vpn"
+      headers:
+        Host: "mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net"
+    alpn:
+      - "http/1.1"
   - name: "CA 🇨🇦 | @Raydikalx | 1A6E36"
     type: vless
     server: "172.64.229.170"
@@ -8227,12 +8241,6 @@ proxies:
     reality-opts:
       public-key: "-ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM"
       sni: "ads.x5.ru"
-  - name: "FR 🇫🇷 | @Raydikalx | D0F0B9"
-    type: ss
-    server: "158.173.221.214"
-    port: 11001
-    password: "c58d16e593d44f42"
-    cipher: "chacha20-ietf-poly1305"
   - name: "HK 🇭🇰 | @Raydikalx | 795769"
     type: vless
     server: "hk6-r.link-t7.com"
@@ -8885,6 +8893,18 @@ proxies:
       path: "/"
       headers:
         Host: "u.srilankangrill.online"
+  - name: "BE 🇧🇪 | @Raydikalx | 6AC90C"
+    type: vless
+    server: "144.31.219.193"
+    port: 443
+    uuid: "d6b59299-2f48-4e9b-9130-b9e9cb5d0a51"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc"
+      sni: "be1.hat.onl"
   - name: "CA 🇨🇦 | @Raydikalx | 398A99"
     type: vless
     server: "104.21.60.109"
@@ -10902,6 +10922,18 @@ proxies:
     reality-opts:
       public-key: "vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng"
       sni: "yahoo.com"
+  - name: "CA 🇨🇦 | @Raydikalx | 0B0F91"
+    type: trojan
+    server: "188.114.97.7"
+    port: 443
+    password: "humanity"
+    network: "ws"
+    tls: true
+    sni: "www.ignitelimit.com"
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
   - name: "CA 🇨🇦 | @Raydikalx | 492C9B"
     type: trojan
     server: "104.16.174.44"
@@ -11151,6 +11183,19 @@ proxies:
       path: "/trojan"
       headers:
         Host: "id1.nathaya.web.id"
+  - name: "CA 🇨🇦 | @Raydikalx | 6227B7"
+    type: trojan
+    server: "172.67.217.240"
+    port: 443
+    password: "018b8e7b-7813-4dcb-84a5-3c98f1521e00"
+    network: "ws"
+    tls: true
+    sni: "id1.nathaya.web.id"
+    client-fingerprint: "unsafe"
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: "id1.nathaya.web.id"
   - name: "CA 🇨🇦 | @Raydikalx | 736B50"
     type: trojan
     server: "104.16.174.36"
@@ -11355,6 +11400,13 @@ proxies:
     password: "18bd49994f2eea74ff62798bd75fb7d1"
     sni: "107.175.219.48"
     skip-cert-verify: true
+  - name: "hysteria2-296929603"
+    type: hysteria2
+    server: "202.146.222.29"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "202.146.222.29"
+    skip-cert-verify: true
   - name: "hysteria2-1295976920"
     type: hysteria2
     server: "47.129.241.226"
@@ -11374,6 +11426,20 @@ proxies:
     port: 443
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
     sni: "https%3a%2f%2ft.me%2fwangcai2"
+    skip-cert-verify: true
+  - name: "hysteria2-1281961368"
+    type: hysteria2
+    server: "65.2.178.161"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "vpn-in-001.fastervpn.world"
+    skip-cert-verify: true
+  - name: "hysteria2-1289897527"
+    type: hysteria2
+    server: "38.54.6.46"
+    port: 36712
+    password: "CompanyHy2_2026%21"
+    sni: "www.microsoft.com"
     skip-cert-verify: true
   - name: "hysteria2-591633775"
     type: hysteria2
@@ -11415,19 +11481,19 @@ proxies:
     port: 443
     password: "amazonskr05"
     cipher: "aes-256-cfb"
-  - name: "shadowsocks-83630747"
+  - name: "shadowsocks-1274174345"
     type: ss
-    server: "82.38.31.174"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "trojan-133769367"
+    server: "46.17.42.166"
+    port: 50111
+    password: "6b39ae3234dfd68b"
+    cipher: "aes-256-gcm"
+  - name: "trojan-201299290"
     type: trojan
-    server: "119.246.1.143"
+    server: "161.34.39.108"
     port: 443
-    password: "BxceQaOe"
+    password: "tsuchiya"
     network: "tcp"
-    sni: "t.me%2fripaojiedian"
+    sni: "aa.ccmusic.jp"
     skip-cert-verify: true
   - name: "hysteria2-1232696196"
     type: hysteria2
@@ -11435,13 +11501,6 @@ proxies:
     port: 2053
     password: "maintell"
     sni: "bing.com"
-    skip-cert-verify: true
-  - name: "hysteria2-856461941"
-    type: hysteria2
-    server: "202.146.222.29"
-    port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "https://t.me/wangcai2üá®üá≥"
     skip-cert-verify: true
   - name: "hysteria2-1291941742"
     type: hysteria2
@@ -11497,12 +11556,19 @@ proxies:
     port: 8080
     password: "14fFPrbezE3HDZzsMOr6"
     cipher: "rc4-md5"
-  - name: "shadowsocks-254910437"
+  - name: "shadowsocks-1290365863"
     type: ss
-    server: "82.38.31.175"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
+    server: "18.191.124.183"
+    port: 443
+    password: "amazonskr05"
+    cipher: "aes-256-cfb"
+  - name: "trojan-2525867"
+    type: trojan
+    server: "aa.ccmusic.jp"
+    port: 443
+    password: "tsuchiya"
+    network: "raw"
+    sni: "aa.ccmusic.jp"
   - name: "vless-1205876725"
     type: vless
     server: "3.114.220.22"
@@ -11530,12 +11596,12 @@ proxies:
     password: "1671a252e2a97dc2bda4e515475931da"
     sni: "www.bing.com"
     skip-cert-verify: true
-  - name: "hysteria2-1281961368"
+  - name: "hysteria2-180178213"
     type: hysteria2
-    server: "65.2.178.161"
-    port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "vpn-in-001.fastervpn.world"
+    server: "155.248.209.237"
+    port: 33333
+    password: "bce6c821-200d-421f-bf3d-7159e5246ea0"
+    sni: "155.248.209.237"
     skip-cert-verify: true
   - name: "hysteria2-1142149999"
     type: hysteria2
@@ -11617,29 +11683,16 @@ proxies:
     port: 8443
     password: "54d2f622-fd71-4f5f-8813-832b68f4ca3b"
     sni: "speedtestmark.com"
-  - name: "hysteria2-48396262"
-    type: hysteria2
-    server: "130.61.50.75"
-    port: 6443
-    password: "zhangyang"
-    skip-cert-verify: true
-  - name: "hysteria2-1066924734"
-    type: hysteria2
-    server: "155.248.209.237"
-    port: 33333
-    password: "bce6c821-200d-421f-bf3d-7159e5246ea0"
-    sni: "off"
-    skip-cert-verify: true
   - name: "shadowsocks-468218514"
     type: ss
     server: "107.151.182.197"
     port: 8080
     password: "14fFPrbezE3HDZzsMOr6"
     cipher: "rc4-md5"
-  - name: "shadowsocks-127255"
+  - name: "shadowsocks-91981760"
     type: ss
-    server: "193.29.139.188"
-    port: 8080
+    server: "82.38.31.174"
+    port: 443
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
   - name: "trojan-1284133120"
@@ -11650,18 +11703,6 @@ proxies:
     network: "tcp"
     sni: "static.rutube.ru#☸️95@oneclickvpnkeyshysteria2://q3madf68gvbgegqtaxkwjg@173.249.210.76:8443/?insecure=1#☸️96@oneclickvpnkeys"
     skip-cert-verify: true
-  - name: "vless-1293946936"
-    type: vless
-    server: "13.231.19.51"
-    port: 11690
-    uuid: "e2b8b217-cffb-4d66-9b8b-eca6e4334032"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg"
-      sni: "www.tesla.com"
   - name: "vless-1279131586"
     type: vless
     server: "207.57.135.125"
@@ -11688,7 +11729,14 @@ proxies:
     port: 50160
     password: "184cdec28da5a09450803c8debcd2cc9"
     skip-cert-verify: true
-  - name: "hysteria2-848874255"
+  - name: "hysteria2-143263693"
+    type: hysteria2
+    server: "hy2.561891.xyz"
+    port: 44356
+    password: "dongtaiwang.com"
+    sni: "hy2.561891.xyz"
+    skip-cert-verify: true
+  - name: "hysteria2-207301017"
     type: hysteria2
     server: "160.187.100.109"
     port: 443
@@ -11708,12 +11756,6 @@ proxies:
     password: "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s"
     sni: "hopp-netherland-new.dynuddns.net"
     skip-cert-verify: true
-  - name: "hysteria2-200242612"
-    type: hysteria2
-    server: "91.196.32.163"
-    port: 443
-    password: "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj"
-    skip-cert-verify: true
   - name: "hysteria2-928823637"
     type: hysteria2
     server: "hys28.wba-pn.ru"
@@ -11726,20 +11768,18 @@ proxies:
     server: "admin.wwwinternetvideo.click"
     port: 443
     password: "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc"
-  - name: "hysteria2-143263693"
-    type: hysteria2
-    server: "hy2.561891.xyz"
-    port: 44356
-    password: "dongtaiwang.com"
-    sni: "hy2.561891.xyz"
-    skip-cert-verify: true
-  - name: "hysteria2-13527647"
-    type: hysteria2
-    server: "45.88.43.116"
-    port: 52454
-    password: "6c077487-06af-4fb1-9e46-d485d98f0a31"
-    sni: "www.bing.com"
-    skip-cert-verify: true
+  - name: "shadowsocks-12792821"
+    type: ss
+    server: "82.38.31.69"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "shadowsocks-187"
+    type: ss
+    server: "82.38.31.210"
+    port: 8080
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
   - name: "trojan-897442828"
     type: trojan
     server: "47.250.84.25"
@@ -11771,18 +11811,6 @@ proxies:
     reality-opts:
       public-key: "UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ"
       sni: "www.cloudflare.com"
-  - name: "vless-1141982328"
-    type: vless
-    server: "18.183.215.124"
-    port: 28573
-    uuid: "871bfce7-8440-4394-8d82-56b51f20fdad"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg"
-      sni: "www.sony.com"
   - name: "vless-1287267870"
     type: vless
     server: "64.49.38.9"
@@ -11806,18 +11834,6 @@ proxies:
       path: "/7586c69d3dc9"
       headers:
         Host: "103.75.119.126"
-  - name: "vless-1274597157"
-    type: vless
-    server: "54.251.9.130"
-    port: 24146
-    uuid: "9d9a048b-3aea-4b3e-b106-1106bf301feb"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo"
-      sni: "www.intel.com"
   - name: "vless-803222314"
     type: vless
     server: "60.248.219.53"
@@ -11839,15 +11855,6 @@ proxies:
     alterId: 0
     network: "raw"
     tls: false
-  - name: "vmess-145234"
-    type: vmess
-    server: "67.220.95.3"
-    port: 18000
-    uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe"
-    cipher: "auto"
-    alterId: 0
-    network: "tcp"
-    tls: false
   - name: "vmess-1293163126"
     type: vmess
     server: "nomino.11hi8itbaf.workers.dev"
@@ -11861,6 +11868,12 @@ proxies:
       path: "/guanwang.awsno.com/hls/cctv5phd.m3u8"
       headers:
         Host: ""
+  - name: "hysteria2-479013117"
+    type: hysteria2
+    server: "45.88.43.116"
+    port: 52454
+    password: "6c077487-06af-4fb1-9e46-d485d98f0a31"
+    skip-cert-verify: true
   - name: "hysteria2-647019510"
     type: hysteria2
     server: "46.229.243.132"
@@ -11916,30 +11929,23 @@ proxies:
     password: "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc"
     sni: "admin.wwwinternetvideo.click"
     skip-cert-verify: true
-  - name: "hysteria2-200394203"
-    type: hysteria2
-    server: "62.210.7.139"
-    port: 60111
-    password: "github.com%2FAlvin9999-newpac%2Ffanqiang"
-    sni: "bing.com"
-    skip-cert-verify: true
   - name: "hysteria2-1118674279"
     type: hysteria2
     server: "144.31.49.47"
     port: 443
     password: "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc"
     sni: "admin.wwwinternetvideo.click"
-  - name: "shadowsocks-129824"
+  - name: "shadowsocks-166"
     type: ss
-    server: "82.38.31.13"
+    server: "137.184.174.93"
+    port: 8080
+    password: "14fFPrbezE3HDZzsMOr6"
+    cipher: "rc4-md5"
+  - name: "shadowsocks-83630747"
+    type: ss
+    server: "82.38.31.174"
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "shadowsocks-169"
-    type: ss
-    server: "82.38.31.202"
-    port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
     cipher: "chacha20-ietf-poly1305"
   - name: "shadowsocks-27269"
     type: ss
@@ -11947,39 +11953,18 @@ proxies:
     port: 8080
     password: "14fFPrbezE3HDZzsMOr6"
     cipher: "rc4-md5"
-  - name: "shadowsocks-10899"
+  - name: "shadowsocks-179"
     type: ss
-    server: "82.38.31.204"
+    server: "193.29.139.235"
     port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
-  - name: "shadowsocks-1274174345"
-    type: ss
-    server: "46.17.42.166"
-    port: 50111
-    password: "6b39ae3234dfd68b"
-    cipher: "aes-256-gcm"
-  - name: "trojan-79476398"
-    type: trojan
-    server: "161.34.39.108"
-    port: 443
-    password: "tsuchiya"
-    network: "tcp"
-    sni: "aa.ccmusic.jp"
-  - name: "trojan-2525867"
-    type: trojan
-    server: "aa.ccmusic.jp"
-    port: 443
-    password: "tsuchiya"
-    network: "raw"
-    sni: "aa.ccmusic.jp"
-  - name: "trojan-123134632"
+  - name: "trojan-98121908"
     type: trojan
     server: "154.90.62.70"
     port: 56127
     password: "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B"
     network: "tcp"
-    sni: "154.90.62.70"
     skip-cert-verify: true
   - name: "vless-1181146323"
     type: vless
@@ -12041,6 +12026,18 @@ proxies:
       path: "/"
       headers:
         Host: "fq.jp188.dpdns.org"
+  - name: "vless-1019463451"
+    type: vless
+    server: "13.231.19.51"
+    port: 11690
+    uuid: "e2b8b217-cffb-4d66-9b8b-eca6e4334032"
+    flow: "xtls-rprx-vision"
+    network: "raw"
+    tls: true
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg"
+      sni: "www.tesla.com"
   - name: "vless-1294595442"
     type: vless
     server: "47.83.4.146"
@@ -12059,6 +12056,18 @@ proxies:
     uuid: "128314f6-f09a-426f-b758-b8e559c38ddb"
     network: "grpc"
     tls: false
+  - name: "vless-1011139750"
+    type: vless
+    server: "18.183.215.124"
+    port: 28573
+    uuid: "871bfce7-8440-4394-8d82-56b51f20fdad"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg"
+      sni: "www.sony.com"
   - name: "vless-1018151551"
     type: vless
     server: "70.39.196.142"
@@ -12095,6 +12104,15 @@ proxies:
       path: "/vless"
       headers:
         Host: "proxy.bingtao.xyz"
+  - name: "vmess-145234"
+    type: vmess
+    server: "67.220.95.3"
+    port: 18000
+    uuid: "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe"
+    cipher: "auto"
+    alterId: 0
+    network: "tcp"
+    tls: false
   - name: "hysteria2-1111846067"
     type: hysteria2
     server: "vpn-in-001.fastervpn.world"
@@ -12163,11 +12181,11 @@ proxies:
     password: "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z"
     sni: "grape-turbo-fr.roxa.org"
     skip-cert-verify: true
-  - name: "shadowsocks-172"
+  - name: "shadowsocks-127255"
     type: ss
-    server: "82.38.31.194"
+    server: "193.29.139.188"
     port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
   - name: "shadowsocks-738053629"
     type: ss
@@ -12187,18 +12205,32 @@ proxies:
     port: 9041
     password: "U6qnYRhfyDmn8sgn"
     cipher: "aes-256-cfb"
-  - name: "shadowsocks-275"
+  - name: "shadowsocks-254910437"
     type: ss
-    server: "82.38.31.7"
+    server: "82.38.31.175"
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
-  - name: "shadowsocks-11024"
+  - name: "shadowsocks-11045"
     type: ss
-    server: "82.38.31.195"
+    server: "82.38.31.18"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "shadowsocks-10899"
+    type: ss
+    server: "82.38.31.204"
     port: 8080
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     cipher: "chacha20-ietf-poly1305"
+  - name: "trojan-856679830"
+    type: trojan
+    server: "119.246.1.143"
+    port: 443
+    password: "BxceQaOe"
+    network: "tcp"
+    sni: "t.me%252fripaojiedian"
+    skip-cert-verify: true
   - name: "trojan-635823137"
     type: trojan
     server: "64.94.95.114"
@@ -12212,14 +12244,6 @@ proxies:
     port: 57142
     password: "kkzh2prsyr2ik47as615"
     network: "tcp"
-    skip-cert-verify: true
-  - name: "trojan-2520867"
-    type: trojan
-    server: "64.94.95.118"
-    port: 57142
-    password: "kkzh2prsyr2ik47as615"
-    network: "tcp"
-    sni: "64.94.95.118"
     skip-cert-verify: true
   - name: "vless-1245590268"
     type: vless
@@ -12317,18 +12341,6 @@ proxies:
       path: "/?ed=2560"
       headers:
         Host: "8gjxe.9zuh.7v9.hh.vavava.kdns.fr"
-  - name: "vless-1294062233"
-    type: vless
-    server: "91.193.58.182"
-    port: 80
-    uuid: "26beb784-a664-4c3e-becf-0f0c12568b62"
-    network: "ws"
-    tls: false
-    sni: "twilight-poetry-2bfe.218-699.workers.dev"
-    ws-opts:
-      path: "/pyip=Telegram-WangCai2🇨🇳security=tls"
-      headers:
-        Host: "twilight-poetry-2bfe.218-699.workers.dev"
   - name: "vless-1019459804"
     type: vless
     server: "172.235.38.85"
@@ -12341,6 +12353,17 @@ proxies:
     reality-opts:
       public-key: "JmkfJoDWpAqt6gj4cbc4_cwItsdryMlV7joAGfNTKQU"
       sni: "www.tesla.com"
+  - name: "vless-1224495307"
+    type: vless
+    server: "54.251.9.130"
+    port: 24146
+    uuid: "9d9a048b-3aea-4b3e-b106-1106bf301feb"
+    flow: "xtls-rprx-vision"
+    network: "tcp#🎡88@oneclickvpnkeys"
+    tls: true
+    reality-opts:
+      public-key: "VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo"
+      sni: "www.intel.com"
   - name: "vless-1294275790"
     type: vless
     server: "37.221.110.245"
@@ -12419,6 +12442,13 @@ proxies:
     password: "9cfc9458e48c028ec03ff86ebc71c744"
     sni: "127.0.0.1"
     skip-cert-verify: true
+  - name: "hysteria2-177823913"
+    type: hysteria2
+    server: "130.61.50.75"
+    port: 6443
+    password: "zhangyang"
+    sni: "130.61.50.75"
+    skip-cert-verify: true
   - name: "hysteria2-657042644"
     type: hysteria2
     server: "13.212.83.43"
@@ -12486,12 +12516,6 @@ proxies:
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
     sni: "t.me"
     skip-cert-verify: true
-  - name: "shadowsocks-277388490"
-    type: ss
-    server: "193.29.139.225"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
   - name: "shadowsocks-696781307"
     type: ss
     server: "217.30.10.44"
@@ -12504,18 +12528,44 @@ proxies:
     port: 9006
     password: "FAdUvMJUq5vDgKEq"
     cipher: "aes-256-cfb"
-  - name: "shadowsocks-812343760"
-    type: ss
-    server: "195.238.126.20"
-    port: 9012
-    password: "xaupMUvhptwxdDUg"
-    cipher: "aes-256-cfb"
   - name: "shadowsocks-11048"
     type: ss
     server: "82.38.31.3"
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
+  - name: "shadowsocks-10898"
+    type: ss
+    server: "82.38.31.203"
+    port: 8080
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "shadowsocks-27285"
+    type: ss
+    server: "146.70.61.18"
+    port: 8080
+    password: "14fFPrbezE3HDZzsMOr6"
+    cipher: "rc4-md5"
+  - name: "shadowsocks-130088"
+    type: ss
+    server: "82.38.31.9"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "shadowsocks-181"
+    type: ss
+    server: "82.38.31.205"
+    port: 8080
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "trojan-2520867"
+    type: trojan
+    server: "64.94.95.118"
+    port: 57142
+    password: "kkzh2prsyr2ik47as615"
+    network: "tcp"
+    sni: "64.94.95.118"
+    skip-cert-verify: true
   - name: "vless-1268262184"
     type: vless
     server: "172.64.42.85"
@@ -12620,18 +12670,6 @@ proxies:
       path: "/Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET"
       headers:
         Host: "new.106-79e.workers.dev"
-  - name: "vless-1294066230"
-    type: vless
-    server: "soskeynets-butterfly-8496.erfannull36.workers.dev"
-    port: 443
-    uuid: "29fb68bb-ff05-4fd4-8393-cc6c05d81a79"
-    network: "ws"
-    tls: true
-    sni: "purple-butterfly-8496.erfannull36.workers.dev"
-    ws-opts:
-      path: "/fp=chrome"
-      headers:
-        Host: "purple-butterfly-8496.erfannull36.workers.dev"
   - name: "vless-1302925893"
     type: vless
     server: "140.235.168.4"
@@ -12643,6 +12681,18 @@ proxies:
     reality-opts:
       public-key: "tICt4RT_Rw9KAU8hIf05_fzAMZnfUUyMfE-Ept6zcBY"
       sni: "www.lenovo.com"
+  - name: "vless-27000"
+    type: vless
+    server: "156.229.161.107"
+    port: 10001
+    uuid: "9c79aceb-4649-44ea-9698-b5e9ecf6d6da"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4"
+      sni: "www.icloud.com"
   - name: "vless-1277964829"
     type: vless
     server: "104.16.157.58"
@@ -12690,18 +12740,6 @@ proxies:
     reality-opts:
       public-key: "lDi6FDdd5qUFMjjR1JDidfUU2qE_U1L90VjNTzPyQhs"
       sni: "download.nvidia.com"
-  - name: "vless-1286550601"
-    type: vless
-    server: "80.91.79.136"
-    port: 443
-    uuid: "807cd1e0-f4ce-4785-b7a3-cde0c1614b8d"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "g9uQwtqcqsPvzqQy2hM4rpvTIGXRQSAt-MAgHpz_gCI"
-      sni: "www.logitech.com"
   - name: "vless-1231429203"
     type: vless
     server: "pl-new-ded2.moritech.net"
@@ -12711,15 +12749,6 @@ proxies:
     network: "tcp"
     tls: true
     sni: "pl-new-ded2.moritech.net"
-  - name: "vless-1157879699"
-    type: vless
-    server: "50.7.226.171"
-    port: 443
-    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    sni: "viper-21.moriarty-web.com"
   - name: "vless-1292946053"
     type: vless
     server: "89.105.206.123"
@@ -12750,6 +12779,12 @@ proxies:
     alterId: 2
     network: "tcp"
     tls: false
+  - name: "hysteria2-159719813"
+    type: hysteria2
+    server: "159.223.157.129"
+    port: 8443
+    password: "suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g"
+    skip-cert-verify: true
   - name: "hysteria2-860759685"
     type: hysteria2
     server: "85.204.107.172"
@@ -12791,12 +12826,6 @@ proxies:
     password: "9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z"
     sni: "hopp-germany-new.ddnsguru.com"
     skip-cert-verify: true
-  - name: "shadowsocks-1212526365"
-    type: ss
-    server: "ca225.vpnbook.com"
-    port: 443
-    password: "3ssumf2"
-    cipher: "chacha20-ietf-poly1305"
   - name: "shadowsocks-812343744"
     type: ss
     server: "217.30.10.44"
@@ -12809,12 +12838,24 @@ proxies:
     port: 9052
     password: "jt2ekBNc9HuVtm2a"
     cipher: "aes-256-cfb"
-  - name: "shadowsocks-1290365863"
+  - name: "shadowsocks-812343760"
     type: ss
-    server: "18.191.124.183"
-    port: 443
-    password: "amazonskr05"
+    server: "195.238.126.20"
+    port: 9012
+    password: "xaupMUvhptwxdDUg"
     cipher: "aes-256-cfb"
+  - name: "shadowsocks-738053582"
+    type: ss
+    server: "195.238.126.20"
+    port: 9045
+    password: "Lp27rqyJq72bZsqX"
+    cipher: "aes-256-cfb"
+  - name: "shadowsocks-205"
+    type: ss
+    server: "109.201.152.181"
+    port: 443
+    password: "shadowsocks"
+    cipher: "aes-128-cfb"
   - name: "vless-625724260"
     type: vless
     server: "202.144.192.76"
@@ -12931,29 +12972,6 @@ proxies:
       path: "/pyip=Telegram-WangCai2ð¨ð³"
       headers:
         Host: "twilight-poetry-2bfe.218-699.workers.dev"
-  - name: "vless-1286417770"
-    type: vless
-    server: "64.49.38.3"
-    port: 8443
-    uuid: "dca76b88-b038-e82b-45e1-1d76b476d7ca"
-    network: "grpc"
-    tls: true
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "92KJ-ibs1qTy8nODGrHTW8T0b_trG7McLYv8My9o2EE"
-      sni: "download.autodesk.com"
-  - name: "vless-2290579"
-    type: vless
-    server: "156.229.161.107"
-    port: 10001
-    uuid: "9c79aceb-4649-44ea-9698-b5e9ecf6d6da"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4"
-      sni: "www.icloud.com"
   - name: "vless-1300049262"
     type: vless
     server: "162.159.137.204"
@@ -13038,29 +13056,17 @@ proxies:
       path: "/"
       headers:
         Host: "u.srilankangrill.online"
-  - name: "vless-1274597147"
+  - name: "vless-1125467414"
     type: vless
-    server: "54.255.121.205"
-    port: 43840
-    uuid: "f053b140-9673-4ac5-bc8b-587bfd2c8fd8"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA"
-      sni: "www.sony.com"
-  - name: "vless-1293946433"
-    type: vless
-    server: "170.168.99.8"
-    port: 8443
-    uuid: "dca76b88-b038-e82b-45e1-1d76b476d7ca"
+    server: "193.42.39.10"
+    port: 33743
+    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
     network: "grpc"
     tls: true
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0"
-      sni: "cdn.steamstatic.com"
+      public-key: "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
+      sni: "www.google.com"
   - name: "vless-1294275796"
     type: vless
     server: "89.47.55.8"
@@ -13072,18 +13078,15 @@ proxies:
     reality-opts:
       public-key: "iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4"
       sni: "www.canon.com"
-  - name: "vless-1294015954"
+  - name: "vless-1157879699"
     type: vless
-    server: "162.249.126.228"
+    server: "50.7.226.171"
     port: 443
-    uuid: "6aaa7d1d-8b35-4fd2-ae60-0129ad624935"
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
     flow: "xtls-rprx-vision"
     network: "tcp"
     tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "BuWOXeVcfmw_I8qSPevsxMVS0cH4ua1b_nH-RFtutB8"
-      sni: "de.edgeses.org"
+    sni: "viper-21.moriarty-web.com"
   - name: "vless-976474882"
     type: vless
     server: "78.129.221.66"
@@ -13107,6 +13110,18 @@ proxies:
     reality-opts:
       public-key: "iVDh09Vm2DqZMNQoUdf-LCZ6TqVGb9mLXnClAK2LRj4"
       sni: "www.canon.com"
+  - name: "vless-1258929858"
+    type: vless
+    server: "93.94.52.23"
+    port: 40443
+    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
+      sni: "deepl.com"
   - name: "vless-1257315595"
     type: vless
     server: "91.193.17.156"
@@ -13139,6 +13154,15 @@ proxies:
     reality-opts:
       public-key: "WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc"
       sni: "deepl.com"
+  - name: "vless-1157879800"
+    type: vless
+    server: "50.7.5.163"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    sni: "ir-viper.failspace.top"
   - name: "vless-1292944080"
     type: vless
     server: "144.31.90.65"
@@ -13151,16 +13175,15 @@ proxies:
     reality-opts:
       public-key: "8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w"
       sni: "fl.convert-flow.net"
-  - name: "vless-1274373871"
+  - name: "vless-1157879774"
     type: vless
-    server: "roma3.moritech.net"
+    server: "50.7.36.26"
     port: 443
     uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
     flow: "xtls-rprx-vision"
     network: "tcp"
     tls: true
-    sni: "roma3.moritech.net"
-    client-fingerprint: "firefox"
+    sni: "at2.moritech.net"
   - name: "vmess-1221516007"
     type: vmess
     server: "165.140.217.2"
@@ -14535,18 +14558,6 @@ proxies:
     port: 8080
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     cipher: "chacha20-ietf-poly1305"
-  - name: "未知 SS-462 | free-nodes"
-    type: ss
-    server: "82.38.31.203"
-    port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "未知 SS-464 | free-nodes"
-    type: ss
-    server: "82.38.31.205"
-    port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    cipher: "chacha20-ietf-poly1305"
   - name: "未知 SS-473 | free-nodes"
     type: ss
     server: "45.129.142.41"
@@ -14604,12 +14615,6 @@ proxies:
   - name: "未知 SS-482 | free-nodes"
     type: ss
     server: "82.38.31.15"
-    port: 443
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "未知 SS-485 | free-nodes"
-    type: ss
-    server: "82.38.31.174"
     port: 443
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
@@ -24110,17 +24115,11 @@ proxies:
     cipher: "chacha20-ietf-poly1305"
   - name: "@ICV2RAY-5"
     type: ss
-    server: "82.38.31.210"
-    port: 8080
-    password: "k1dBOmOB4oqi7Ump37a1bQ"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "@ICV2RAY-6"
-    type: ss
     server: "82.38.31.211"
     port: 8080
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     cipher: "chacha20-ietf-poly1305"
-  - name: "@ICV2RAY-7"
+  - name: "@ICV2RAY-6"
     type: ss
     server: "20.234.82.250"
     port: 443
@@ -24180,6 +24179,12 @@ proxies:
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
+  - name: "@Shh_Proxy-New⁷"
+    type: ss
+    server: "193.29.139.225"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
   - name: "🇳🇱139740 | ⚡️Telegram = t.me/SOSkeyNET"
     type: ss
     server: "193.29.139.230"
@@ -24204,12 +24209,6 @@ proxies:
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
-  - name: "@ICV2RAY-8"
-    type: ss
-    server: "82.38.31.18"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
   - name: "@SylphNet | 2026-07-14 21:29"
     type: ss
     server: "82.38.31.35"
@@ -24219,6 +24218,12 @@ proxies:
   - name: "🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱"
     type: ss
     server: "82.38.31.39"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "TEL:Father_vpn"
+    type: ss
+    server: "82.38.31.7"
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
@@ -25113,7 +25118,7 @@ proxies:
     tls: true
     sni: "87.121.218.169"
     client-fingerprint: "chrome"
-  - name: "TEL:Father_vpn"
+  - name: "TEL:Father_vpn-1"
     type: trojan
     server: "89.116.46.68"
     port: 443
@@ -25154,7 +25159,7 @@ proxies:
         Host: "r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev"
     alpn:
       - "http/1.1"
-  - name: "@ICV2RAY-9"
+  - name: "@ICV2RAY-7"
     type: trojan
     server: "104.16.7.70"
     port: 443
@@ -26124,7 +26129,7 @@ proxies:
     uuid: "02a96d4d-f2f5-4c0b-ba83-d24aec5defb8"
     network: "tcp"
     tls: false
-  - name: "@Shh_Proxy-New⁷"
+  - name: "@Shh_Proxy-New⁷-1"
     type: vless
     server: "91.228.227.172"
     port: 443
@@ -26991,7 +26996,7 @@ proxies:
       path: "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN"
       headers:
         Host: "netlivpn4024.bgfjhd.workers.dev"
-  - name: "TEL:Father_vpn-1"
+  - name: "TEL:Father_vpn-2"
     type: vless
     server: "a.r-o-o-t3.ir"
     port: 443
@@ -28164,7 +28169,7 @@ proxies:
     reality-opts:
       public-key: "VFDbAJQdqzKl7hL6SmUrhHHEORtILSsJHYWF67an1HU"
       sni: "amp-api-edge.apps.apple.com"
-  - name: "TEL:Father_vpn-2"
+  - name: "TEL:Father_vpn-3"
     type: vless
     server: "188.114.97.6"
     port: 443
@@ -28283,7 +28288,7 @@ proxies:
       path: "/"
       headers:
         Host: "blogweb1.pages.dev"
-  - name: "@Shh_Proxy-New⁷-1"
+  - name: "@Shh_Proxy-New⁷-2"
     type: vless
     server: "it.selqora.ir"
     port: 22211
@@ -28368,7 +28373,7 @@ proxies:
     tls: true
     sni: "coral-atlas-46c9-production.up.railway.app"
     client-fingerprint: "chrome"
-  - name: "TEL:Father_vpn-3"
+  - name: "TEL:Father_vpn-4"
     type: vless
     server: "195.74.93.254"
     port: 443
@@ -29626,7 +29631,7 @@ proxies:
     reality-opts:
       public-key: "oX_8IyRmI_X4pPWaGTbduLyvlZWwLkZlxJKmtvjmqEg"
       sni: "smartcaptcha.yandexcloud.net"
-  - name: "TEL:Father_vpn-4"
+  - name: "TEL:Father_vpn-5"
     type: vless
     server: "188.114.97.6"
     port: 443
@@ -31157,7 +31162,7 @@ proxies:
     reality-opts:
       public-key: "_IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo"
       sni: "pl.cloudtechone.org"
-  - name: "@ICV2RAY-10"
+  - name: "@ICV2RAY-8"
     type: vless
     server: "tr.cloudtechone.org"
     port: 443
@@ -33070,7 +33075,7 @@ proxies:
     reality-opts:
       public-key: "HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU"
       sni: "flarora.ferreo.sbs"
-  - name: "@ICV2RAY-11"
+  - name: "@ICV2RAY-9"
     type: vless
     server: "84.252.100.49"
     port: 443
@@ -33185,7 +33190,7 @@ proxies:
       path: "/ws/3eb1c85a-a0bc-1c6e-bd80-ada5fb05ae48"
       headers:
         Host: "cobalt-prairie-172d-production.up.railway.app"
-  - name: "@ICV2RAY-12"
+  - name: "@ICV2RAY-10"
     type: vless
     server: "api-759bce-95564413abnm.rezasubjack.ir"
     port: 43149
@@ -34575,7 +34580,7 @@ proxies:
     reality-opts:
       public-key: "B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw"
       sni: "www.amazon.com"
-  - name: "TEL:Father_vpn-5"
+  - name: "TEL:Father_vpn-6"
     type: vless
     server: "45.130.125.160"
     port: 443
@@ -36575,7 +36580,7 @@ proxies:
     reality-opts:
       public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       sni: "akamai.com"
-  - name: "@ICV2RAY-13"
+  - name: "@ICV2RAY-11"
     type: vless
     server: "31.76.119.63"
     port: 47010
@@ -38475,6 +38480,18 @@ proxies:
     reality-opts:
       public-key: "g2sGRzHjnyC06HbpTkPdikRrYYP-09aZ4UT-WKVODTo"
       sni: "play.google.com"
+  - name: "@V2RAYNG_IP شبانه🌚-2"
+    type: vless
+    server: "ee-node.usel.pro"
+    port: 443
+    uuid: "6fb79584-30b8-4888-b358-98f7ef6b8697"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "NiCJO84l7l--GJ10ggvb6HcOS8qLR30pWTphwvWozhg"
+      sni: "mail.protech-plus.ee"
   - name: "🇺🇸 CxrolVPN"
     type: vless
     server: "172.64.153.100"
@@ -39484,19 +39501,6 @@ proxies:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
   - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-3"
     type: vless
-    server: "104.18.40.152"
-    port: 2083
-    uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
-    network: "ws"
-    tls: true
-    sni: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
-    type: vless
     server: "104.19.215.97"
     port: 443
     uuid: "77777777-8a3e-6666-b6d1-a9c5f0e8b3a2"
@@ -39547,7 +39551,7 @@ proxies:
       path: "/"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
+  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
     type: vless
     server: "172.64.146.211"
     port: 8443
@@ -39612,7 +39616,7 @@ proxies:
       path: "/"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-6"
+  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
     type: vless
     server: "172.64.53.194"
     port: 443
@@ -39625,7 +39629,7 @@ proxies:
       path: "/"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
-  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
+  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-6"
     type: vless
     server: "mfa.gov.ua"
     port: 2087
@@ -42373,7 +42377,7 @@ proxies:
     uuid: "8dc7722c-2767-4eea-a28b-2f8daacc07e3"
     network: "grpc"
     tls: false
-  - name: "TEL:Father_vpn-6"
+  - name: "TEL:Father_vpn-7"
     type: vless
     server: "sca17.myfymain.com"
     port: 8880
@@ -44687,7 +44691,7 @@ proxies:
     tls: true
     sni: "ssl.fastly.com"
     client-fingerprint: "chrome"
-  - name: "TEL:Father_vpn-7"
+  - name: "TEL:Father_vpn-8"
     type: vless
     server: "151.101.129.57"
     port: 80
@@ -46355,7 +46359,7 @@ proxies:
       path: "/ws/Jehdhsus"
       headers:
         Host: "core-d79e53-5f2007-production.up.railway.app"
-  - name: "@ICV2RAY-14"
+  - name: "@ICV2RAY-12"
     type: vless
     server: "app-ss-57.shopping-spb.com"
     port: 443
@@ -47468,7 +47472,7 @@ proxies:
       path: "/hdgrbws"
       headers:
         Host: "terazhediii.info"
-  - name: "@ICV2RAY-15"
+  - name: "@ICV2RAY-13"
     type: vless
     server: "23.172.120.194"
     port: 9000
@@ -48183,7 +48187,7 @@ proxies:
     reality-opts:
       public-key: "b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4"
       sni: "www.amd.com"
-  - name: "@ICV2RAY-16"
+  - name: "@ICV2RAY-14"
     type: vless
     server: "16d3dccf464f296f.ainl.reknaro.ir"
     port: 53966
@@ -48195,7 +48199,7 @@ proxies:
       path: "/"
       headers:
         Host: "tl3.tavqila.ir"
-  - name: "@ICV2RAY-17"
+  - name: "@ICV2RAY-15"
     type: vless
     server: "c9f4ebdada6d914b.aide.reknaro.ir"
     port: 46312
@@ -48345,17 +48349,6 @@ proxies:
     reality-opts:
       public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
       sni: "deepl.com"
-  - name: "@Daily_Configs-13"
-    type: vless
-    server: "93.94.52.23"
-    port: 40443
-    uuid: "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    reality-opts:
-      public-key: "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4"
-      sni: "deepl.com"
   - name: "@Tanhanet"
     type: vless
     server: "104.19.64.105"
@@ -48376,7 +48369,7 @@ proxies:
     uuid: "bb5c8872-3e39-41b0-98d6-fdf7b183c51f"
     network: "tcp"
     tls: false
-  - name: "@Daily_Configs-14"
+  - name: "@Daily_Configs-13"
     type: vless
     server: "www.web.far30bazi.ir"
     port: 443
@@ -48438,7 +48431,7 @@ proxies:
       path: "/fp=chromefp=chrome"
       headers:
         Host: "edge.yzkvm.top"
-  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-8"
+  - name: "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
     type: vless
     server: "167.172.165.106"
     port: 2083
@@ -48788,7 +48781,7 @@ proxies:
     reality-opts:
       public-key: "cmSGhJrA5uAZbcg4kGEuCDPXoUqVXWfdbot8c8OjFnw"
       sni: "cdn-media.spliceflowtech.com"
-  - name: "@Daily_Configs-15"
+  - name: "@Daily_Configs-14"
     type: vless
     server: "179.254.115.225"
     port: 443
@@ -48889,7 +48882,7 @@ proxies:
     reality-opts:
       public-key: "CuGfoVwpKbDfXx5Lx657c-RpIyCJgWmd2xXsLgb5AhQ"
       sni: "blog.api.www.cloudflare.com"
-  - name: "@Daily_Configs-16"
+  - name: "@Daily_Configs-15"
     type: vless
     server: "www.web.far30bazi.ir"
     port: 443
@@ -49702,6 +49695,17 @@ proxies:
     network: "tcp"
     tls: true
     sni: "avval.pinocchio1.ir."
+  - name: "@Begoo_VPN ²⁹¹"
+    type: vless
+    server: "153.76.208.232"
+    port: 443
+    uuid: "c87e551b-3999-4b76-b3bf-bdfd6ef176fd"
+    network: "tcp"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "kCKXYcvEQ2cz4d0jBmBjyzbesUZ3AHQBukhqXWPiRlA"
+      sni: "yandex.com.am"
   - name: "@hollowcon-6"
     type: vless
     server: "rezeroooo3-hollowcon2.hf.space"
@@ -49764,7 +49768,7 @@ proxies:
     tls: true
     sni: "maple-orchard-fa48-production.up.railway.app"
     client-fingerprint: "chrome"
-  - name: "@Daily_Configs-17"
+  - name: "@Daily_Configs-16"
     type: vless
     server: "104.143.223.217"
     port: 2085
@@ -50111,7 +50115,7 @@ proxies:
       path: "/"
       headers:
         Host: "c12.com"
-  - name: "TEL:Father_vpn-8"
+  - name: "TEL:Father_vpn-9"
     type: vless
     server: "104.19.229.21"
     port: 443
@@ -50215,6 +50219,16 @@ proxies:
     flow: "xtls-rprx-vision"
     network: "tcp"
     tls: true
+    client-fingerprint: "chrome"
+  - name: "@meliproxyy-54"
+    type: vless
+    server: "roma3.moritech.net"
+    port: 443
+    uuid: "cd3bb7d9-7df3-4644-ac05-c260990ac277"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    sni: "roma3.moritech.net"
     client-fingerprint: "chrome"
   - name: "🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧"
     type: vless
@@ -50405,7 +50419,7 @@ proxies:
     reality-opts:
       public-key: "UaZnwKxdigEueBucuJvlq1Jk1nMuRHWs7GnYIYOTWwI"
       sni: "archive.mozilla.org"
-  - name: "@Daily_Configs-18"
+  - name: "@Daily_Configs-17"
     type: vless
     server: "91.196.34.154"
     port: 34111
@@ -50719,7 +50733,7 @@ proxies:
       path: "/eyJqdW5rIjoicVZMOXFIcEN4UkI2azNnIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560"
       headers:
         Host: "edge26-topnet.topnet1127.workers.dev"
-  - name: "TEL:Father_vpn-9"
+  - name: "TEL:Father_vpn-10"
     type: vless
     server: "45.130.125.0"
     port: 443
@@ -51478,7 +51492,7 @@ proxies:
     reality-opts:
       public-key: "OEp5OMlE08EaAunays3K7Lbd0JWKOQKZ8HXiytog4EQ"
       sni: "de3.hat.onl"
-  - name: "@Daily_Configs-19"
+  - name: "@Daily_Configs-18"
     type: vless
     server: "31.76.60.110"
     port: 443
@@ -51514,18 +51528,6 @@ proxies:
     reality-opts:
       public-key: "V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc"
       sni: "gr1.hat.onl"
-  - name: "@Daily_Configs-20"
-    type: vless
-    server: "95.85.228.65"
-    port: 443
-    uuid: "d6b59299-2f48-4e9b-9130-b9e9cb5d0a51"
-    flow: "xtls-rprx-vision"
-    network: "tcp"
-    tls: true
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "PfG1V1-ODHD8CegoTVg8m4G4mw5S1QiA751yWKCkhBc"
-      sni: "nl1.hat.onl"
   - name: "🇺🇸☁️ US"
     type: vless
     server: "skk.moe"
@@ -51537,28 +51539,28 @@ proxies:
       path: "/pyip=ProxyIP.US.CMLiussss.net"
       headers:
         Host: "lucky-cell-d20c.78-107.workers.dev"
-  - name: "@meliproxyy-54"
+  - name: "@meliproxyy-55"
     type: vless
     server: "104.143.223.66"
     port: 2085
     uuid: "d6e792d5-ea82-4e6c-b679-89f49ff7996e"
     network: "grpc"
     tls: false
-  - name: "@meliproxyy-55"
+  - name: "@meliproxyy-56"
     type: vless
     server: "104.143.223.69"
     port: 2085
     uuid: "d6e792d5-ea82-4e6c-b679-89f49ff7996e"
     network: "grpc"
     tls: false
-  - name: "@meliproxyy-56"
+  - name: "@meliproxyy-57"
     type: vless
     server: "104.143.223.80"
     port: 2085
     uuid: "d6e792d5-ea82-4e6c-b679-89f49ff7996e"
     network: "grpc"
     tls: false
-  - name: "@meliproxyy-57"
+  - name: "@meliproxyy-58"
     type: vless
     server: "194.87.59.7"
     port: 2085
@@ -51578,7 +51580,7 @@ proxies:
       path: "/ws/vless/d6fbbc29-9e7c-454d-a791-9b0d068337a2?ed=2048"
       headers:
         Host: "net-f2bc74-fd3396-production.up.railway.app"
-  - name: "@ICV2RAY-18"
+  - name: "@ICV2RAY-16"
     type: vless
     server: "47394715f0acb0a2.taziyanebz.ir"
     port: 8735
@@ -51601,7 +51603,7 @@ proxies:
       path: "/eyJqdW5rIjoiVndBTWp2RGsyc0g4TlgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjoiWzJhMDI6ODk4OjE0Njo2NDo6XSJ9?ed"
       headers:
         Host: "bpb-panel-4e2c.sakwra939.workers.dev"
-  - name: "@Daily_Configs-21"
+  - name: "@Daily_Configs-19"
     type: vless
     server: "199.232.78.159"
     port: 443
@@ -51638,7 +51640,7 @@ proxies:
     reality-opts:
       public-key: "NuS0Su5ozBXBDDBEeBHc2AaeL4qRxK-w9SN4t0VP8Bs"
       sni: "pl.sdssv-vid.online"
-  - name: "@meliproxyy-58"
+  - name: "@meliproxyy-59"
     type: vless
     server: "s.yourvibe.my"
     port: 443
@@ -51932,7 +51934,7 @@ proxies:
       path: "/cloud-vps"
       headers:
         Host: "chrome.yas-nowin.ir"
-  - name: "@Daily_Configs-22"
+  - name: "@Daily_Configs-20"
     type: vless
     server: "31.15.18.174"
     port: 443
@@ -51985,7 +51987,7 @@ proxies:
     reality-opts:
       public-key: "ImWhg9OJ8xUd2Fj4ZkgnURYCABBqumTCqYZNRuxAf34"
       sni: "nl4-6vkfut.vpvr4ib84nuv6hdkt.ru"
-  - name: "@meliproxyy-59"
+  - name: "@meliproxyy-60"
     type: vless
     server: "185.255.179.11"
     port: 443
@@ -52009,7 +52011,7 @@ proxies:
     reality-opts:
       public-key: "RY0VjR_1hwb6oO9FvhRvFOjf4iLfYC95xagmDdk2fCA"
       sni: "us-main-1.hanvpn.biz"
-  - name: "@meliproxyy-60"
+  - name: "@meliproxyy-61"
     type: vless
     server: "212.87.223.55"
     port: 443
@@ -52021,7 +52023,7 @@ proxies:
     reality-opts:
       public-key: "6u5MsvuynzH1dEb7TQ6EJpwApl2Et4yset4cQu8sRD0"
       sni: "eu-west-nl-6.hanvpn.biz"
-  - name: "@meliproxyy-61"
+  - name: "@meliproxyy-62"
     type: vless
     server: "212.87.223.71"
     port: 443
@@ -52079,7 +52081,7 @@ proxies:
     reality-opts:
       public-key: "ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM"
       sni: ""
-  - name: "@meliproxyy-62"
+  - name: "@meliproxyy-63"
     type: vless
     server: "eu-west-nl-5.hanvpn.biz"
     port: 443
@@ -52091,7 +52093,7 @@ proxies:
     reality-opts:
       public-key: "hbC3iY1vomc1WbYJPQ4EjJrxVre5eTBURa-RO9tV9Tw"
       sni: "eu-west-nl-5.hanvpn.biz"
-  - name: "@meliproxyy-63"
+  - name: "@meliproxyy-64"
     type: vless
     server: "eu-west-nl-6.hanvpn.biz"
     port: 443
@@ -52302,7 +52304,7 @@ proxies:
     reality-opts:
       public-key: "4h74KXbkBMYOhJkZabJNsf85cI91ytap_gkl56mzjTU"
       sni: "soulful.host"
-  - name: "@ICV2RAY-19"
+  - name: "@ICV2RAY-17"
     type: vless
     server: "85.90.197.91"
     port: 443
@@ -52516,7 +52518,7 @@ proxies:
     reality-opts:
       public-key: "A1Qf_rMG4KDfLzfCK-M5R9qW_0uThfeSosQnv6LBL1M"
       sni: "www.googletagmanager.com"
-  - name: "@meliproxyy-64"
+  - name: "@meliproxyy-65"
     type: vless
     server: "144.31.126.220"
     port: 6543
@@ -52583,7 +52585,7 @@ proxies:
     reality-opts:
       public-key: "fCVnWVMTCS5fzMMTwk7EaBLlg4a2kAVDt2CG2jwobQ0"
       sni: "download.nvidia.com"
-  - name: "@Daily_Configs-23"
+  - name: "@Daily_Configs-21"
     type: vless
     server: "147.78.182.4"
     port: 443
@@ -52594,7 +52596,7 @@ proxies:
     reality-opts:
       public-key: "EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ"
       sni: "download.nvidia.com"
-  - name: "@meliproxyy-65"
+  - name: "@meliproxyy-66"
     type: vless
     server: "170.168.99.8"
     port: 443
@@ -52605,7 +52607,7 @@ proxies:
     reality-opts:
       public-key: "-GbQJg3bnEGEVFjVaRRu01cgF1f0K_maI4d5MWtMb28"
       sni: "www.epson.com"
-  - name: "@ICV2RAY-20"
+  - name: "@ICV2RAY-18"
     type: vless
     server: "62.233.39.7"
     port: 443
@@ -52616,6 +52618,17 @@ proxies:
     reality-opts:
       public-key: "Sq7mtLmaanwsTVNBR9gU7ECU87ftrb_wFGRLLNRBlmQ"
       sni: "www.philips.com"
+  - name: "🔵@chillguy_vpn-4"
+    type: vless
+    server: "64.49.38.3"
+    port: 8443
+    uuid: "dca76b88-b038-e82b-45e1-1d76b476d7ca"
+    network: "grpc"
+    tls: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "92KJ-ibs1qTy8nODGrHTW8T0b_trG7McLYv8My9o2EE"
+      sni: "download.autodesk.com"
   - name: "@KAFING_2-46"
     type: vless
     server: "104.18.26.90"
@@ -52773,7 +52786,7 @@ proxies:
     reality-opts:
       public-key: "LjEQR0FEtsOs5eQoVsZgJX5ZI0yeadUKTCLoGD641RQ"
       sni: "www.google.com"
-  - name: "@Daily_Configs-24"
+  - name: "@Daily_Configs-22"
     type: vless
     server: "199.232.78.170"
     port: 443
@@ -53548,7 +53561,7 @@ proxies:
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     network: "tcp"
     tls: false
-  - name: "@Daily_Configs-25"
+  - name: "@Daily_Configs-23"
     type: vless
     server: "15.236.112.22"
     port: 22224
@@ -53597,7 +53610,7 @@ proxies:
     uuid: "e4514801-0d5a-42ba-869f-39bd605aef9e"
     network: "tcp"
     tls: false
-  - name: "@Daily_Configs-26"
+  - name: "@Daily_Configs-24"
     type: vless
     server: "15.236.252.3"
     port: 22223
@@ -55075,7 +55088,7 @@ proxies:
     reality-opts:
       public-key: "JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA"
       sni: "cdnjs.cloudflare.com"
-  - name: "@ICV2RAY-21"
+  - name: "@ICV2RAY-19"
     type: vless
     server: "89.106.206.57"
     port: 443
@@ -55162,7 +55175,7 @@ proxies:
     reality-opts:
       public-key: "72SJFDXHCtB2fWWRrjMj23J8iJ8T_2jvj-iNThmLREs"
       sni: "play-apps-features.googleusercontent.com"
-  - name: "@ICV2RAY-22"
+  - name: "@ICV2RAY-20"
     type: vless
     server: "65.109.178.164"
     port: 443
@@ -55184,7 +55197,7 @@ proxies:
     reality-opts:
       public-key: "WlAXTWbhFDMJJHaXkpnbbxEBtQV3lZNoIH86pmYzMx8"
       sni: "play-apps-features.googleusercontent.com"
-  - name: "@ICV2RAY-23"
+  - name: "@ICV2RAY-21"
     type: vless
     server: "91.107.255.230"
     port: 443
@@ -55977,7 +55990,7 @@ proxies:
     reality-opts:
       public-key: "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY"
       sni: "s1.test.anti-zapret.com"
-  - name: "@ICV2RAY-24"
+  - name: "@ICV2RAY-22"
     type: vless
     server: "uk-tube-01.stre4m.net"
     port: 443
@@ -55988,7 +56001,7 @@ proxies:
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
       sni: "jobinvest.ru"
-  - name: "@Shh_Proxy-New⁷-2"
+  - name: "@Shh_Proxy-New⁷-3"
     type: vless
     server: "217.179.220.67"
     port: 8443
@@ -56540,7 +56553,7 @@ proxies:
       path: "/bmi.ir"
       headers:
         Host: "play-apps-features.googleusercontent.com"
-  - name: "@ICV2RAY-25"
+  - name: "@ICV2RAY-23"
     type: vless
     server: "fr-jan.ramcalshoping.ir"
     port: 8088
@@ -56551,7 +56564,7 @@ proxies:
       path: "/bmi.ir"
       headers:
         Host: "play-apps-features.googleusercontent.com"
-  - name: "@ICV2RAY-26"
+  - name: "@ICV2RAY-24"
     type: vless
     server: "pol-hhasca.ramcalshoping.ir"
     port: 8088
@@ -56621,7 +56634,7 @@ proxies:
       path: "/eyJqdW5rIjoiYUVJQnRNVEk1MlJKUiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
       headers:
         Host: "green-flower-361d.iamxenor.workers.dev"
-  - name: "@Daily_Configs-27"
+  - name: "@Daily_Configs-25"
     type: vless
     server: "155.46.213.144"
     port: 443
@@ -57112,7 +57125,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: true
-  - name: "@meliproxyy-66"
+  - name: "@meliproxyy-67"
     type: vmess
     server: "46.8.100.213"
     port: 443
@@ -57121,7 +57134,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: false
-  - name: "@meliproxyy-67"
+  - name: "@meliproxyy-68"
     type: vmess
     server: "46.8.100.213"
     port: 8080
@@ -57148,7 +57161,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: false
-  - name: "🔵@chillguy_vpn-4"
+  - name: "🔵@chillguy_vpn-5"
     type: vmess
     server: "gr.qjcm.ir"
     port: 2086
@@ -57157,7 +57170,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: false
-  - name: "🔵@chillguy_vpn-5"
+  - name: "🔵@chillguy_vpn-6"
     type: vmess
     server: "mnl2.qjcm.ir"
     port: 2086
@@ -57166,7 +57179,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: false
-  - name: "🔵@chillguy_vpn-6"
+  - name: "🔵@chillguy_vpn-7"
     type: vmess
     server: "nll2.qjcm.ir"
     port: 2086
@@ -57437,7 +57450,7 @@ proxies:
     alterId: 0
     network: "tcp"
     tls: false
-  - name: "TEL:Father_vpn-10"
+  - name: "TEL:Father_vpn-11"
     type: vmess
     server: "de.connfull.org"
     port: 2053
@@ -57457,7 +57470,7 @@ proxies:
     tls: false
     grpc-opts:
       grpc-service-name: ""
-  - name: "TEL:Father_vpn-11"
+  - name: "TEL:Father_vpn-12"
     type: vmess
     server: "fr.connfull.org"
     port: 2053
@@ -57645,6 +57658,12 @@ proxies:
     port: 443
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
+  - name: ">>@v2rayNG_Matsuri::XX"
+    type: ss
+    server: "82.38.31.13"
+    port: 8080
+    password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    cipher: "chacha20-ietf-poly1305"
   - name: ">>@v2nodes::XX-1"
     type: ss
     server: "193.29.139.129"
@@ -57657,13 +57676,7 @@ proxies:
     port: 443
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
-  - name: ">>@prrofile_purple::XX"
-    type: ss
-    server: "82.38.31.9"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
-  - name: ">>@v2rayNG_Matsuri::XX"
+  - name: ">>@v2rayNG_Matsuri::XX-1"
     type: ss
     server: "82.38.31.42"
     port: 443
@@ -59094,21 +59107,21 @@ proxies:
     port: 48172
     password: "51yloQC8D9w1Wae7FHtI65"
     cipher: "chacha20-ietf-poly1305"
-  - name: "🇨🇦CA-137.184.174.93-0208"
+  - name: "@Rayan_Config-82.38.31.194-@beepassvpn_bot"
     type: ss
-    server: "137.184.174.93"
+    server: "82.38.31.194"
     port: 8080
-    password: "14fFPrbezE3HDZzsMOr6"
-    cipher: "rc4-md5"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
+  - name: "@Rayan_Config-82.38.31.202-@beepassvpn_bot"
+    type: ss
+    server: "82.38.31.202"
+    port: 8080
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
   - name: "🇬🇧GB-82.38.31.35-0130"
     type: ss
     server: "82.38.31.35"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
-  - name: "🇳🇱NL-193.29.139.235-0131"
-    type: ss
-    server: "193.29.139.235"
     port: 8080
     password: "oZIoA69Q8yhcQV8ka3Pa3A"
     cipher: "chacha20-ietf-poly1305"
@@ -59118,12 +59131,6 @@ proxies:
     port: 8080
     password: "k1dBOmOB4oqi7Ump37a1bQ"
     cipher: "chacha20-ietf-poly1305"
-  - name: "🇳🇱NL-109.201.152.181-0171"
-    type: ss
-    server: "109.201.152.181"
-    port: 443
-    password: "shadowsocks"
-    cipher: "aes-128-cfb"
   - name: "🇰🇷KR-49.254.204.134-0225"
     type: ss
     server: "49.254.204.134"
@@ -68215,17 +68222,17 @@ proxies:
       path: "/"
       headers:
         Host: "081d1aad-rwcsg0-1n7jq.bn.p5pv.com"
-  - name: "🏁RELAY-172.67.74.2-1271"
+  - name: "🏁RELAY-104.26.15.137-1272"
     type: trojan
-    server: "172.67.74.2"
+    server: "104.26.15.137"
     port: 443
     password: "humanity"
     network: "tcp"
     tls: true
     sni: "www.ignitelimit.com"
-  - name: "🏁RELAY-104.26.15.137-1272"
+  - name: "🏁RELAY-104.20.6.134-1273"
     type: trojan
-    server: "104.26.15.137"
+    server: "104.20.6.134"
     port: 443
     password: "humanity"
     network: "tcp"
@@ -71499,6 +71506,13 @@ proxies:
     server: "cf.130209.xyz"
     port: 2053
     password: "65c56e1f-5c41-40bc-b0b5-9346772476ca"
+    network: "tcp"
+    tls: true
+  - name: "🏁RELAY-104.26.14.137-2339"
+    type: trojan
+    server: "104.26.14.137"
+    port: 443
+    password: "humanity"
     network: "tcp"
     tls: true
   - name: "🇨🇳CN-14.29.124.174-2345"
@@ -106693,6 +106707,13 @@ proxies:
     tls: true
     sni: "id.vk.com"
     client-fingerprint: "chrome"
+  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+    type: vless
+    server: "us22.sofast.live"
+    port: 58011
+    uuid: "0afc6426-606c-48e7-bd70-3c424a416842"
+    network: "tcp"
+    tls: false
   - name: "🇭🇰_HK_中国香港->🇺🇸_US_美国"
     type: vmess
     server: "v4.hdacd.com"
@@ -106882,6 +106903,13 @@ proxies:
     password: "gf1"
     sni: "www.docker.com"
     skip-cert-verify: true
+  - name: "🏀34@oneclickvpnkeys"
+    type: hysteria2
+    server: "91.196.32.163"
+    port: 443
+    password: "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj"
+    sni: "germany3.h2corp.local"
+    skip-cert-verify: true
   - name: "@fastkanfig کانال تلگرام-3"
     type: hysteria2
     server: "bwdf2fnt.xn--e1aatfr8bwa.online"
@@ -106996,6 +107024,15 @@ proxies:
     port: 443
     password: "amazonskr05"
     cipher: "aes-256-cfb"
+  - name: "🇸🇪SE_5|1.0MB/s"
+    type: vless
+    server: "170.168.99.8"
+    port: 8443
+    uuid: "dca76b88-b038-e82b-45e1-1d76b476d7ca"
+    network: "grpc"
+    tls: true
+    sni: "cdn.steamstatic.com"
+    client-fingerprint: "chrome"
   - name: "US_speednode_0130"
     type: vless
     server: "38.244.4.1"
@@ -108195,18 +108232,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.ignitelimit.com"
-  - name: "🏳️_未知_258"
-    type: trojan
-    server: "www.speedtest.org"
-    port: 443
-    password: "humanity"
-    network: "ws"
-    tls: true
-    sni: "www.ignitelimit.com"
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
   - name: "🇷🇺_俄罗斯_261"
     type: vless
     server: "95.163.232.171"
@@ -108457,42 +108482,23 @@ proxies:
       path: "/vmess"
       headers:
         Host: "proxy.bingtao.xyz"
-  - name: "🇺🇿[openproxylist.com] vless-UZ"
+  - name: "🇹🇭[openproxylist.com] vless-TH"
     type: vless
-    server: "104.25.155.45"
-    port: 443
-    uuid: "50414e45-4c5f-5a45-5553-4eef5adc237a"
+    server: "v2ray.simspeedup.com"
+    port: 80
+    uuid: "3c52e091-6714-4915-949f-2149fe69951b"
     network: "ws"
-    tls: true
-    sni: "r5zenrelur2s.pqzdileiu8es.workers.dev"
-    client-fingerprint: "chrome"
+    tls: false
     ws-opts:
-      path: "/stream/PANEL_ZEUS/4eef5adc237a/loc-1"
+      path: "/ws"
       headers:
-        Host: "r5zenrelur2s.pqzdileiu8es.workers.dev"
+        Host: "v2ray.simspeedup.com"
   - name: "🇨🇱[openproxylist.com] ss-CL"
     type: ss
     server: "64.176.2.21"
     port: 8388
     password: "xBStBEVqvGwHPocc"
     cipher: "aes-256-gcm"
-  - name: "🇸🇪[openproxylist.com] ss-SE"
-    type: ss
-    server: "70.34.212.124"
-    port: 8388
-    password: "AxIYWtskJWIIaefW"
-    cipher: "aes-256-gcm"
-  - name: "🇸🇪[openproxylist.com] vless-SE"
-    type: vless
-    server: "193.42.39.10"
-    port: 33743
-    uuid: "b3a11068-1a7e-4643-85de-7c82cce46943"
-    network: "grpc"
-    tls: true
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY"
-      sni: "www.google.com"
   - name: "🇮🇹[openproxylist.com] vless-IT"
     type: vless
     server: "172.238.232.239"
@@ -108507,7 +108513,7 @@ proxies:
       sni: "www.intel.com"
   - name: "🇩🇪[openproxylist.com] vmess-DE"
     type: vmess
-    server: "82.139.242.5"
+    server: "91.217.76.237"
     port: 443
     uuid: "db50a20e-7ff5-4e70-948f-17cc9ca7c154"
     cipher: "auto"
@@ -108518,30 +108524,12 @@ proxies:
       path: "/api/v1/gpu-stream/socket"
       headers:
         Host: "renderer-stream-2-62.mirra.now"
-  - name: "🇩🇪[openproxylist.com] vless-DE-1"
-    type: vless
-    server: "cctvhikvision.center"
-    port: 2052
-    uuid: "6f1fef36-db08-4ecb-9227-c1289c257e02"
-    network: "ws"
-    tls: false
-    ws-opts:
-      path: "/@BlueKnight_net--@BlueKnight_net"
-      headers:
-        Host: "uwu.blueknightnet.qzz.io"
   - name: "🇯🇵_JP_日本-1"
     type: hysteria2
     server: "8.211.152.47"
     port: 443
     password: "6219d77fdd9d4570d1c473de7f051c44"
     sni: "8.211.152.47"
-    skip-cert-verify: true
-  - name: "🇷🇺_RU_俄罗斯->🇩🇪_DE_德国-1"
-    type: hysteria2
-    server: "31.76.71.252"
-    port: 443
-    password: "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj"
-    sni: "gta.internet-card.sbs"
     skip-cert-verify: true
   - name: "🇰🇷_KR_韩国-1"
     type: hysteria2
@@ -108564,6 +108552,13 @@ proxies:
     cipher: "auto"
     alterId: 0
     network: "http"
+    tls: false
+  - name: "🇨🇳_CN_中国->🇺🇸_US_美国-1"
+    type: vless
+    server: "jp.sofast.live"
+    port: 52683
+    uuid: "399b6b23-cc40-4831-a494-61948e2df133"
+    network: "tcp"
     tls: false
   - name: "🇸🇬_SG_新加坡"
     type: hysteria2
@@ -111046,6 +111041,19 @@ proxies:
     reality-opts:
       public-key: "iTCQz0n0AolvGxU2ZASJIsSVoKOR9PAFbnZVQDnSnF8"
       sni: "app2.jarvesitw.ru"
+  - name: "🇩🇪 德国_OYP728"
+    type: vless
+    server: "162.249.126.228"
+    port: 443
+    uuid: "6aaa7d1d-8b35-4fd2-ae60-0129ad624935"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    udp: true
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "BuWOXeVcfmw_I8qSPevsxMVS0cH4ua1b_nH-RFtutB8"
+      sni: "de.edgeses.org"
   - name: "🇭🇰 香港_MI7HZK"
     type: vless
     server: "47.76.172.190"
@@ -111058,7 +111066,7 @@ proxies:
     reality-opts:
       public-key: "9nukDgL8dc3PWV07DAwi-_FFj3Y25ifYnnrIp7uV0SI"
       sni: "www.cloudflare.com"
-  - name: "美国+CloudFlare节点-4"
+  - name: "美国+CloudFlare节点-8"
     type: vless
     server: "104.21.8.136"
     port: 443
@@ -111072,7 +111080,7 @@ proxies:
       path: "/8qMLgNapWf6SBxo8fhQlVPYO"
       headers:
         Host: "4-m20.c79324d6-7c42-4d44-be57-c3e1debe6c59.kdns.fr"
-  - name: "美国+CloudFlare节点-5"
+  - name: "美国+CloudFlare节点-9"
     type: vless
     server: "172.67.185.142"
     port: 443
@@ -111086,7 +111094,7 @@ proxies:
       path: "/8qMLgNapWf6SBxo8fhQlVPYO"
       headers:
         Host: "4-m20.c3d5336a-3310-48b7-8505-ec90b7a7df24.kdns.fr"
-  - name: "美国+CloudFlare节点-6"
+  - name: "美国+CloudFlare节点-10"
     type: vless
     server: "104.19.149.119"
     port: 2087
@@ -111100,20 +111108,6 @@ proxies:
       path: "/proxyip=154.3.33.43"
       headers:
         Host: "mianfei-73q.pages.dev"
-  - name: "美国+CloudFlare节点-7"
-    type: vless
-    server: "172.67.205.153"
-    port: 443
-    uuid: "7e26fd8f-d75a-473d-84ba-9f4e3f47d086"
-    network: "ws"
-    tls: true
-    udp: true
-    sni: "7-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/8qMLgNapWf6SBxo8fhQlVPYO"
-      headers:
-        Host: "7-m20.c98a10b6-5ab2-4974-8750-c24cffb2c622.kdns.fr"
   - name: "美国+佛罗里达州迈阿密市"
     type: vless
     server: "72.56.238.46"
@@ -111126,7 +111120,7 @@ proxies:
     reality-opts:
       public-key: "74pbcWZE8Ne6iYrsl_31qy_pWKRrILQiAWfZs2IuGR0"
       sni: "fin.sdssh-vid.online"
-  - name: "美国+CloudFlare节点-8"
+  - name: "美国+CloudFlare节点-11"
     type: vless
     server: "104.21.56.104"
     port: 443
@@ -111140,7 +111134,7 @@ proxies:
       path: "/CjBjB9sn5pCvaSwScc"
       headers:
         Host: "5-M19.AlBaNia.KDNs.Fr"
-  - name: "美国+CloudFlare节点-9"
+  - name: "美国+CloudFlare节点-12"
     type: vless
     server: "172.67.156.222"
     port: 443
@@ -118579,13 +118573,6 @@ proxies:
       path: "/socks5=888:888@hkip.1d.mom:1080"
       headers:
         Host: "vlsovip.1d.mom"
-  - name: "🇺🇸US_313|1.9MB/s|A001-260618 01"
-    type: hysteria2
-    server: "159.223.157.129"
-    port: 8443
-    password: "suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g"
-    sni: "www.microsoft.com"
-    skip-cert-verify: true
   - name: "🇺🇸US_315|391KB/s|T001-260618 01"
     type: vless
     server: "31.58.50.200"
@@ -122102,6 +122089,12 @@ proxies:
     reality-opts:
       public-key: "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY"
       sni: "zvukipro.com"
+  - name: "🇳🇱NL_176|2.6MB/s|A004-260618 01"
+    type: ss
+    server: "82.38.31.195"
+    port: 8080
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    cipher: "chacha20-ietf-poly1305"
   - name: "🇯🇵JP_17|708KB/s|A004-260618 01"
     type: ss
     server: "45.32.16.53"
@@ -122375,18 +122368,6 @@ proxies:
       path: "/pyip=ProxyIP.KR.CMLiussss.net@https://t.me/QiangLieTuiJian"
       headers:
         Host: "shrill-fog-67af.235-e6a.workers.dev"
-  - name: "🇫🇷FR_791|612KB/s|C002-260622 01"
-    type: vless
-    server: "deepl.com"
-    port: 8880
-    uuid: "b1b99d33-8df1-4c74-b140-28941b43a4d2"
-    network: "ws"
-    tls: false
-    udp: true
-    ws-opts:
-      path: "/pyip=ProxyIP.KR.CMLiussss.net"
-      headers:
-        Host: "nameless-poetry-cc33.268-910.workers.dev"
   - name: "🇫🇷FR_792|311KB/s|C002-260622 01"
     type: vless
     server: "104.21.117.9"
@@ -124854,6 +124835,19 @@ proxies:
     reality-opts:
       public-key: "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY"
       sni: "strapi.io"
+  - name: "🇸🇬SG_44|113KB/s|B007-260618 01"
+    type: vless
+    server: "54.255.121.205"
+    port: 43840
+    uuid: "f053b140-9673-4ac5-bc8b-587bfd2c8fd8"
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    tls: true
+    udp: true
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA"
+      sni: "www.sony.com"
   - name: "🇯🇵JP_27|496KB/s|M003-260806 01"
     type: vless
     server: "52.199.9.165"
@@ -126476,20 +126470,6 @@ proxies:
       path: "/pyip=ProxyIP.JP.CMLiussss.net"
       headers:
         Host: "noisy-cherry-b46b.206-866.workers.dev"
-  - name: "🇺🇸US_613|265KB/s|F003-260618 01"
-    type: vless
-    server: "104.21.27.240"
-    port: 443
-    uuid: "7e26fd8f-d75a-473d-84ba-9f4e3f47d086"
-    network: "ws"
-    tls: true
-    udp: true
-    sni: "3-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/8qMLgNapWf6SBxo8fhQlVPYO"
-      headers:
-        Host: "3-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc"
   - name: "🇺🇸US_614|493KB/s|F003-260618 01"
     type: vless
     server: "172.67.198.236"
@@ -129315,20 +129295,6 @@ proxies:
       path: "/8qMLgNapWf6SBxo8fhQlVPYO"
       headers:
         Host: "4-m20.20260721-a5c2-48bd-bb63-efdae93240e3.ccwu.cc"
-  - name: "🇺🇸US_720|579KB/s|F003-260618 01"
-    type: vless
-    server: "104.21.5.156"
-    port: 443
-    uuid: "1aa96574-c28b-4ee9-855d-ebdbbf1f7e90"
-    network: "ws"
-    tls: true
-    udp: true
-    sni: "2-m13.1332afdc-0737-4bb1-8ca8-EE4f0Cd20BC6.kdNs.FR"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ED3ZQPu7lqyeDGD58KabZ"
-      headers:
-        Host: "2-m13.1332aFDC-0737-4Bb1-8cA8-Ee4f0CD20Bc6.kDNS.FR"
   - name: "🇺🇸US_722|528KB/s|F003-260618 01"
     type: vless
     server: "172.67.178.166"
@@ -131200,6 +131166,20 @@ proxies:
       path: "/eyJqdW5rIjoiYVgxNXpobkJlaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0="
       headers:
         Host: "7x70yyvt7eqotx-iq9n3rjt1xn1jwkh9.asdfsafdsaf.workers.dev"
+  - name: "🇧🇪BE_3|1.5MB/s|M003-260806 01"
+    type: vless
+    server: "104.25.155.45"
+    port: 443
+    uuid: "50414e45-4c5f-5a45-5553-4eef5adc237a"
+    network: "ws"
+    tls: true
+    udp: true
+    sni: "r5zenrelur2s.pqzdileiu8es.workers.dev"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/stream/PANEL_ZEUS/4eef5adc237a/loc-1"
+      headers:
+        Host: "r5zenrelur2s.pqzdileiu8es.workers.dev"
   - name: "🇧🇪BE_4|950KB/s|M003-260806 01"
     type: vless
     server: "172.67.210.146"
@@ -140436,12 +140416,6 @@ proxies:
     reality-opts:
       public-key: "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc"
       sni: "tradingview.com"
-  - name: "🇱🇹LT_10|2.1MB/s|A004-260618 01"
-    type: ss
-    server: "195.238.126.20"
-    port: 9045
-    password: "Lp27rqyJq72bZsqX"
-    cipher: "aes-256-cfb"
   - name: "🇬🇧GB_257|5.0MB/s|A004-260618 01"
     type: vless
     server: "109.169.37.43"
@@ -141629,12 +141603,6 @@ proxies:
       path: "/JRr6VGcSLFc034DC6sDbwyWJLbB"
       headers:
         Host: "IMG-eDgE-m16-2.CaNaDA-online.eu.cc"
-  - name: "🇳🇱NL_256|2.2MB/s|G001-260618 01"
-    type: ss
-    server: "82.38.31.69"
-    port: 8080
-    password: "oZIoA69Q8yhcQV8ka3Pa3A"
-    cipher: "chacha20-ietf-poly1305"
   - name: "🇵🇱PL_27|2.3MB/s|M003-260806 01"
     type: vless
     server: "50.7.249.170"
@@ -143720,6 +143688,12 @@ proxies:
       path: "/pyip=ProxyIP.KR.CMLiussss.net"
       headers:
         Host: "withered-cloud-1202.405-42c.workers.dev"
+  - name: "🇸🇪SE_18|780KB/s|T001-260618 01"
+    type: ss
+    server: "70.34.212.124"
+    port: 8388
+    password: "AxIYWtskJWIIaefW"
+    cipher: "aes-256-gcm"
   - name: "🇫🇷FR_2168|1.9MB/s|A004-260618 01"
     type: vless
     server: "cloudflare.seeck.cn"
@@ -143935,18 +143909,6 @@ proxies:
     port: 443
     password: "amazonskr05"
     cipher: "aes-256-cfb"
-  - name: "🇹🇭TH_7|548KB/s|A001-260618 01"
-    type: vless
-    server: "v2ray.simspeedup.com"
-    port: 80
-    uuid: "3c52e091-6714-4915-949f-2149fe69951b"
-    network: "ws"
-    tls: false
-    udp: true
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: "v2ray.simspeedup.com"
   - name: "🇷🇺RU_13|490KB/s|A004-260618 01"
     type: ss
     server: "130.49.189.158"
@@ -144212,6 +144174,12 @@ proxies:
       path: "/"
       headers:
         Host: "faxf32gkfzoxqv.fx6hsv0.ccwu.cc"
+  - name: "🇨🇦CA_82|1.7MB/s|A004-260618 01"
+    type: ss
+    server: "ca225.vpnbook.com"
+    port: 443
+    password: "3ssumf2"
+    cipher: "chacha20-ietf-poly1305"
   - name: "🇫🇷FR_2202|1.5MB/s|B007-260618 01"
     type: vless
     server: "104.16.150.108"
@@ -146009,21 +145977,20 @@ proxy-groups:
     proxies:
       - ♻️ AutoTest
       - DIRECT
-      - "美国+V2CROSS.COM"
-      - "广东省广州市+UCloud"
+      - "丹麦+V2CROSS.COM"
       - "美国+CloudFlare节点"
-      - "美国+CloudFlare节点-1"
-      - "美国+华盛顿Cogent通信公司"
-      - "广东省广州市+UCloud-1"
-      - "巴西圣保罗+CloudFlare节点"
-      - "美国+乔治亚洲亚特兰大Fastly节点"
-      - "英国+V2CROSS.COM"
-      - "美国+CloudFlare节点-2"
       - "英国+社会保险安全部"
+      - "美国+CloudFlare节点-1"
+      - "美国+CloudFlare节点-2"
+      - "英国+V2CROSS.COM"
+      - "捷克+V2CROSS.COM"
       - "美国+CloudFlare节点-3"
-      - "美国+V2CROSS.COM-1"
-      - "爱沙尼亚+V2CROSS.COM"
+      - "美国+CloudFlare节点-4"
+      - "美国+CloudFlare节点-5"
+      - "美国+CloudFlare节点-6"
       - "英国+V2CROSS.COM-1"
+      - "美国+CloudFlare节点-7"
+      - "英国+V2CROSS.COM-2"
       - "US - zhuhai.uk 03"
       - "US - zhuhai.uk 04"
       - "US - zhuhai.uk 05"
@@ -146644,6 +146611,7 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | 6FDC79"
       - "US 🇺🇸 | @Raydikalx | C9E73F"
       - "JP 🇯🇵 | @Raydikalx | 3209D3"
+      - "US 🇺🇸 | @Raydikalx | C3C114"
       - "CA 🇨🇦 | @Raydikalx | 1A6E36"
       - "NL 🇳🇱 | @Raydikalx | B10C19"
       - "PL 🇵🇱 | @Raydikalx | 1F3DAC"
@@ -146787,7 +146755,6 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | CFCA1F"
       - "HK 🇭🇰 | @Raydikalx | 7234B8"
       - "JP 🇯🇵 | @Raydikalx | 060585"
-      - "FR 🇫🇷 | @Raydikalx | D0F0B9"
       - "HK 🇭🇰 | @Raydikalx | 795769"
       - "TW 🇹🇼 | @Raydikalx | F75059"
       - "SG 🇸🇬 | @Raydikalx | 7A1660"
@@ -146843,6 +146810,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 1F0561"
       - "US 🇺🇸 | @Raydikalx | 3F6402"
       - "CA 🇨🇦 | @Raydikalx | 17116D"
+      - "BE 🇧🇪 | @Raydikalx | 6AC90C"
       - "CA 🇨🇦 | @Raydikalx | 398A99"
       - "CA 🇨🇦 | @Raydikalx | 25A781"
       - "CA 🇨🇦 | @Raydikalx | 73DB4B"
@@ -147006,6 +146974,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 39D89D"
       - "FR 🇫🇷 | @Raydikalx | 73231D"
       - "KZ 🇰🇿 | @Raydikalx | 47B4AC"
+      - "CA 🇨🇦 | @Raydikalx | 0B0F91"
       - "CA 🇨🇦 | @Raydikalx | 492C9B"
       - "US 🇺🇸 | @Raydikalx | 2B1C6C"
       - "US 🇺🇸 | @Raydikalx | 142D40"
@@ -147027,6 +146996,7 @@ proxy-groups:
       - "HK 🇭🇰 | @Raydikalx | CDE182"
       - "HK 🇭🇰 | @Raydikalx | D53DDD"
       - "CA 🇨🇦 | @Raydikalx | 088D78"
+      - "CA 🇨🇦 | @Raydikalx | 6227B7"
       - "CA 🇨🇦 | @Raydikalx | 736B50"
       - "CA 🇨🇦 | @Raydikalx | 8B794D"
       - "BG 🇧🇬 | @Raydikalx | C9FCFD"
@@ -147046,19 +147016,21 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | 27BFAA"
       - "hysteria2-655713431"
       - "hysteria2-1278719479"
+      - "hysteria2-296929603"
       - "hysteria2-1295976920"
       - "hysteria2-1296090371"
       - "hysteria2-1255010039"
+      - "hysteria2-1281961368"
+      - "hysteria2-1289897527"
       - "hysteria2-591633775"
       - "hysteria2-650671509"
       - "hysteria2-1210298803"
       - "hysteria2-1045025820"
       - "hysteria2-1284850378"
       - "shadowsocks-1296006037"
-      - "shadowsocks-83630747"
-      - "trojan-133769367"
+      - "shadowsocks-1274174345"
+      - "trojan-201299290"
       - "hysteria2-1232696196"
-      - "hysteria2-856461941"
       - "hysteria2-1291941742"
       - "hysteria2-737135161"
       - "hysteria2-1046909543"
@@ -147067,11 +147039,12 @@ proxy-groups:
       - "hysteria2-971362777"
       - "shadowsocks-468218487"
       - "shadowsocks-468218613"
-      - "shadowsocks-254910437"
+      - "shadowsocks-1290365863"
+      - "trojan-2525867"
       - "vless-1205876725"
       - "vmess-485686933"
       - "hysteria2-956723733"
-      - "hysteria2-1281961368"
+      - "hysteria2-180178213"
       - "hysteria2-1142149999"
       - "hysteria2-932065352"
       - "hysteria2-1045025838"
@@ -147084,34 +147057,29 @@ proxy-groups:
       - "hysteria2-1045026816"
       - "hysteria2-857369683"
       - "hysteria2-857107263"
-      - "hysteria2-48396262"
-      - "hysteria2-1066924734"
       - "shadowsocks-468218514"
-      - "shadowsocks-127255"
+      - "shadowsocks-91981760"
       - "trojan-1284133120"
-      - "vless-1293946936"
       - "vless-1279131586"
       - "vless-725797379"
       - "hysteria2-1087758493"
-      - "hysteria2-848874255"
+      - "hysteria2-143263693"
+      - "hysteria2-207301017"
       - "hysteria2-1058426437"
       - "hysteria2-1045025806"
-      - "hysteria2-200242612"
       - "hysteria2-928823637"
       - "hysteria2-652726817"
-      - "hysteria2-143263693"
-      - "hysteria2-13527647"
+      - "shadowsocks-12792821"
+      - "shadowsocks-187"
       - "trojan-897442828"
       - "vless-1260157437"
       - "vless-1259627594"
-      - "vless-1141982328"
       - "vless-1287267870"
       - "vless-1151376484"
-      - "vless-1274597157"
       - "vless-803222314"
       - "vmess-712805962"
-      - "vmess-145234"
       - "vmess-1293163126"
+      - "hysteria2-479013117"
       - "hysteria2-647019510"
       - "hysteria2-996886195"
       - "hysteria2-1045026815"
@@ -147120,26 +147088,25 @@ proxy-groups:
       - "hysteria2-896855667"
       - "hysteria2-655767069"
       - "hysteria2-855833185"
-      - "hysteria2-200394203"
       - "hysteria2-1118674279"
-      - "shadowsocks-129824"
-      - "shadowsocks-169"
+      - "shadowsocks-166"
+      - "shadowsocks-83630747"
       - "shadowsocks-27269"
-      - "shadowsocks-10899"
-      - "shadowsocks-1274174345"
-      - "trojan-79476398"
-      - "trojan-2525867"
-      - "trojan-123134632"
+      - "shadowsocks-179"
+      - "trojan-98121908"
       - "vless-1181146323"
       - "vless-1301930841"
       - "vless-1260157439"
       - "vless-656168799"
       - "vless-1281678351"
+      - "vless-1019463451"
       - "vless-1294595442"
       - "vless-1294275797"
+      - "vless-1011139750"
       - "vless-1018151551"
       - "vless-1284063888"
       - "vless-1289124866"
+      - "vmess-145234"
       - "hysteria2-1111846067"
       - "hysteria2-855401605"
       - "hysteria2-1163840406"
@@ -147150,15 +147117,16 @@ proxy-groups:
       - "hysteria2-474576783"
       - "hysteria2-1005932813"
       - "hysteria2-856354795"
-      - "shadowsocks-172"
+      - "shadowsocks-127255"
       - "shadowsocks-738053629"
       - "shadowsocks-819466521"
       - "shadowsocks-779606815"
-      - "shadowsocks-275"
-      - "shadowsocks-11024"
+      - "shadowsocks-254910437"
+      - "shadowsocks-11045"
+      - "shadowsocks-10899"
+      - "trojan-856679830"
       - "trojan-635823137"
       - "trojan-1143294023"
-      - "trojan-2520867"
       - "vless-1245590268"
       - "vless-1301907874"
       - "vless-1272388880"
@@ -147167,8 +147135,8 @@ proxy-groups:
       - "vless-1300049254"
       - "vless-875271586"
       - "vless-1300049257"
-      - "vless-1294062233"
       - "vless-1019459804"
+      - "vless-1224495307"
       - "vless-1294275790"
       - "vless-1298274294"
       - "vless-1291036916"
@@ -147178,6 +147146,7 @@ proxy-groups:
       - "vmess-1048363126"
       - "hysteria2-573042062"
       - "hysteria2-1149856388"
+      - "hysteria2-177823913"
       - "hysteria2-657042644"
       - "hysteria2-881852124"
       - "hysteria2-862083260"
@@ -147188,11 +147157,14 @@ proxy-groups:
       - "hysteria2-720834172"
       - "hysteria2-1005907717"
       - "hysteria2-1059313769"
-      - "shadowsocks-277388490"
       - "shadowsocks-696781307"
       - "shadowsocks-795694264"
-      - "shadowsocks-812343760"
       - "shadowsocks-11048"
+      - "shadowsocks-10898"
+      - "shadowsocks-27285"
+      - "shadowsocks-130088"
+      - "shadowsocks-181"
+      - "trojan-2520867"
       - "vless-1268262184"
       - "vless-1300707741"
       - "vless-1301907876"
@@ -147202,28 +147174,28 @@ proxy-groups:
       - "vless-1299665629"
       - "vless-1294543628"
       - "vless-1294543615"
-      - "vless-1294066230"
       - "vless-1302925893"
+      - "vless-27000"
       - "vless-1277964829"
       - "vless-1247220683"
       - "vless-716054701"
       - "vless-1279478362"
-      - "vless-1286550601"
       - "vless-1231429203"
-      - "vless-1157879699"
       - "vless-1292946053"
       - "vmess-1048363138"
       - "vmess-1301846542"
+      - "hysteria2-159719813"
       - "hysteria2-860759685"
       - "hysteria2-468884155"
       - "hysteria2-1208885900"
       - "hysteria2-781397524"
       - "hysteria2-855762695"
       - "hysteria2-1059437573"
-      - "shadowsocks-1212526365"
       - "shadowsocks-812343744"
       - "shadowsocks-717969033"
-      - "shadowsocks-1290365863"
+      - "shadowsocks-812343760"
+      - "shadowsocks-738053582"
+      - "shadowsocks-205"
       - "vless-625724260"
       - "vless-1287883462"
       - "vless-1287883465"
@@ -147234,8 +147206,6 @@ proxy-groups:
       - "vless-1299665622"
       - "vless-1299665636"
       - "vless-1299665637"
-      - "vless-1286417770"
-      - "vless-2290579"
       - "vless-1300049262"
       - "vless-1277965781"
       - "vless-1277964793"
@@ -147243,17 +147213,18 @@ proxy-groups:
       - "vless-1300049246"
       - "vless-1220630118"
       - "vless-1278721299"
-      - "vless-1274597147"
-      - "vless-1293946433"
+      - "vless-1125467414"
       - "vless-1294275796"
-      - "vless-1294015954"
+      - "vless-1157879699"
       - "vless-976474882"
       - "vless-1291036914"
+      - "vless-1258929858"
       - "vless-1257315595"
       - "vless-1267371431"
       - "vless-1267372049"
+      - "vless-1157879800"
       - "vless-1292944080"
-      - "vless-1274373871"
+      - "vless-1157879774"
       - "vmess-1221516007"
       - "vmess-1244738599"
       - "未知 SS-210 | free-nodes"
@@ -147482,8 +147453,6 @@ proxy-groups:
       - "未知 SS-452 | free-nodes"
       - "未知 SS-457 | free-nodes"
       - "未知 SS-458 | free-nodes"
-      - "未知 SS-462 | free-nodes"
-      - "未知 SS-464 | free-nodes"
       - "未知 SS-473 | free-nodes"
       - "未知 SS-474 | free-nodes"
       - "未知 SS-475 | free-nodes"
@@ -147494,7 +147463,6 @@ proxy-groups:
       - "未知 SS-480 | free-nodes"
       - "未知 SS-481 | free-nodes"
       - "未知 SS-482 | free-nodes"
-      - "未知 SS-485 | free-nodes"
       - "未知 SS-487 | free-nodes"
       - "未知 SS-488 | free-nodes"
       - "未知 SS-490 | free-nodes"
@@ -148464,7 +148432,6 @@ proxy-groups:
       - "@KAFING_2-3"
       - "@ICV2RAY-5"
       - "@ICV2RAY-6"
-      - "@ICV2RAY-7"
       - "@Maznet - SOS520"
       - "@KAFING_2-4"
       - "[052382] - 🇬🇧 United Kingdom | @freenettir"
@@ -148474,13 +148441,14 @@ proxy-groups:
       - "🩵+@Azarakhsh_Proxy+🩷-3"
       - "@appsooner کانال تلگرام 🕊️"
       - "🇮🇹⇝ @GpConnectSho کانکت شو! 💠"
+      - "@Shh_Proxy-New⁷"
       - "🇳🇱139740 | ⚡️Telegram = t.me/SOSkeyNET"
       - "[052385] - 🇳🇱 The Netherlands | @freenettir"
       - "@CUSTOMVPNSERVER-1"
       - "@EXPRESSVPN_420  👈🏻 کانال تلگرام"
-      - "@ICV2RAY-8"
       - "@SylphNet | 2026-07-14 21:29"
       - "🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱"
+      - "TEL:Father_vpn"
       - "🇮🇷@tanhant"
       - "[052386] - 🇸🇪 Sweden | @freenettir"
       - "@ATOVPN"
@@ -148582,11 +148550,11 @@ proxy-groups:
       - "@v2ray_phoenix-2"
       - "🩵+@Azarakhsh_Proxy+🩷-15"
       - "@leviconfigs🪐-26"
-      - "TEL:Father_vpn"
+      - "TEL:Father_vpn-1"
       - "@v2ray_ng"
       - "@V2rayng3"
       - "Telegram: @Daily_Configs"
-      - "@ICV2RAY-9"
+      - "@ICV2RAY-7"
       - "@i10VPN4️⃣"
       - "@v2raybaaz ²"
       - "🇫🇷 - FR - @FreeOnlineVPN"
@@ -148672,7 +148640,7 @@ proxy-groups:
       - "[ 🇨🇦 ] | @Cfox_SerVer"
       - "☀️ 🅵🅸🆇.🅸🅿.🇩🇪 ¦ 🖥️ARN ¦ 👤VEGAAS_6437359110 ¦ 🏷️ ¦ 📊18.41GB ¦ ⏳27d 1h 41m"
       - "@Shh_Proxy-New¹⁰"
-      - "@Shh_Proxy-New⁷"
+      - "@Shh_Proxy-New⁷-1"
       - "@configprxy"
       - "🇩🇪139844 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇫🇮139907 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -148755,7 +148723,7 @@ proxy-groups:
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-2"
       - "𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn-2"
       - "@filembad-1"
-      - "TEL:Father_vpn-1"
+      - "TEL:Father_vpn-2"
       - "t.me/ConfigFori  -  Config 88290"
       - "t.me/ConfigFori  -  Config 88292"
       - "@ehsawn8-500gig"
@@ -148864,7 +148832,7 @@ proxy-groups:
       - "Free x233 @Outline_Vpn"
       - "𝗝𝗼𝗶𝗻➠@V2RAYNG_IP-1"
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-3"
-      - "TEL:Father_vpn-2"
+      - "TEL:Father_vpn-3"
       - "@IRAN_V2RAY1 🌟"
       - " MTMVPN 12"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-10"
@@ -148874,7 +148842,7 @@ proxy-groups:
       - "@GozargahAzad|🇺🇸-2"
       - "🇺🇸 - US - @FreeOnlineVPN-1"
       - "咕-2"
-      - "@Shh_Proxy-New⁷-1"
+      - "@Shh_Proxy-New⁷-2"
       - "112"
       - "@zyzzzoao"
       - "🇩🇪⇝ @GpConnectSho کانکت شو! 💠-3"
@@ -148882,7 +148850,7 @@ proxy-groups:
       - "🇮🇳 | 5"
       - "@WebShecan-27Mordad-1"
       - "All Operators @MaSTeRSeRVeR1-4"
-      - "TEL:Father_vpn-3"
+      - "TEL:Father_vpn-4"
       - "@leviconfigs🪐-30"
       - "کانال تلگرام : Free_VPN_CH@-11"
       - "[🇩🇪]t.me/ConfigV2RayNG"
@@ -148997,7 +148965,7 @@ proxy-groups:
       - "@ehsawn8"
       - "channel : @freedomofinfor-1"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-12"
-      - "TEL:Father_vpn-4"
+      - "TEL:Father_vpn-5"
       - "Telegram @mtmvpn-8"
       - "@appsooner کانال تلگرام-1"
       - "@appsooner کانال تلگرام-2"
@@ -149136,7 +149104,7 @@ proxy-groups:
       - "@VConfing-1"
       - "@v2ray_phoenix-10"
       - "@fastkanfig کانال تلگرام-2"
-      - "@ICV2RAY-10"
+      - "@ICV2RAY-8"
       - "@Hope_Net-join-us-on-Telegram-2"
       - "🇨🇦139819 | ⚡️Telegram = t.me/SOSkeyNET"
       - "6"
@@ -149309,7 +149277,7 @@ proxy-groups:
       - "⛽71@oneclickvpnkeys"
       - "德国-2"
       - "⛽67@oneclickvpnkeys"
-      - "@ICV2RAY-11"
+      - "@ICV2RAY-9"
       - "⛽72@oneclickvpnkeys"
       - "@V2ray_Alpha🐍 10"
       - "PRISONVPNc"
@@ -149319,7 +149287,7 @@ proxy-groups:
       - "@V2ray_confiig-7"
       - "@V2RAYNG_IP-1"
       - "🇩🇪 @V2ngFast-7"
-      - "@ICV2RAY-12"
+      - "@ICV2RAY-10"
       - "channel : @freedomofinfor-4"
       - "TEL;Father_vpn-31"
       - "119"
@@ -149446,7 +149414,7 @@ proxy-groups:
       - "@Net2ray 6"
       - "@uonvpn اختصاصی 🇱🇷B"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-31"
-      - "TEL:Father_vpn-5"
+      - "TEL:Father_vpn-6"
       - "🇩🇪All⁹ | @BigSmoke_Config"
       - "@vasl_bashim"
       - "Free x160 @Outline_Vpn"
@@ -149627,7 +149595,7 @@ proxy-groups:
       - "@V2ray_confiig-9"
       - "• 🇳🇱 | 𝗡𝗲𝘁𝗵𝗲𝗿𝗹𝗮𝗻𝗱𝘀 - @HesarWeb-1"
       - "kurdconfig"
-      - "@ICV2RAY-13"
+      - "@ICV2RAY-11"
       - "[ 🇷🇺 ] | @Cfox_SerVer-1"
       - "@appsooner کانال تلگرام 🕊️-13"
       - "🇩🇪All¹ | @BigSmoke_Config-3"
@@ -149800,6 +149768,7 @@ proxy-groups:
       - "🇺🇸171071 | ⚡️Telegram = t.me/SOSkeyNET"
       - "SPDNET-1 🇳🇱"
       - "SPDNET-3 🇳🇱"
+      - "@V2RAYNG_IP شبانه🌚-2"
       - "🇺🇸 CxrolVPN"
       - "🇺🇸 CxrolVPN-1"
       - "🇺🇸 CxrolVPN-2"
@@ -149891,17 +149860,16 @@ proxy-groups:
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-3"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-2"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-3"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-5"
       - "[ 🇨🇦 ] | @Cfox_SerVer-10"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-6"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-7"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-8"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-9"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-6"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
       - "@Hope_Net-join-us-on-Telegram-48"
       - "🚀@VPNine1"
       - "🇨🇦CA_2181_@Surfboardv2ray"
@@ -150153,7 +150121,7 @@ proxy-groups:
       - "🔥 @free_conf_iran 🔥 14"
       - "TEL;Father_vpn-52"
       - "TEL;Father_vpn-53"
-      - "TEL:Father_vpn-6"
+      - "TEL:Father_vpn-7"
       - "@v2rayng3-32"
       - "@EVAY_VPN 9"
       - "TEL;Father_vpn-54"
@@ -150369,7 +150337,7 @@ proxy-groups:
       - "🇳🇱  ConfigV2RayNG"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-3"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-4"
-      - "TEL:Father_vpn-7"
+      - "TEL:Father_vpn-8"
       - "@brayirani •☕ | عضو شید قطع نشید"
       - "TEL;Father_vpn-60"
       - "@MIMITDL کانال ما🔥⚡  کانفیگ رایگان(به اتمام رسید)  پنل با همین کیفیت موجود شد(امروز"
@@ -150517,7 +150485,7 @@ proxy-groups:
       - "Telegram: @Configfori-1"
       - "All Operators @MaSTeRSeRVeR1-29"
       - "Free x242 @Outline_Vpn"
-      - "@ICV2RAY-14"
+      - "@ICV2RAY-12"
       - "🇳🇱139851 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇳🇱139893 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪-4"
@@ -150622,7 +150590,7 @@ proxy-groups:
       - "@v2rayng3-38"
       - "@hopev2ray🩵"
       - "@v2rayng3-39"
-      - "@ICV2RAY-15"
+      - "@ICV2RAY-13"
       - "vpnsal-3"
       - "vpnsal-4"
       - "vpnsal-5"
@@ -150688,8 +150656,8 @@ proxy-groups:
       - "@EVAY_VPN 1-1"
       - "@confiig_hub-20"
       - "[🇫🇮]t.me/ConfigV2RayNG"
-      - "@ICV2RAY-16"
-      - "@ICV2RAY-17"
+      - "@ICV2RAY-14"
+      - "@ICV2RAY-15"
       - "110"
       - "🇩🇪 @V2ngFast-19"
       - "🌐سرور 27 | @ELiV2Ray"
@@ -150702,15 +150670,14 @@ proxy-groups:
       - "@leviconfigs🪐-6-3"
       - "@leviconfigs🪐-1-2"
       - "تو کانال نتورلد نباشید قطع میشن@networld_vpn-2"
-      - "@Daily_Configs-13"
       - "@Tanhanet"
       - "Channel-@Azaranv2ray-3"
-      - "@Daily_Configs-14"
+      - "@Daily_Configs-13"
       - "🇫🇷⇝ @GpConnectSho کانکت شو! 💠-6"
       - "Arshiavpn12-6"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-9"
       - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-6"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-8"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
       - "@EVAY_VPN 8"
       - "🇹🇷@FreakConfig"
       - "کانال تلگرام : Free_VPN_CH@-81"
@@ -150742,7 +150709,7 @@ proxy-groups:
       - "@NETMelliAnti-5"
       - "@FarazV2ray-8"
       - "@meliproxyy-45"
-      - "@Daily_Configs-15"
+      - "@Daily_Configs-14"
       - "@FarazV2ray-9"
       - "@meliproxyy-46"
       - "@meliproxyy-47"
@@ -150751,7 +150718,7 @@ proxy-groups:
       - "波兰-1"
       - "@Sparrk_VPN-8"
       - "[ 🇳🇱 ] | @Cfox_SerVer"
-      - "@Daily_Configs-16"
+      - "@Daily_Configs-15"
       - "کانال تلگرام : Free_VPN_CH@-82"
       - "1 🇺🇸 @V2ngNet-1"
       - "kurdconfig-2"
@@ -150826,13 +150793,14 @@ proxy-groups:
       - "کانال تلگرام : Free_VPN_CH@-84"
       - "TEL;Father_vpn-64"
       - "✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | 🚀 | 🇺🇸"
+      - "@Begoo_VPN ²⁹¹"
       - "@hollowcon-6"
       - "@Begoo_VPN ²⁸⁷"
       - "@filembad-9"
       - "@filembad-10"
       - "کانال ما-3"
       - "All Operators @MaSTeRSeRVeR1-30"
-      - "@Daily_Configs-17"
+      - "@Daily_Configs-16"
       - "@v2raybaaz-6"
       - "⛽94@oneclickvpnkeys"
       - "🇩🇪@LOCKEY_VPN-8"
@@ -150865,7 +150833,7 @@ proxy-groups:
       - "@tootffarangi🍓-1-1"
       - "@ansooyefilter 🔥❤️"
       - "🇩🇪All¹ | @BigSmoke_Config-4"
-      - "TEL:Father_vpn-8"
+      - "TEL:Father_vpn-9"
       - "@confiig_hub-23"
       - "@hollowcon-7"
       - "🇷🇺139743 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -150875,6 +150843,7 @@ proxy-groups:
       - "🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
       - "@meliproxyy-52"
       - "@meliproxyy-53"
+      - "@meliproxyy-54"
       - "🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧"
       - "✨ @NOFiLTERING2 | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪-2"
       - "🇨🇭 direct"
@@ -150892,7 +150861,7 @@ proxy-groups:
       - "@hex_proxy ⁵-2"
       - "@hex_proxy ⁶"
       - "@hex_proxy ¹"
-      - "@Daily_Configs-18"
+      - "@Daily_Configs-17"
       - "@hex_proxy ²"
       - "Telegram @mtmvpn  15"
       - "کانال تلگرام : Free_VPN_CH@-85"
@@ -150919,7 +150888,7 @@ proxy-groups:
       - "کانال تلگرام : Free_VPN_CH@-86"
       - "Telegram 🆔@cnetvpn 🇩🇪-1"
       - "کانال تلگرام : Free_VPN_CH@-87"
-      - "TEL:Father_vpn-9"
+      - "TEL:Father_vpn-10"
       - "🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-1"
       - "@appsooner کانال تلگرام 🕊️-26"
       - "🇫🇮 AzadMarz [ Irancell / Rightel ]-JOIN  : @AzadMarz-8"
@@ -150986,22 +150955,21 @@ proxy-groups:
       - "Arshiavpn12-8"
       - "🇺🇸139836 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@GozargahAzad|🇩🇪-1"
-      - "@Daily_Configs-19"
+      - "@Daily_Configs-18"
       - "[052402] - 🇫🇮 Finland | ⚡️ 1.04ms | @freenettir"
       - "𝗝𝗼𝗶𝗻➠@V2RAYNG_IP-10"
-      - "@Daily_Configs-20"
       - "🇺🇸☁️ US"
-      - "@meliproxyy-54"
       - "@meliproxyy-55"
       - "@meliproxyy-56"
       - "@meliproxyy-57"
+      - "@meliproxyy-58"
       - "♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️📶‎🛰️544🌐🆕️"
-      - "@ICV2RAY-18"
+      - "@ICV2RAY-16"
       - "@V2ray_confiig-19"
-      - "@Daily_Configs-21"
+      - "@Daily_Configs-19"
       - "@Alpha_V2rayip-7"
       - "@Alpha_V2rayip-8"
-      - "@meliproxyy-58"
+      - "@meliproxyy-59"
       - "@v2ray313 کانالمون 😍"
       - "Free x172 @Outline_Vpn"
       - "@v2ray313 کانالمون 😃-1"
@@ -151027,21 +150995,21 @@ proxy-groups:
       - "🇩🇪171054 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@Alfred_Config-6"
       - "@Alfred_Config-7"
-      - "@Daily_Configs-22"
+      - "@Daily_Configs-20"
       - "@v2mystery 👈 عضو شو-16"
       - "Free x258 @Outline_Vpn"
       - "@V2ray_Alpha🧸 8"
       - "@FarazV2ray-11"
-      - "@meliproxyy-59"
-      - "• 🇺🇸 | United States - @HesarWeb"
       - "@meliproxyy-60"
+      - "• 🇺🇸 | United States - @HesarWeb"
       - "@meliproxyy-61"
+      - "@meliproxyy-62"
       - "Free x248 @Outline_Vpn"
       - "🇮🇹⇝ @GpConnectSho کانکت شو! 💠-6"
       - "Tel-@ProxyMtAlpha🐴 8"
       - "@Sparrk_VPN-10"
-      - "@meliproxyy-62"
       - "@meliproxyy-63"
+      - "@meliproxyy-64"
       - "Telegram @mtmvpn-23"
       - "@ansooyefilter ❤️💫"
       - "@V2ray_Alpha🫘 1"
@@ -151060,7 +151028,7 @@ proxy-groups:
       - "@i10VPN🥉"
       - "捷克"
       - "🇩🇪All⁷ | @BigSmoke_Config-2"
-      - "@ICV2RAY-19"
+      - "@ICV2RAY-17"
       - "🇺🇳 UN-3"
       - "@Hope_Net-join-us-on-Telegram-66"
       - "@Hope_Net-join-us-on-Telegram-67"
@@ -151078,15 +151046,16 @@ proxy-groups:
       - "@Iran_v2ray1 🌟-1"
       - "🇩🇪⇝ @GpConnectSho کانکت شو! 💠-8"
       - "@v2rayng3-42"
-      - "@meliproxyy-64"
+      - "@meliproxyy-65"
       - "🇺🇳☁️ UN"
       - "configprxy-8"
       - "@SylphNet | 2026-06-27 05:03"
       - "🔵@chillguy_vpn-2"
       - "🔵@chillguy_vpn-3"
-      - "@Daily_Configs-23"
-      - "@meliproxyy-65"
-      - "@ICV2RAY-20"
+      - "@Daily_Configs-21"
+      - "@meliproxyy-66"
+      - "@ICV2RAY-18"
+      - "🔵@chillguy_vpn-4"
       - "@KAFING_2-46"
       - "@KAFING_2-47"
       - "@KAFING_2-48"
@@ -151102,7 +151071,7 @@ proxy-groups:
       - "🇹🇭🟧 TH"
       - "🔥⚡@MimiTdL ⚡🔥"
       - "@EXPRESSVPN_420  👈🏻 کانال تلگرام-2"
-      - "@Daily_Configs-24"
+      - "@Daily_Configs-22"
       - "@CxrolVPN"
       - "کانال تلگرام : Free_VPN_CH@-96"
       - "@B2Hub-3"
@@ -151187,14 +151156,14 @@ proxy-groups:
       - "🇫🇷139801 | ⚡️Telegram = t.me/SOSkeyNET"
       - "(S103)🇨🇵t.me/PrivateVPNs"
       - "@vmesskhodam-5"
-      - "@Daily_Configs-25"
+      - "@Daily_Configs-23"
       - "@GozargahAzad|🇫🇷"
       - "@Napsternetvirani-1"
       - "@B2Hub-4"
       - "🇩🇪All³ | @BigSmoke_Config-4"
       - "V2ray_confiig-5"
       - "(S103)🇨🇵t.me/PrivateVPNs-1"
-      - "@Daily_Configs-26"
+      - "@Daily_Configs-24"
       - "kurdconfig-3"
       - "@V2ray_Alpha🍭 6"
       - "V2ray_confiig-6"
@@ -151339,7 +151308,7 @@ proxy-groups:
       - "@v2rayng3-51"
       - "香港-9"
       - "香港-10"
-      - "@ICV2RAY-21"
+      - "@ICV2RAY-19"
       - "@Sparrk_VPN-11"
       - "𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn-19"
       - "🇷🇺139910 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -151347,9 +151316,9 @@ proxy-groups:
       - "🇩🇪139731 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@B2Hub-5"
       - "@bored_vpn-19"
-      - "@ICV2RAY-22"
+      - "@ICV2RAY-20"
       - "@v2raybaaz ²-2"
-      - "@ICV2RAY-23"
+      - "@ICV2RAY-21"
       - "Telegram: @Daily_Configs-9"
       - "@configprxy-27"
       - "@configprxy 🇳🇱"
@@ -151421,8 +151390,8 @@ proxy-groups:
       - "All Operators @MaSTeRSeRVeR1-43"
       - "@leviconfigs🪐-7-4"
       - "[ 🇩🇪 ] | @Cfox_SerVer-2"
-      - "@ICV2RAY-24"
-      - "@Shh_Proxy-New⁷-2"
+      - "@ICV2RAY-22"
+      - "@Shh_Proxy-New⁷-3"
       - "🇮🇷139730 | ⚡️Telegram = t.me/SOSkeyNET"
       - "کانال تلگرام : Free_VPN_CH@-105"
       - "@v2ray_phoenix-29"
@@ -151474,14 +151443,14 @@ proxy-groups:
       - "🇮🇷139782 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@V2ray_confiig-28"
       - "Free x222 @Outline_Vpn"
-      - "@ICV2RAY-25"
-      - "@ICV2RAY-26"
+      - "@ICV2RAY-23"
+      - "@ICV2RAY-24"
       - "Free x229 @Outline_Vpn"
       - "@Hope_Net-join-us-on-Telegram-74"
       - "113"
       - "114-1"
       - "@KAFING_2-54"
-      - "@Daily_Configs-27"
+      - "@Daily_Configs-25"
       - "@iTV2RAY+/+MCI-4"
       - "VPN @MimiTdl 🔥⚡-1"
       - "@Net2ray FI🇫🇮"
@@ -151525,13 +151494,13 @@ proxy-groups:
       - "🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-7"
       - "🇩🇪139810 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇳🇱139729 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "@meliproxyy-66"
       - "@meliproxyy-67"
+      - "@meliproxyy-68"
       - "🇹🇷139866 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇮🇷171046 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🔵@chillguy_vpn-4"
       - "🔵@chillguy_vpn-5"
       - "🔵@chillguy_vpn-6"
+      - "🔵@chillguy_vpn-7"
       - "🇨🇦139900 | ⚡️Telegram = t.me/SOSkeyNET"
       - "A42"
       - "🇫🇮Finland: @v2ryNG01 جدید"
@@ -151558,9 +151527,9 @@ proxy-groups:
       - "@custom_config"
       - "@VConfing-6"
       - "@Shh_Proxy-New⁶-5"
-      - "TEL:Father_vpn-10"
-      - "@NETMelliAnti👈🏻👈🏻سرورجدید داخل چنل🥀❤-3"
       - "TEL:Father_vpn-11"
+      - "@NETMelliAnti👈🏻👈🏻سرورجدید داخل چنل🥀❤-3"
+      - "TEL:Father_vpn-12"
       - "@appsooner کانال تلگرام 🕊️-31"
       - "@EXPRESSVPN_420-5"
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-7"
@@ -151581,10 +151550,10 @@ proxy-groups:
       - ">>@oneclickvpnkeys::PL-2"
       - ">>@freeland8::XX"
       - ">>@v2nodes::XX"
+      - ">>@v2rayNG_Matsuri::XX"
       - ">>@v2nodes::XX-1"
       - ">>@VmessProtocol::XX"
-      - ">>@prrofile_purple::XX"
-      - ">>@v2rayNG_Matsuri::XX"
+      - ">>@v2rayNG_Matsuri::XX-1"
       - ">>@shadowproxy66::XX"
       - ">>@shadowproxy66::KR"
       - ">>@configV2rayNG::IT"
@@ -151711,11 +151680,10 @@ proxy-groups:
       - "@Rayan_Config 3.33-1"
       - "Fast Deploy Your Own Worker For Creation Of Configs : https://telegraph.rayan-config.workers.dev/translate-2"
       - "Ainita Server azure-sto.edgeservers.org"
-      - "🇨🇦CA-137.184.174.93-0208"
+      - "@Rayan_Config-82.38.31.194-@beepassvpn_bot"
+      - "@Rayan_Config-82.38.31.202-@beepassvpn_bot"
       - "🇬🇧GB-82.38.31.35-0130"
-      - "🇳🇱NL-193.29.139.235-0131"
       - "🇳🇱NL-193.29.139.223-0155"
-      - "🇳🇱NL-109.201.152.181-0171"
       - "🇰🇷KR-49.254.204.134-0225"
       - "🇭🇰HK-103.149.182.79-5161"
       - "🇰🇷KR-218.237.185.230-0258"
@@ -152547,8 +152515,8 @@ proxy-groups:
       - "🇫🇷FR-146.70.158.111-1268"
       - "🏁RELAY-104.31.16.3-1269"
       - "🇭🇰HK-203.218.71.40-1270"
-      - "🏁RELAY-172.67.74.2-1271"
       - "🏁RELAY-104.26.15.137-1272"
+      - "🏁RELAY-104.20.6.134-1273"
       - "🇯🇵JP-139.162.117.173-1277"
       - "🇯🇵JP-168.138.44.176-1278"
       - "🇰🇷KR-138.2.113.248-1279"
@@ -152914,6 +152882,7 @@ proxy-groups:
       - "🇩🇪DE-185.137.157.254-2329"
       - "🇳🇱NL-163.172.220.71-2333"
       - "🏁RELAY-172.64.53.89-2335"
+      - "🏁RELAY-104.26.14.137-2339"
       - "🇨🇳CN-14.29.124.174-2345"
       - "🇺🇸US-192.96.204.250-2348"
       - "🇰🇷KR-141.164.39.146-2354"
@@ -156838,6 +156807,7 @@ proxy-groups:
       - "🔒 VL-WS-TLS 🇲🇩 MD-213.159.68.143:443"
       - "🇺🇸_US_美国"
       - "🇷🇺_RU_俄罗斯->🇩🇪_DE_德国"
+      - "🇨🇳_CN_中国->🇺🇸_US_美国"
       - "🇭🇰_HK_中国香港->🇺🇸_US_美国"
       - "🇺🇸_US_美国-1"
       - "🇭🇰_HK_中国香港"
@@ -156863,6 +156833,7 @@ proxy-groups:
       - "@V2ray_confiig #3"
       - "未命名"
       - "⛽86@oneclickvpnkeys"
+      - "🏀34@oneclickvpnkeys"
       - "@fastkanfig کانال تلگرام-3"
       - "🇸🇪SE_1|1.7MB/s"
       - "🇸🇪SE_2|2.4MB/s"
@@ -156875,6 +156846,7 @@ proxy-groups:
       - "🇺🇸US_20|1.4MB/s"
       - "🇺🇸US_21|1.0MB/s"
       - "🇫🇷FR_1|2.7MB/s"
+      - "🇸🇪SE_5|1.0MB/s"
       - "US_speednode_0130"
       - "US_speednode_0132"
       - "US_speednode_0135"
@@ -156980,7 +156952,6 @@ proxy-groups:
       - "🇸🇨_塞舌尔_206"
       - "🏳️_未知_218"
       - "🏳️_未知_220"
-      - "🏳️_未知_258"
       - "🇷🇺_俄罗斯_261"
       - "🏳️_未知_263"
       - "🇦🇪_阿拉伯联合酋长国_311"
@@ -157001,18 +156972,15 @@ proxy-groups:
       - "🇩🇪[openproxylist.com] vless-DE"
       - "🇪🇪[openproxylist.com] vless-EE"
       - "🇺🇸[openproxylist.com] vmess-US"
-      - "🇺🇿[openproxylist.com] vless-UZ"
+      - "🇹🇭[openproxylist.com] vless-TH"
       - "🇨🇱[openproxylist.com] ss-CL"
-      - "🇸🇪[openproxylist.com] ss-SE"
-      - "🇸🇪[openproxylist.com] vless-SE"
       - "🇮🇹[openproxylist.com] vless-IT"
       - "🇩🇪[openproxylist.com] vmess-DE"
-      - "🇩🇪[openproxylist.com] vless-DE-1"
       - "🇯🇵_JP_日本-1"
-      - "🇷🇺_RU_俄罗斯->🇩🇪_DE_德国-1"
       - "🇰🇷_KR_韩国-1"
       - "🇺🇸_US_美国-3"
       - "🇯🇵_JP_日本-2"
+      - "🇨🇳_CN_中国->🇺🇸_US_美国-1"
       - "🇸🇬_SG_新加坡"
       - "❓免費節點丨yoyapai.com"
       - "🇫🇷法國丨yoyapai.com"
@@ -157235,14 +157203,14 @@ proxy-groups:
       - "🇫🇮 芬兰_2QFOEB"
       - "🇳🇱 荷兰_6Z87WK"
       - "🇳🇱 荷兰_SLK2Y9"
+      - "🇩🇪 德国_OYP728"
       - "🇭🇰 香港_MI7HZK"
-      - "美国+CloudFlare节点-4"
-      - "美国+CloudFlare节点-5"
-      - "美国+CloudFlare节点-6"
-      - "美国+CloudFlare节点-7"
-      - "美国+佛罗里达州迈阿密市"
       - "美国+CloudFlare节点-8"
       - "美国+CloudFlare节点-9"
+      - "美国+CloudFlare节点-10"
+      - "美国+佛罗里达州迈阿密市"
+      - "美国+CloudFlare节点-11"
+      - "美国+CloudFlare节点-12"
       - "伊朗+V2CROSS.COM"
       - "US美国(mibei77.com 米贝节点分享)-23"
       - "FR法国(mibei77.com 米贝节点分享)-2"
@@ -157847,7 +157815,6 @@ proxy-groups:
       - "🇫🇷FR_577|5.6MB/s|B007-260618 01"
       - "🇫🇷FR_580|527KB/s|M003-260806 01"
       - "🇺🇸US_309|426KB/s|T001-260618 01"
-      - "🇺🇸US_313|1.9MB/s|A001-260618 01"
       - "🇺🇸US_315|391KB/s|T001-260618 01"
       - "🇯🇵JP_10|624KB/s|A004-260618 01"
       - "🇫🇷FR_583|547KB/s|C002-260622 01"
@@ -158155,6 +158122,7 @@ proxy-groups:
       - "🇦🇪AE_97|7.5MB/s|A004-260618 01"
       - "🇸🇬SG_33|541KB/s|A004-260618 01"
       - "🇦🇷AR_3|357KB/s|S004-260618 01"
+      - "🇳🇱NL_176|2.6MB/s|A004-260618 01"
       - "🇯🇵JP_17|708KB/s|A004-260618 01"
       - "🇳🇴NO_3|314KB/s|S001-260618 01"
       - "🇱🇻LV_19|2.4MB/s|A004-260618 01"
@@ -158183,7 +158151,6 @@ proxy-groups:
       - "🇫🇷FR_788|586KB/s|C002-260622 01"
       - "🇫🇷FR_789|1.3MB/s|C002-260622 01"
       - "🇫🇷FR_790|363KB/s|C002-260622 01"
-      - "🇫🇷FR_791|612KB/s|C002-260622 01"
       - "🇫🇷FR_792|311KB/s|C002-260622 01"
       - "🇫🇷FR_793|330KB/s|X001-260618 01"
       - "🇫🇷FR_794|409KB/s|B007-260618 01"
@@ -158382,6 +158349,7 @@ proxy-groups:
       - "🇫🇷FR_965|659KB/s|A004-260618 01"
       - "🇦🇪AE_108|743KB/s|A004-260618 01"
       - "🇬🇧GB_133|1.5MB/s|A004-260618 01"
+      - "🇸🇬SG_44|113KB/s|B007-260618 01"
       - "🇯🇵JP_27|496KB/s|M003-260806 01"
       - "🇫🇷FR_967|821KB/s|M003-260806 01"
       - "🇱🇹LT_7|2.4MB/s|M003-260806 01"
@@ -158513,7 +158481,6 @@ proxy-groups:
       - "🇫🇷FR_1056|555KB/s|P002-260618 01"
       - "🇫🇷FR_1057|667KB/s|V007-260618 01"
       - "🇫🇷FR_1058|438KB/s|V007-260618 01"
-      - "🇺🇸US_613|265KB/s|F003-260618 01"
       - "🇺🇸US_614|493KB/s|F003-260618 01"
       - "🇰🇿KZ_3|941KB/s|M003-260806 01"
       - "🇰🇿KZ_4|1007KB/s|M003-260806 01"
@@ -158734,7 +158701,6 @@ proxy-groups:
       - "🇺🇸US_714|499KB/s|F003-260618 01"
       - "🇺🇸US_717|859KB/s|F003-260618 01"
       - "🇺🇸US_718|525KB/s|F003-260618 01"
-      - "🇺🇸US_720|579KB/s|F003-260618 01"
       - "🇺🇸US_722|528KB/s|F003-260618 01"
       - "🇺🇸US_723|557KB/s|F003-260618 01"
       - "🇺🇸US_724|1.1MB/s|F003-260618 01"
@@ -158881,6 +158847,7 @@ proxy-groups:
       - "🇫🇷FR_1318|660KB/s|M003-260806 01"
       - "🇫🇷FR_1319|634KB/s|T001-260618 01"
       - "🇫🇷FR_1320|349KB/s|B007-260618 01"
+      - "🇧🇪BE_3|1.5MB/s|M003-260806 01"
       - "🇧🇪BE_4|950KB/s|M003-260806 01"
       - "🇫🇷FR_1322|2.2MB/s|M003-260806 01"
       - "🇫🇷FR_1323|306KB/s|M002-260618 01"
@@ -159588,7 +159555,6 @@ proxy-groups:
       - "🇷🇴RO_95|2.2MB/s|R002-260618 01"
       - "🇮🇹IT_53|2.3MB/s|M002-260618 01"
       - "🇦🇪AE_126|4.0MB/s|M003-260806 01"
-      - "🇱🇹LT_10|2.1MB/s|A004-260618 01"
       - "🇬🇧GB_257|5.0MB/s|A004-260618 01"
       - "🇫🇷FR_1948|394KB/s|B007-260618 01"
       - "🇫🇷FR_1949|3.3MB/s|B007-260618 01"
@@ -159681,7 +159647,6 @@ proxy-groups:
       - "🇫🇷FR_2020|531KB/s|M003-260806 01"
       - "🇫🇷FR_2021|514KB/s|A004-260618 01"
       - "🇺🇸US_860|905KB/s|F003-260618 01"
-      - "🇳🇱NL_256|2.2MB/s|G001-260618 01"
       - "🇵🇱PL_27|2.3MB/s|M003-260806 01"
       - "🇬🇧GB_298|5.4MB/s|A001-260618 01"
       - "🇫🇷FR_2023|1.1MB/s|B007-260618 01"
@@ -159847,6 +159812,7 @@ proxy-groups:
       - "🇪🇸ES_35|387KB/s|M003-260806 01"
       - "🇫🇷FR_2166|247KB/s|M003-260806 01"
       - "🇫🇷FR_2167|1.3MB/s|M003-260806 01"
+      - "🇸🇪SE_18|780KB/s|T001-260618 01"
       - "🇫🇷FR_2168|1.9MB/s|A004-260618 01"
       - "🇫🇷FR_2169|1.1MB/s|A004-260618 01"
       - "🇹🇷TR_8|457KB/s|A004-260618 01"
@@ -159869,7 +159835,6 @@ proxy-groups:
       - "🇫🇷FR_2178|3.8MB/s|M003-260806 01"
       - "🇳🇴NO_17|3.4MB/s|M003-260806 01"
       - "🇬🇧GB_341|3.9MB/s|A001-260618 01"
-      - "🇹🇭TH_7|548KB/s|A001-260618 01"
       - "🇷🇺RU_13|490KB/s|A004-260618 01"
       - "🇫🇷FR_2180|1.6MB/s|B007-260618 01"
       - "🇺🇸US_930|846KB/s|B007-260618 01"
@@ -159891,6 +159856,7 @@ proxy-groups:
       - "🇶🇦QA_5|354KB/s|M003-260806 01"
       - "🇫🇷FR_2200|1.8MB/s|T001-260618 01"
       - "🇫🇷FR_2201|2.2MB/s|B007-260618 01"
+      - "🇨🇦CA_82|1.7MB/s|A004-260618 01"
       - "🇫🇷FR_2202|1.5MB/s|B007-260618 01"
       - "🇫🇷FR_2203|1.5MB/s|F003-260618 01"
       - "🇫🇷FR_2204|1.7MB/s|F003-260618 01"
@@ -160054,23 +160020,22 @@ proxy-groups:
   - name: ♻️ AutoTest
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 300
+    interval: 600
     proxies:
-      - "美国+V2CROSS.COM"
-      - "广东省广州市+UCloud"
+      - "丹麦+V2CROSS.COM"
       - "美国+CloudFlare节点"
-      - "美国+CloudFlare节点-1"
-      - "美国+华盛顿Cogent通信公司"
-      - "广东省广州市+UCloud-1"
-      - "巴西圣保罗+CloudFlare节点"
-      - "美国+乔治亚洲亚特兰大Fastly节点"
-      - "英国+V2CROSS.COM"
-      - "美国+CloudFlare节点-2"
       - "英国+社会保险安全部"
+      - "美国+CloudFlare节点-1"
+      - "美国+CloudFlare节点-2"
+      - "英国+V2CROSS.COM"
+      - "捷克+V2CROSS.COM"
       - "美国+CloudFlare节点-3"
-      - "美国+V2CROSS.COM-1"
-      - "爱沙尼亚+V2CROSS.COM"
+      - "美国+CloudFlare节点-4"
+      - "美国+CloudFlare节点-5"
+      - "美国+CloudFlare节点-6"
       - "英国+V2CROSS.COM-1"
+      - "美国+CloudFlare节点-7"
+      - "英国+V2CROSS.COM-2"
       - "US - zhuhai.uk 03"
       - "US - zhuhai.uk 04"
       - "US - zhuhai.uk 05"
@@ -160691,6 +160656,7 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | 6FDC79"
       - "US 🇺🇸 | @Raydikalx | C9E73F"
       - "JP 🇯🇵 | @Raydikalx | 3209D3"
+      - "US 🇺🇸 | @Raydikalx | C3C114"
       - "CA 🇨🇦 | @Raydikalx | 1A6E36"
       - "NL 🇳🇱 | @Raydikalx | B10C19"
       - "PL 🇵🇱 | @Raydikalx | 1F3DAC"
@@ -160834,7 +160800,6 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | CFCA1F"
       - "HK 🇭🇰 | @Raydikalx | 7234B8"
       - "JP 🇯🇵 | @Raydikalx | 060585"
-      - "FR 🇫🇷 | @Raydikalx | D0F0B9"
       - "HK 🇭🇰 | @Raydikalx | 795769"
       - "TW 🇹🇼 | @Raydikalx | F75059"
       - "SG 🇸🇬 | @Raydikalx | 7A1660"
@@ -160890,6 +160855,7 @@ proxy-groups:
       - "US 🇺🇸 | @Raydikalx | 1F0561"
       - "US 🇺🇸 | @Raydikalx | 3F6402"
       - "CA 🇨🇦 | @Raydikalx | 17116D"
+      - "BE 🇧🇪 | @Raydikalx | 6AC90C"
       - "CA 🇨🇦 | @Raydikalx | 398A99"
       - "CA 🇨🇦 | @Raydikalx | 25A781"
       - "CA 🇨🇦 | @Raydikalx | 73DB4B"
@@ -161053,6 +161019,7 @@ proxy-groups:
       - "CA 🇨🇦 | @Raydikalx | 39D89D"
       - "FR 🇫🇷 | @Raydikalx | 73231D"
       - "KZ 🇰🇿 | @Raydikalx | 47B4AC"
+      - "CA 🇨🇦 | @Raydikalx | 0B0F91"
       - "CA 🇨🇦 | @Raydikalx | 492C9B"
       - "US 🇺🇸 | @Raydikalx | 2B1C6C"
       - "US 🇺🇸 | @Raydikalx | 142D40"
@@ -161074,6 +161041,7 @@ proxy-groups:
       - "HK 🇭🇰 | @Raydikalx | CDE182"
       - "HK 🇭🇰 | @Raydikalx | D53DDD"
       - "CA 🇨🇦 | @Raydikalx | 088D78"
+      - "CA 🇨🇦 | @Raydikalx | 6227B7"
       - "CA 🇨🇦 | @Raydikalx | 736B50"
       - "CA 🇨🇦 | @Raydikalx | 8B794D"
       - "BG 🇧🇬 | @Raydikalx | C9FCFD"
@@ -161093,19 +161061,21 @@ proxy-groups:
       - "NL 🇳🇱 | @Raydikalx | 27BFAA"
       - "hysteria2-655713431"
       - "hysteria2-1278719479"
+      - "hysteria2-296929603"
       - "hysteria2-1295976920"
       - "hysteria2-1296090371"
       - "hysteria2-1255010039"
+      - "hysteria2-1281961368"
+      - "hysteria2-1289897527"
       - "hysteria2-591633775"
       - "hysteria2-650671509"
       - "hysteria2-1210298803"
       - "hysteria2-1045025820"
       - "hysteria2-1284850378"
       - "shadowsocks-1296006037"
-      - "shadowsocks-83630747"
-      - "trojan-133769367"
+      - "shadowsocks-1274174345"
+      - "trojan-201299290"
       - "hysteria2-1232696196"
-      - "hysteria2-856461941"
       - "hysteria2-1291941742"
       - "hysteria2-737135161"
       - "hysteria2-1046909543"
@@ -161114,11 +161084,12 @@ proxy-groups:
       - "hysteria2-971362777"
       - "shadowsocks-468218487"
       - "shadowsocks-468218613"
-      - "shadowsocks-254910437"
+      - "shadowsocks-1290365863"
+      - "trojan-2525867"
       - "vless-1205876725"
       - "vmess-485686933"
       - "hysteria2-956723733"
-      - "hysteria2-1281961368"
+      - "hysteria2-180178213"
       - "hysteria2-1142149999"
       - "hysteria2-932065352"
       - "hysteria2-1045025838"
@@ -161131,34 +161102,29 @@ proxy-groups:
       - "hysteria2-1045026816"
       - "hysteria2-857369683"
       - "hysteria2-857107263"
-      - "hysteria2-48396262"
-      - "hysteria2-1066924734"
       - "shadowsocks-468218514"
-      - "shadowsocks-127255"
+      - "shadowsocks-91981760"
       - "trojan-1284133120"
-      - "vless-1293946936"
       - "vless-1279131586"
       - "vless-725797379"
       - "hysteria2-1087758493"
-      - "hysteria2-848874255"
+      - "hysteria2-143263693"
+      - "hysteria2-207301017"
       - "hysteria2-1058426437"
       - "hysteria2-1045025806"
-      - "hysteria2-200242612"
       - "hysteria2-928823637"
       - "hysteria2-652726817"
-      - "hysteria2-143263693"
-      - "hysteria2-13527647"
+      - "shadowsocks-12792821"
+      - "shadowsocks-187"
       - "trojan-897442828"
       - "vless-1260157437"
       - "vless-1259627594"
-      - "vless-1141982328"
       - "vless-1287267870"
       - "vless-1151376484"
-      - "vless-1274597157"
       - "vless-803222314"
       - "vmess-712805962"
-      - "vmess-145234"
       - "vmess-1293163126"
+      - "hysteria2-479013117"
       - "hysteria2-647019510"
       - "hysteria2-996886195"
       - "hysteria2-1045026815"
@@ -161167,26 +161133,25 @@ proxy-groups:
       - "hysteria2-896855667"
       - "hysteria2-655767069"
       - "hysteria2-855833185"
-      - "hysteria2-200394203"
       - "hysteria2-1118674279"
-      - "shadowsocks-129824"
-      - "shadowsocks-169"
+      - "shadowsocks-166"
+      - "shadowsocks-83630747"
       - "shadowsocks-27269"
-      - "shadowsocks-10899"
-      - "shadowsocks-1274174345"
-      - "trojan-79476398"
-      - "trojan-2525867"
-      - "trojan-123134632"
+      - "shadowsocks-179"
+      - "trojan-98121908"
       - "vless-1181146323"
       - "vless-1301930841"
       - "vless-1260157439"
       - "vless-656168799"
       - "vless-1281678351"
+      - "vless-1019463451"
       - "vless-1294595442"
       - "vless-1294275797"
+      - "vless-1011139750"
       - "vless-1018151551"
       - "vless-1284063888"
       - "vless-1289124866"
+      - "vmess-145234"
       - "hysteria2-1111846067"
       - "hysteria2-855401605"
       - "hysteria2-1163840406"
@@ -161197,15 +161162,16 @@ proxy-groups:
       - "hysteria2-474576783"
       - "hysteria2-1005932813"
       - "hysteria2-856354795"
-      - "shadowsocks-172"
+      - "shadowsocks-127255"
       - "shadowsocks-738053629"
       - "shadowsocks-819466521"
       - "shadowsocks-779606815"
-      - "shadowsocks-275"
-      - "shadowsocks-11024"
+      - "shadowsocks-254910437"
+      - "shadowsocks-11045"
+      - "shadowsocks-10899"
+      - "trojan-856679830"
       - "trojan-635823137"
       - "trojan-1143294023"
-      - "trojan-2520867"
       - "vless-1245590268"
       - "vless-1301907874"
       - "vless-1272388880"
@@ -161214,8 +161180,8 @@ proxy-groups:
       - "vless-1300049254"
       - "vless-875271586"
       - "vless-1300049257"
-      - "vless-1294062233"
       - "vless-1019459804"
+      - "vless-1224495307"
       - "vless-1294275790"
       - "vless-1298274294"
       - "vless-1291036916"
@@ -161225,6 +161191,7 @@ proxy-groups:
       - "vmess-1048363126"
       - "hysteria2-573042062"
       - "hysteria2-1149856388"
+      - "hysteria2-177823913"
       - "hysteria2-657042644"
       - "hysteria2-881852124"
       - "hysteria2-862083260"
@@ -161235,11 +161202,14 @@ proxy-groups:
       - "hysteria2-720834172"
       - "hysteria2-1005907717"
       - "hysteria2-1059313769"
-      - "shadowsocks-277388490"
       - "shadowsocks-696781307"
       - "shadowsocks-795694264"
-      - "shadowsocks-812343760"
       - "shadowsocks-11048"
+      - "shadowsocks-10898"
+      - "shadowsocks-27285"
+      - "shadowsocks-130088"
+      - "shadowsocks-181"
+      - "trojan-2520867"
       - "vless-1268262184"
       - "vless-1300707741"
       - "vless-1301907876"
@@ -161249,28 +161219,28 @@ proxy-groups:
       - "vless-1299665629"
       - "vless-1294543628"
       - "vless-1294543615"
-      - "vless-1294066230"
       - "vless-1302925893"
+      - "vless-27000"
       - "vless-1277964829"
       - "vless-1247220683"
       - "vless-716054701"
       - "vless-1279478362"
-      - "vless-1286550601"
       - "vless-1231429203"
-      - "vless-1157879699"
       - "vless-1292946053"
       - "vmess-1048363138"
       - "vmess-1301846542"
+      - "hysteria2-159719813"
       - "hysteria2-860759685"
       - "hysteria2-468884155"
       - "hysteria2-1208885900"
       - "hysteria2-781397524"
       - "hysteria2-855762695"
       - "hysteria2-1059437573"
-      - "shadowsocks-1212526365"
       - "shadowsocks-812343744"
       - "shadowsocks-717969033"
-      - "shadowsocks-1290365863"
+      - "shadowsocks-812343760"
+      - "shadowsocks-738053582"
+      - "shadowsocks-205"
       - "vless-625724260"
       - "vless-1287883462"
       - "vless-1287883465"
@@ -161281,8 +161251,6 @@ proxy-groups:
       - "vless-1299665622"
       - "vless-1299665636"
       - "vless-1299665637"
-      - "vless-1286417770"
-      - "vless-2290579"
       - "vless-1300049262"
       - "vless-1277965781"
       - "vless-1277964793"
@@ -161290,17 +161258,18 @@ proxy-groups:
       - "vless-1300049246"
       - "vless-1220630118"
       - "vless-1278721299"
-      - "vless-1274597147"
-      - "vless-1293946433"
+      - "vless-1125467414"
       - "vless-1294275796"
-      - "vless-1294015954"
+      - "vless-1157879699"
       - "vless-976474882"
       - "vless-1291036914"
+      - "vless-1258929858"
       - "vless-1257315595"
       - "vless-1267371431"
       - "vless-1267372049"
+      - "vless-1157879800"
       - "vless-1292944080"
-      - "vless-1274373871"
+      - "vless-1157879774"
       - "vmess-1221516007"
       - "vmess-1244738599"
       - "未知 SS-210 | free-nodes"
@@ -161529,8 +161498,6 @@ proxy-groups:
       - "未知 SS-452 | free-nodes"
       - "未知 SS-457 | free-nodes"
       - "未知 SS-458 | free-nodes"
-      - "未知 SS-462 | free-nodes"
-      - "未知 SS-464 | free-nodes"
       - "未知 SS-473 | free-nodes"
       - "未知 SS-474 | free-nodes"
       - "未知 SS-475 | free-nodes"
@@ -161541,7 +161508,6 @@ proxy-groups:
       - "未知 SS-480 | free-nodes"
       - "未知 SS-481 | free-nodes"
       - "未知 SS-482 | free-nodes"
-      - "未知 SS-485 | free-nodes"
       - "未知 SS-487 | free-nodes"
       - "未知 SS-488 | free-nodes"
       - "未知 SS-490 | free-nodes"
@@ -162511,7 +162477,6 @@ proxy-groups:
       - "@KAFING_2-3"
       - "@ICV2RAY-5"
       - "@ICV2RAY-6"
-      - "@ICV2RAY-7"
       - "@Maznet - SOS520"
       - "@KAFING_2-4"
       - "[052382] - 🇬🇧 United Kingdom | @freenettir"
@@ -162521,13 +162486,14 @@ proxy-groups:
       - "🩵+@Azarakhsh_Proxy+🩷-3"
       - "@appsooner کانال تلگرام 🕊️"
       - "🇮🇹⇝ @GpConnectSho کانکت شو! 💠"
+      - "@Shh_Proxy-New⁷"
       - "🇳🇱139740 | ⚡️Telegram = t.me/SOSkeyNET"
       - "[052385] - 🇳🇱 The Netherlands | @freenettir"
       - "@CUSTOMVPNSERVER-1"
       - "@EXPRESSVPN_420  👈🏻 کانال تلگرام"
-      - "@ICV2RAY-8"
       - "@SylphNet | 2026-07-14 21:29"
       - "🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱"
+      - "TEL:Father_vpn"
       - "🇮🇷@tanhant"
       - "[052386] - 🇸🇪 Sweden | @freenettir"
       - "@ATOVPN"
@@ -162629,11 +162595,11 @@ proxy-groups:
       - "@v2ray_phoenix-2"
       - "🩵+@Azarakhsh_Proxy+🩷-15"
       - "@leviconfigs🪐-26"
-      - "TEL:Father_vpn"
+      - "TEL:Father_vpn-1"
       - "@v2ray_ng"
       - "@V2rayng3"
       - "Telegram: @Daily_Configs"
-      - "@ICV2RAY-9"
+      - "@ICV2RAY-7"
       - "@i10VPN4️⃣"
       - "@v2raybaaz ²"
       - "🇫🇷 - FR - @FreeOnlineVPN"
@@ -162719,7 +162685,7 @@ proxy-groups:
       - "[ 🇨🇦 ] | @Cfox_SerVer"
       - "☀️ 🅵🅸🆇.🅸🅿.🇩🇪 ¦ 🖥️ARN ¦ 👤VEGAAS_6437359110 ¦ 🏷️ ¦ 📊18.41GB ¦ ⏳27d 1h 41m"
       - "@Shh_Proxy-New¹⁰"
-      - "@Shh_Proxy-New⁷"
+      - "@Shh_Proxy-New⁷-1"
       - "@configprxy"
       - "🇩🇪139844 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇫🇮139907 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -162802,7 +162768,7 @@ proxy-groups:
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-2"
       - "𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn-2"
       - "@filembad-1"
-      - "TEL:Father_vpn-1"
+      - "TEL:Father_vpn-2"
       - "t.me/ConfigFori  -  Config 88290"
       - "t.me/ConfigFori  -  Config 88292"
       - "@ehsawn8-500gig"
@@ -162911,7 +162877,7 @@ proxy-groups:
       - "Free x233 @Outline_Vpn"
       - "𝗝𝗼𝗶𝗻➠@V2RAYNG_IP-1"
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-3"
-      - "TEL:Father_vpn-2"
+      - "TEL:Father_vpn-3"
       - "@IRAN_V2RAY1 🌟"
       - " MTMVPN 12"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-10"
@@ -162921,7 +162887,7 @@ proxy-groups:
       - "@GozargahAzad|🇺🇸-2"
       - "🇺🇸 - US - @FreeOnlineVPN-1"
       - "咕-2"
-      - "@Shh_Proxy-New⁷-1"
+      - "@Shh_Proxy-New⁷-2"
       - "112"
       - "@zyzzzoao"
       - "🇩🇪⇝ @GpConnectSho کانکت شو! 💠-3"
@@ -162929,7 +162895,7 @@ proxy-groups:
       - "🇮🇳 | 5"
       - "@WebShecan-27Mordad-1"
       - "All Operators @MaSTeRSeRVeR1-4"
-      - "TEL:Father_vpn-3"
+      - "TEL:Father_vpn-4"
       - "@leviconfigs🪐-30"
       - "کانال تلگرام : Free_VPN_CH@-11"
       - "[🇩🇪]t.me/ConfigV2RayNG"
@@ -163044,7 +163010,7 @@ proxy-groups:
       - "@ehsawn8"
       - "channel : @freedomofinfor-1"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-12"
-      - "TEL:Father_vpn-4"
+      - "TEL:Father_vpn-5"
       - "Telegram @mtmvpn-8"
       - "@appsooner کانال تلگرام-1"
       - "@appsooner کانال تلگرام-2"
@@ -163183,7 +163149,7 @@ proxy-groups:
       - "@VConfing-1"
       - "@v2ray_phoenix-10"
       - "@fastkanfig کانال تلگرام-2"
-      - "@ICV2RAY-10"
+      - "@ICV2RAY-8"
       - "@Hope_Net-join-us-on-Telegram-2"
       - "🇨🇦139819 | ⚡️Telegram = t.me/SOSkeyNET"
       - "6"
@@ -163356,7 +163322,7 @@ proxy-groups:
       - "⛽71@oneclickvpnkeys"
       - "德国-2"
       - "⛽67@oneclickvpnkeys"
-      - "@ICV2RAY-11"
+      - "@ICV2RAY-9"
       - "⛽72@oneclickvpnkeys"
       - "@V2ray_Alpha🐍 10"
       - "PRISONVPNc"
@@ -163366,7 +163332,7 @@ proxy-groups:
       - "@V2ray_confiig-7"
       - "@V2RAYNG_IP-1"
       - "🇩🇪 @V2ngFast-7"
-      - "@ICV2RAY-12"
+      - "@ICV2RAY-10"
       - "channel : @freedomofinfor-4"
       - "TEL;Father_vpn-31"
       - "119"
@@ -163493,7 +163459,7 @@ proxy-groups:
       - "@Net2ray 6"
       - "@uonvpn اختصاصی 🇱🇷B"
       - "@prrofile_purple | 𝗙𝗮𝗦𝗧 💚-31"
-      - "TEL:Father_vpn-5"
+      - "TEL:Father_vpn-6"
       - "🇩🇪All⁹ | @BigSmoke_Config"
       - "@vasl_bashim"
       - "Free x160 @Outline_Vpn"
@@ -163674,7 +163640,7 @@ proxy-groups:
       - "@V2ray_confiig-9"
       - "• 🇳🇱 | 𝗡𝗲𝘁𝗵𝗲𝗿𝗹𝗮𝗻𝗱𝘀 - @HesarWeb-1"
       - "kurdconfig"
-      - "@ICV2RAY-13"
+      - "@ICV2RAY-11"
       - "[ 🇷🇺 ] | @Cfox_SerVer-1"
       - "@appsooner کانال تلگرام 🕊️-13"
       - "🇩🇪All¹ | @BigSmoke_Config-3"
@@ -163847,6 +163813,7 @@ proxy-groups:
       - "🇺🇸171071 | ⚡️Telegram = t.me/SOSkeyNET"
       - "SPDNET-1 🇳🇱"
       - "SPDNET-3 🇳🇱"
+      - "@V2RAYNG_IP شبانه🌚-2"
       - "🇺🇸 CxrolVPN"
       - "🇺🇸 CxrolVPN-1"
       - "🇺🇸 CxrolVPN-2"
@@ -163938,17 +163905,16 @@ proxy-groups:
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-3"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-2"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-3"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-5"
       - "[ 🇨🇦 ] | @Cfox_SerVer-10"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-4"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-6"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-7"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-8"
       - "🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-9"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-5"
       - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-6"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
       - "@Hope_Net-join-us-on-Telegram-48"
       - "🚀@VPNine1"
       - "🇨🇦CA_2181_@Surfboardv2ray"
@@ -164200,7 +164166,7 @@ proxy-groups:
       - "🔥 @free_conf_iran 🔥 14"
       - "TEL;Father_vpn-52"
       - "TEL;Father_vpn-53"
-      - "TEL:Father_vpn-6"
+      - "TEL:Father_vpn-7"
       - "@v2rayng3-32"
       - "@EVAY_VPN 9"
       - "TEL;Father_vpn-54"
@@ -164416,7 +164382,7 @@ proxy-groups:
       - "🇳🇱  ConfigV2RayNG"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-3"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-4"
-      - "TEL:Father_vpn-7"
+      - "TEL:Father_vpn-8"
       - "@brayirani •☕ | عضو شید قطع نشید"
       - "TEL;Father_vpn-60"
       - "@MIMITDL کانال ما🔥⚡  کانفیگ رایگان(به اتمام رسید)  پنل با همین کیفیت موجود شد(امروز"
@@ -164564,7 +164530,7 @@ proxy-groups:
       - "Telegram: @Configfori-1"
       - "All Operators @MaSTeRSeRVeR1-29"
       - "Free x242 @Outline_Vpn"
-      - "@ICV2RAY-14"
+      - "@ICV2RAY-12"
       - "🇳🇱139851 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇳🇱139893 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪-4"
@@ -164669,7 +164635,7 @@ proxy-groups:
       - "@v2rayng3-38"
       - "@hopev2ray🩵"
       - "@v2rayng3-39"
-      - "@ICV2RAY-15"
+      - "@ICV2RAY-13"
       - "vpnsal-3"
       - "vpnsal-4"
       - "vpnsal-5"
@@ -164735,8 +164701,8 @@ proxy-groups:
       - "@EVAY_VPN 1-1"
       - "@confiig_hub-20"
       - "[🇫🇮]t.me/ConfigV2RayNG"
-      - "@ICV2RAY-16"
-      - "@ICV2RAY-17"
+      - "@ICV2RAY-14"
+      - "@ICV2RAY-15"
       - "110"
       - "🇩🇪 @V2ngFast-19"
       - "🌐سرور 27 | @ELiV2Ray"
@@ -164749,15 +164715,14 @@ proxy-groups:
       - "@leviconfigs🪐-6-3"
       - "@leviconfigs🪐-1-2"
       - "تو کانال نتورلد نباشید قطع میشن@networld_vpn-2"
-      - "@Daily_Configs-13"
       - "@Tanhanet"
       - "Channel-@Azaranv2ray-3"
-      - "@Daily_Configs-14"
+      - "@Daily_Configs-13"
       - "🇫🇷⇝ @GpConnectSho کانکت شو! 💠-6"
       - "Arshiavpn12-6"
       - "@𝐕𝟐𝐗𝐍𝐄𝐓-9"
       - "🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-6"
-      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-8"
+      - "🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-7"
       - "@EVAY_VPN 8"
       - "🇹🇷@FreakConfig"
       - "کانال تلگرام : Free_VPN_CH@-81"
@@ -164789,7 +164754,7 @@ proxy-groups:
       - "@NETMelliAnti-5"
       - "@FarazV2ray-8"
       - "@meliproxyy-45"
-      - "@Daily_Configs-15"
+      - "@Daily_Configs-14"
       - "@FarazV2ray-9"
       - "@meliproxyy-46"
       - "@meliproxyy-47"
@@ -164798,7 +164763,7 @@ proxy-groups:
       - "波兰-1"
       - "@Sparrk_VPN-8"
       - "[ 🇳🇱 ] | @Cfox_SerVer"
-      - "@Daily_Configs-16"
+      - "@Daily_Configs-15"
       - "کانال تلگرام : Free_VPN_CH@-82"
       - "1 🇺🇸 @V2ngNet-1"
       - "kurdconfig-2"
@@ -164873,13 +164838,14 @@ proxy-groups:
       - "کانال تلگرام : Free_VPN_CH@-84"
       - "TEL;Father_vpn-64"
       - "✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | 🚀 | 🇺🇸"
+      - "@Begoo_VPN ²⁹¹"
       - "@hollowcon-6"
       - "@Begoo_VPN ²⁸⁷"
       - "@filembad-9"
       - "@filembad-10"
       - "کانال ما-3"
       - "All Operators @MaSTeRSeRVeR1-30"
-      - "@Daily_Configs-17"
+      - "@Daily_Configs-16"
       - "@v2raybaaz-6"
       - "⛽94@oneclickvpnkeys"
       - "🇩🇪@LOCKEY_VPN-8"
@@ -164912,7 +164878,7 @@ proxy-groups:
       - "@tootffarangi🍓-1-1"
       - "@ansooyefilter 🔥❤️"
       - "🇩🇪All¹ | @BigSmoke_Config-4"
-      - "TEL:Father_vpn-8"
+      - "TEL:Father_vpn-9"
       - "@confiig_hub-23"
       - "@hollowcon-7"
       - "🇷🇺139743 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -164922,6 +164888,7 @@ proxy-groups:
       - "🇸🇪 Join+Telegram:@Farah_VPN 🇸🇪"
       - "@meliproxyy-52"
       - "@meliproxyy-53"
+      - "@meliproxyy-54"
       - "🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧"
       - "✨ @NOFiLTERING2 | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪-2"
       - "🇨🇭 direct"
@@ -164939,7 +164906,7 @@ proxy-groups:
       - "@hex_proxy ⁵-2"
       - "@hex_proxy ⁶"
       - "@hex_proxy ¹"
-      - "@Daily_Configs-18"
+      - "@Daily_Configs-17"
       - "@hex_proxy ²"
       - "Telegram @mtmvpn  15"
       - "کانال تلگرام : Free_VPN_CH@-85"
@@ -164966,7 +164933,7 @@ proxy-groups:
       - "کانال تلگرام : Free_VPN_CH@-86"
       - "Telegram 🆔@cnetvpn 🇩🇪-1"
       - "کانال تلگرام : Free_VPN_CH@-87"
-      - "TEL:Father_vpn-9"
+      - "TEL:Father_vpn-10"
       - "🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-1"
       - "@appsooner کانال تلگرام 🕊️-26"
       - "🇫🇮 AzadMarz [ Irancell / Rightel ]-JOIN  : @AzadMarz-8"
@@ -165033,22 +165000,21 @@ proxy-groups:
       - "Arshiavpn12-8"
       - "🇺🇸139836 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@GozargahAzad|🇩🇪-1"
-      - "@Daily_Configs-19"
+      - "@Daily_Configs-18"
       - "[052402] - 🇫🇮 Finland | ⚡️ 1.04ms | @freenettir"
       - "𝗝𝗼𝗶𝗻➠@V2RAYNG_IP-10"
-      - "@Daily_Configs-20"
       - "🇺🇸☁️ US"
-      - "@meliproxyy-54"
       - "@meliproxyy-55"
       - "@meliproxyy-56"
       - "@meliproxyy-57"
+      - "@meliproxyy-58"
       - "♾️𝗝𝗼𝗶𝗻➠🆔️@ATLAS_V2VPN🆓️📶‎🛰️544🌐🆕️"
-      - "@ICV2RAY-18"
+      - "@ICV2RAY-16"
       - "@V2ray_confiig-19"
-      - "@Daily_Configs-21"
+      - "@Daily_Configs-19"
       - "@Alpha_V2rayip-7"
       - "@Alpha_V2rayip-8"
-      - "@meliproxyy-58"
+      - "@meliproxyy-59"
       - "@v2ray313 کانالمون 😍"
       - "Free x172 @Outline_Vpn"
       - "@v2ray313 کانالمون 😃-1"
@@ -165074,21 +165040,21 @@ proxy-groups:
       - "🇩🇪171054 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@Alfred_Config-6"
       - "@Alfred_Config-7"
-      - "@Daily_Configs-22"
+      - "@Daily_Configs-20"
       - "@v2mystery 👈 عضو شو-16"
       - "Free x258 @Outline_Vpn"
       - "@V2ray_Alpha🧸 8"
       - "@FarazV2ray-11"
-      - "@meliproxyy-59"
-      - "• 🇺🇸 | United States - @HesarWeb"
       - "@meliproxyy-60"
+      - "• 🇺🇸 | United States - @HesarWeb"
       - "@meliproxyy-61"
+      - "@meliproxyy-62"
       - "Free x248 @Outline_Vpn"
       - "🇮🇹⇝ @GpConnectSho کانکت شو! 💠-6"
       - "Tel-@ProxyMtAlpha🐴 8"
       - "@Sparrk_VPN-10"
-      - "@meliproxyy-62"
       - "@meliproxyy-63"
+      - "@meliproxyy-64"
       - "Telegram @mtmvpn-23"
       - "@ansooyefilter ❤️💫"
       - "@V2ray_Alpha🫘 1"
@@ -165107,7 +165073,7 @@ proxy-groups:
       - "@i10VPN🥉"
       - "捷克"
       - "🇩🇪All⁷ | @BigSmoke_Config-2"
-      - "@ICV2RAY-19"
+      - "@ICV2RAY-17"
       - "🇺🇳 UN-3"
       - "@Hope_Net-join-us-on-Telegram-66"
       - "@Hope_Net-join-us-on-Telegram-67"
@@ -165125,15 +165091,16 @@ proxy-groups:
       - "@Iran_v2ray1 🌟-1"
       - "🇩🇪⇝ @GpConnectSho کانکت شو! 💠-8"
       - "@v2rayng3-42"
-      - "@meliproxyy-64"
+      - "@meliproxyy-65"
       - "🇺🇳☁️ UN"
       - "configprxy-8"
       - "@SylphNet | 2026-06-27 05:03"
       - "🔵@chillguy_vpn-2"
       - "🔵@chillguy_vpn-3"
-      - "@Daily_Configs-23"
-      - "@meliproxyy-65"
-      - "@ICV2RAY-20"
+      - "@Daily_Configs-21"
+      - "@meliproxyy-66"
+      - "@ICV2RAY-18"
+      - "🔵@chillguy_vpn-4"
       - "@KAFING_2-46"
       - "@KAFING_2-47"
       - "@KAFING_2-48"
@@ -165149,7 +165116,7 @@ proxy-groups:
       - "🇹🇭🟧 TH"
       - "🔥⚡@MimiTdL ⚡🔥"
       - "@EXPRESSVPN_420  👈🏻 کانال تلگرام-2"
-      - "@Daily_Configs-24"
+      - "@Daily_Configs-22"
       - "@CxrolVPN"
       - "کانال تلگرام : Free_VPN_CH@-96"
       - "@B2Hub-3"
@@ -165234,14 +165201,14 @@ proxy-groups:
       - "🇫🇷139801 | ⚡️Telegram = t.me/SOSkeyNET"
       - "(S103)🇨🇵t.me/PrivateVPNs"
       - "@vmesskhodam-5"
-      - "@Daily_Configs-25"
+      - "@Daily_Configs-23"
       - "@GozargahAzad|🇫🇷"
       - "@Napsternetvirani-1"
       - "@B2Hub-4"
       - "🇩🇪All³ | @BigSmoke_Config-4"
       - "V2ray_confiig-5"
       - "(S103)🇨🇵t.me/PrivateVPNs-1"
-      - "@Daily_Configs-26"
+      - "@Daily_Configs-24"
       - "kurdconfig-3"
       - "@V2ray_Alpha🍭 6"
       - "V2ray_confiig-6"
@@ -165386,7 +165353,7 @@ proxy-groups:
       - "@v2rayng3-51"
       - "香港-9"
       - "香港-10"
-      - "@ICV2RAY-21"
+      - "@ICV2RAY-19"
       - "@Sparrk_VPN-11"
       - "𝐂𝐡𝐚𝐧𝐧𝐞𝐥: @ISVvpn-19"
       - "🇷🇺139910 | ⚡️Telegram = t.me/SOSkeyNET"
@@ -165394,9 +165361,9 @@ proxy-groups:
       - "🇩🇪139731 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@B2Hub-5"
       - "@bored_vpn-19"
-      - "@ICV2RAY-22"
+      - "@ICV2RAY-20"
       - "@v2raybaaz ²-2"
-      - "@ICV2RAY-23"
+      - "@ICV2RAY-21"
       - "Telegram: @Daily_Configs-9"
       - "@configprxy-27"
       - "@configprxy 🇳🇱"
@@ -165468,8 +165435,8 @@ proxy-groups:
       - "All Operators @MaSTeRSeRVeR1-43"
       - "@leviconfigs🪐-7-4"
       - "[ 🇩🇪 ] | @Cfox_SerVer-2"
-      - "@ICV2RAY-24"
-      - "@Shh_Proxy-New⁷-2"
+      - "@ICV2RAY-22"
+      - "@Shh_Proxy-New⁷-3"
       - "🇮🇷139730 | ⚡️Telegram = t.me/SOSkeyNET"
       - "کانال تلگرام : Free_VPN_CH@-105"
       - "@v2ray_phoenix-29"
@@ -165521,14 +165488,14 @@ proxy-groups:
       - "🇮🇷139782 | ⚡️Telegram = t.me/SOSkeyNET"
       - "@V2ray_confiig-28"
       - "Free x222 @Outline_Vpn"
-      - "@ICV2RAY-25"
-      - "@ICV2RAY-26"
+      - "@ICV2RAY-23"
+      - "@ICV2RAY-24"
       - "Free x229 @Outline_Vpn"
       - "@Hope_Net-join-us-on-Telegram-74"
       - "113"
       - "114-1"
       - "@KAFING_2-54"
-      - "@Daily_Configs-27"
+      - "@Daily_Configs-25"
       - "@iTV2RAY+/+MCI-4"
       - "VPN @MimiTdl 🔥⚡-1"
       - "@Net2ray FI🇫🇮"
@@ -165572,13 +165539,13 @@ proxy-groups:
       - "🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-7"
       - "🇩🇪139810 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇳🇱139729 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "@meliproxyy-66"
       - "@meliproxyy-67"
+      - "@meliproxyy-68"
       - "🇹🇷139866 | ⚡️Telegram = t.me/SOSkeyNET"
       - "🇮🇷171046 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "🔵@chillguy_vpn-4"
       - "🔵@chillguy_vpn-5"
       - "🔵@chillguy_vpn-6"
+      - "🔵@chillguy_vpn-7"
       - "🇨🇦139900 | ⚡️Telegram = t.me/SOSkeyNET"
       - "A42"
       - "🇫🇮Finland: @v2ryNG01 جدید"
@@ -165605,9 +165572,9 @@ proxy-groups:
       - "@custom_config"
       - "@VConfing-6"
       - "@Shh_Proxy-New⁶-5"
-      - "TEL:Father_vpn-10"
-      - "@NETMelliAnti👈🏻👈🏻سرورجدید داخل چنل🥀❤-3"
       - "TEL:Father_vpn-11"
+      - "@NETMelliAnti👈🏻👈🏻سرورجدید داخل چنل🥀❤-3"
+      - "TEL:Father_vpn-12"
       - "@appsooner کانال تلگرام 🕊️-31"
       - "@EXPRESSVPN_420-5"
       - "✰𝗝𝗼𝗶𝗻 ➠ @v2raymelliii✰-7"
@@ -165628,10 +165595,10 @@ proxy-groups:
       - ">>@oneclickvpnkeys::PL-2"
       - ">>@freeland8::XX"
       - ">>@v2nodes::XX"
+      - ">>@v2rayNG_Matsuri::XX"
       - ">>@v2nodes::XX-1"
       - ">>@VmessProtocol::XX"
-      - ">>@prrofile_purple::XX"
-      - ">>@v2rayNG_Matsuri::XX"
+      - ">>@v2rayNG_Matsuri::XX-1"
       - ">>@shadowproxy66::XX"
       - ">>@shadowproxy66::KR"
       - ">>@configV2rayNG::IT"
@@ -165758,11 +165725,10 @@ proxy-groups:
       - "@Rayan_Config 3.33-1"
       - "Fast Deploy Your Own Worker For Creation Of Configs : https://telegraph.rayan-config.workers.dev/translate-2"
       - "Ainita Server azure-sto.edgeservers.org"
-      - "🇨🇦CA-137.184.174.93-0208"
+      - "@Rayan_Config-82.38.31.194-@beepassvpn_bot"
+      - "@Rayan_Config-82.38.31.202-@beepassvpn_bot"
       - "🇬🇧GB-82.38.31.35-0130"
-      - "🇳🇱NL-193.29.139.235-0131"
       - "🇳🇱NL-193.29.139.223-0155"
-      - "🇳🇱NL-109.201.152.181-0171"
       - "🇰🇷KR-49.254.204.134-0225"
       - "🇭🇰HK-103.149.182.79-5161"
       - "🇰🇷KR-218.237.185.230-0258"
@@ -166594,8 +166560,8 @@ proxy-groups:
       - "🇫🇷FR-146.70.158.111-1268"
       - "🏁RELAY-104.31.16.3-1269"
       - "🇭🇰HK-203.218.71.40-1270"
-      - "🏁RELAY-172.67.74.2-1271"
       - "🏁RELAY-104.26.15.137-1272"
+      - "🏁RELAY-104.20.6.134-1273"
       - "🇯🇵JP-139.162.117.173-1277"
       - "🇯🇵JP-168.138.44.176-1278"
       - "🇰🇷KR-138.2.113.248-1279"
@@ -166961,6 +166927,7 @@ proxy-groups:
       - "🇩🇪DE-185.137.157.254-2329"
       - "🇳🇱NL-163.172.220.71-2333"
       - "🏁RELAY-172.64.53.89-2335"
+      - "🏁RELAY-104.26.14.137-2339"
       - "🇨🇳CN-14.29.124.174-2345"
       - "🇺🇸US-192.96.204.250-2348"
       - "🇰🇷KR-141.164.39.146-2354"
@@ -170885,6 +170852,7 @@ proxy-groups:
       - "🔒 VL-WS-TLS 🇲🇩 MD-213.159.68.143:443"
       - "🇺🇸_US_美国"
       - "🇷🇺_RU_俄罗斯->🇩🇪_DE_德国"
+      - "🇨🇳_CN_中国->🇺🇸_US_美国"
       - "🇭🇰_HK_中国香港->🇺🇸_US_美国"
       - "🇺🇸_US_美国-1"
       - "🇭🇰_HK_中国香港"
@@ -170910,6 +170878,7 @@ proxy-groups:
       - "@V2ray_confiig #3"
       - "未命名"
       - "⛽86@oneclickvpnkeys"
+      - "🏀34@oneclickvpnkeys"
       - "@fastkanfig کانال تلگرام-3"
       - "🇸🇪SE_1|1.7MB/s"
       - "🇸🇪SE_2|2.4MB/s"
@@ -170922,6 +170891,7 @@ proxy-groups:
       - "🇺🇸US_20|1.4MB/s"
       - "🇺🇸US_21|1.0MB/s"
       - "🇫🇷FR_1|2.7MB/s"
+      - "🇸🇪SE_5|1.0MB/s"
       - "US_speednode_0130"
       - "US_speednode_0132"
       - "US_speednode_0135"
@@ -171027,7 +170997,6 @@ proxy-groups:
       - "🇸🇨_塞舌尔_206"
       - "🏳️_未知_218"
       - "🏳️_未知_220"
-      - "🏳️_未知_258"
       - "🇷🇺_俄罗斯_261"
       - "🏳️_未知_263"
       - "🇦🇪_阿拉伯联合酋长国_311"
@@ -171048,18 +171017,15 @@ proxy-groups:
       - "🇩🇪[openproxylist.com] vless-DE"
       - "🇪🇪[openproxylist.com] vless-EE"
       - "🇺🇸[openproxylist.com] vmess-US"
-      - "🇺🇿[openproxylist.com] vless-UZ"
+      - "🇹🇭[openproxylist.com] vless-TH"
       - "🇨🇱[openproxylist.com] ss-CL"
-      - "🇸🇪[openproxylist.com] ss-SE"
-      - "🇸🇪[openproxylist.com] vless-SE"
       - "🇮🇹[openproxylist.com] vless-IT"
       - "🇩🇪[openproxylist.com] vmess-DE"
-      - "🇩🇪[openproxylist.com] vless-DE-1"
       - "🇯🇵_JP_日本-1"
-      - "🇷🇺_RU_俄罗斯->🇩🇪_DE_德国-1"
       - "🇰🇷_KR_韩国-1"
       - "🇺🇸_US_美国-3"
       - "🇯🇵_JP_日本-2"
+      - "🇨🇳_CN_中国->🇺🇸_US_美国-1"
       - "🇸🇬_SG_新加坡"
       - "❓免費節點丨yoyapai.com"
       - "🇫🇷法國丨yoyapai.com"
@@ -171282,14 +171248,14 @@ proxy-groups:
       - "🇫🇮 芬兰_2QFOEB"
       - "🇳🇱 荷兰_6Z87WK"
       - "🇳🇱 荷兰_SLK2Y9"
+      - "🇩🇪 德国_OYP728"
       - "🇭🇰 香港_MI7HZK"
-      - "美国+CloudFlare节点-4"
-      - "美国+CloudFlare节点-5"
-      - "美国+CloudFlare节点-6"
-      - "美国+CloudFlare节点-7"
-      - "美国+佛罗里达州迈阿密市"
       - "美国+CloudFlare节点-8"
       - "美国+CloudFlare节点-9"
+      - "美国+CloudFlare节点-10"
+      - "美国+佛罗里达州迈阿密市"
+      - "美国+CloudFlare节点-11"
+      - "美国+CloudFlare节点-12"
       - "伊朗+V2CROSS.COM"
       - "US美国(mibei77.com 米贝节点分享)-23"
       - "FR法国(mibei77.com 米贝节点分享)-2"
@@ -171894,7 +171860,6 @@ proxy-groups:
       - "🇫🇷FR_577|5.6MB/s|B007-260618 01"
       - "🇫🇷FR_580|527KB/s|M003-260806 01"
       - "🇺🇸US_309|426KB/s|T001-260618 01"
-      - "🇺🇸US_313|1.9MB/s|A001-260618 01"
       - "🇺🇸US_315|391KB/s|T001-260618 01"
       - "🇯🇵JP_10|624KB/s|A004-260618 01"
       - "🇫🇷FR_583|547KB/s|C002-260622 01"
@@ -172202,6 +172167,7 @@ proxy-groups:
       - "🇦🇪AE_97|7.5MB/s|A004-260618 01"
       - "🇸🇬SG_33|541KB/s|A004-260618 01"
       - "🇦🇷AR_3|357KB/s|S004-260618 01"
+      - "🇳🇱NL_176|2.6MB/s|A004-260618 01"
       - "🇯🇵JP_17|708KB/s|A004-260618 01"
       - "🇳🇴NO_3|314KB/s|S001-260618 01"
       - "🇱🇻LV_19|2.4MB/s|A004-260618 01"
@@ -172230,7 +172196,6 @@ proxy-groups:
       - "🇫🇷FR_788|586KB/s|C002-260622 01"
       - "🇫🇷FR_789|1.3MB/s|C002-260622 01"
       - "🇫🇷FR_790|363KB/s|C002-260622 01"
-      - "🇫🇷FR_791|612KB/s|C002-260622 01"
       - "🇫🇷FR_792|311KB/s|C002-260622 01"
       - "🇫🇷FR_793|330KB/s|X001-260618 01"
       - "🇫🇷FR_794|409KB/s|B007-260618 01"
@@ -172429,6 +172394,7 @@ proxy-groups:
       - "🇫🇷FR_965|659KB/s|A004-260618 01"
       - "🇦🇪AE_108|743KB/s|A004-260618 01"
       - "🇬🇧GB_133|1.5MB/s|A004-260618 01"
+      - "🇸🇬SG_44|113KB/s|B007-260618 01"
       - "🇯🇵JP_27|496KB/s|M003-260806 01"
       - "🇫🇷FR_967|821KB/s|M003-260806 01"
       - "🇱🇹LT_7|2.4MB/s|M003-260806 01"
@@ -172560,7 +172526,6 @@ proxy-groups:
       - "🇫🇷FR_1056|555KB/s|P002-260618 01"
       - "🇫🇷FR_1057|667KB/s|V007-260618 01"
       - "🇫🇷FR_1058|438KB/s|V007-260618 01"
-      - "🇺🇸US_613|265KB/s|F003-260618 01"
       - "🇺🇸US_614|493KB/s|F003-260618 01"
       - "🇰🇿KZ_3|941KB/s|M003-260806 01"
       - "🇰🇿KZ_4|1007KB/s|M003-260806 01"
@@ -172781,7 +172746,6 @@ proxy-groups:
       - "🇺🇸US_714|499KB/s|F003-260618 01"
       - "🇺🇸US_717|859KB/s|F003-260618 01"
       - "🇺🇸US_718|525KB/s|F003-260618 01"
-      - "🇺🇸US_720|579KB/s|F003-260618 01"
       - "🇺🇸US_722|528KB/s|F003-260618 01"
       - "🇺🇸US_723|557KB/s|F003-260618 01"
       - "🇺🇸US_724|1.1MB/s|F003-260618 01"
@@ -172928,6 +172892,7 @@ proxy-groups:
       - "🇫🇷FR_1318|660KB/s|M003-260806 01"
       - "🇫🇷FR_1319|634KB/s|T001-260618 01"
       - "🇫🇷FR_1320|349KB/s|B007-260618 01"
+      - "🇧🇪BE_3|1.5MB/s|M003-260806 01"
       - "🇧🇪BE_4|950KB/s|M003-260806 01"
       - "🇫🇷FR_1322|2.2MB/s|M003-260806 01"
       - "🇫🇷FR_1323|306KB/s|M002-260618 01"
@@ -173635,7 +173600,6 @@ proxy-groups:
       - "🇷🇴RO_95|2.2MB/s|R002-260618 01"
       - "🇮🇹IT_53|2.3MB/s|M002-260618 01"
       - "🇦🇪AE_126|4.0MB/s|M003-260806 01"
-      - "🇱🇹LT_10|2.1MB/s|A004-260618 01"
       - "🇬🇧GB_257|5.0MB/s|A004-260618 01"
       - "🇫🇷FR_1948|394KB/s|B007-260618 01"
       - "🇫🇷FR_1949|3.3MB/s|B007-260618 01"
@@ -173728,7 +173692,6 @@ proxy-groups:
       - "🇫🇷FR_2020|531KB/s|M003-260806 01"
       - "🇫🇷FR_2021|514KB/s|A004-260618 01"
       - "🇺🇸US_860|905KB/s|F003-260618 01"
-      - "🇳🇱NL_256|2.2MB/s|G001-260618 01"
       - "🇵🇱PL_27|2.3MB/s|M003-260806 01"
       - "🇬🇧GB_298|5.4MB/s|A001-260618 01"
       - "🇫🇷FR_2023|1.1MB/s|B007-260618 01"
@@ -173894,6 +173857,7 @@ proxy-groups:
       - "🇪🇸ES_35|387KB/s|M003-260806 01"
       - "🇫🇷FR_2166|247KB/s|M003-260806 01"
       - "🇫🇷FR_2167|1.3MB/s|M003-260806 01"
+      - "🇸🇪SE_18|780KB/s|T001-260618 01"
       - "🇫🇷FR_2168|1.9MB/s|A004-260618 01"
       - "🇫🇷FR_2169|1.1MB/s|A004-260618 01"
       - "🇹🇷TR_8|457KB/s|A004-260618 01"
@@ -173916,7 +173880,6 @@ proxy-groups:
       - "🇫🇷FR_2178|3.8MB/s|M003-260806 01"
       - "🇳🇴NO_17|3.4MB/s|M003-260806 01"
       - "🇬🇧GB_341|3.9MB/s|A001-260618 01"
-      - "🇹🇭TH_7|548KB/s|A001-260618 01"
       - "🇷🇺RU_13|490KB/s|A004-260618 01"
       - "🇫🇷FR_2180|1.6MB/s|B007-260618 01"
       - "🇺🇸US_930|846KB/s|B007-260618 01"
@@ -173938,6 +173901,7 @@ proxy-groups:
       - "🇶🇦QA_5|354KB/s|M003-260806 01"
       - "🇫🇷FR_2200|1.8MB/s|T001-260618 01"
       - "🇫🇷FR_2201|2.2MB/s|B007-260618 01"
+      - "🇨🇦CA_82|1.7MB/s|A004-260618 01"
       - "🇫🇷FR_2202|1.5MB/s|B007-260618 01"
       - "🇫🇷FR_2203|1.5MB/s|F003-260618 01"
       - "🇫🇷FR_2204|1.7MB/s|F003-260618 01"

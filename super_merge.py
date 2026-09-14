@@ -345,8 +345,19 @@ def parse_source(text):
     return nodes
 
 
+# YAML forbids C0 controls (except tab/LF/CR) and C1 controls (U+007F-U+009F),
+# plus BOM and U+FFFE/U+FFFF. Free-node sources occasionally inject them (seen:
+# a ws `path` carrying U+0087/U+009F). Desktop Clash is lenient, but Clash for
+# Android rejects the whole file with "yaml: control characters are not allowed".
+_BAD_CHARS = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f\ufeff\ufffe\uffff]")
+
+
+def sanitize(s):
+    return _BAD_CHARS.sub("", s)
+
+
 def yaml_str(v):
-    s = str(v)
+    s = sanitize(str(v))
     return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
 
@@ -430,8 +441,8 @@ def main():
     for n in uniq:
         out.write("  - name: " + yaml_str(n["name"]) + "\n")
         out.write("    type: " + n["type"] + "\n")
-        out.write("    server: " + str(n["server"]) + "\n")
-        out.write("    port: " + str(n["port"]) + "\n")
+        out.write("    server: " + yaml_str(n["server"]) + "\n")
+        out.write("    port: " + yaml_str(n["port"]) + "\n")
         for k in ("uuid", "password", "cipher"):
             if k in n:
                 out.write(f"    {k}: {yaml_str(n[k])}\n")
@@ -448,7 +459,7 @@ def main():
         if "sni" in n:
             out.write(f"    sni: {yaml_str(n['sni'])}\n")
         if "client-fingerprint" in n:
-            out.write(f"    client-fingerprint: {n['client-fingerprint']}\n")
+            out.write(f"    client-fingerprint: {yaml_str(n['client-fingerprint'])}\n")
         if "skip-cert-verify" in n:
             out.write(f"    skip-cert-verify: {str(n['skip-cert-verify']).lower()}\n")
         if "reality-opts" in n:
@@ -469,7 +480,7 @@ def main():
         if "alpn" in n:
             out.write("    alpn:\n")
             for a in n["alpn"]:
-                out.write(f"      - {a}\n")
+                out.write(f"      - {yaml_str(a)}\n")
 
     out.write("proxy-groups:\n")
     out.write("  - name: \U0001F680 NodeSelect\n")
@@ -490,9 +501,18 @@ def main():
     out.write("  - GEOIP,CN,DIRECT\n")
     out.write("  - MATCH,\U0001F680 NodeSelect\n")
 
+    text = out.getvalue()
+    # Assertion: sanitizing must leave zero illegal chars. If this ever trips,
+    # fail loudly instead of shipping a config that some clients cannot parse.
+    leaked = _BAD_CHARS.findall(text)
+    if leaked:
+        print(f"[FATAL] {len(leaked)} illegal control char(s) survived sanitizing; "
+              f"refusing to write {os.path.basename(OUT_FILE)}.")
+        sys.exit(1)
+
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
-        f.write(out.getvalue())
+        f.write(text)
 
     # type distribution
     dist = {}

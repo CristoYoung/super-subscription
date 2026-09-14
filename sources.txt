@@ -1,0 +1,18 @@
+# SuperMerge sources - one URL per line, # = comment
+# All sources use base64-subscription or v2ray-link-list format (auto-detected).
+# Raw Clash-YAML-only sources are skipped (use their base64/link-list variant URL).
+
+# --- Core (the 4 auto-fetchable repos from user's list) ---
+# Pawdroid/Free-servers - link list
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+# zhuhaiuk/free-nodes - base64 subscription (~50 nodes, hourly)
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt
+# 0xRadikal/Free-v2ray-Configs - verified base64 + verified link list
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt
+# Au1rxx/free-vpn-subscriptions - base64 (huge, by-country)
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt
+
+# NOTE: mermeroo/V2RAY-CLASH-BASE64-Subscription.Links only ships a 1032-link
+# third-party dump (SUB LINKS). Skipped to avoid hammering 1000+ hosts.
+# Add your own base64/link-list subs below if you want more sources.

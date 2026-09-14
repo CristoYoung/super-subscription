@@ -1,0 +1,6 @@
+cache/
+__pycache__/
+*.pyc
+
+# local-only helper (contains your PAT - never commit this)
+publish.bat

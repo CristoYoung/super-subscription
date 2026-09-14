@@ -1,0 +1,37 @@
+name: SuperMerge Build
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # every 3 hours at :23 (avoid top-of-hour congestion)
+    - cron: '23 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SUPER_OUT_DIR: ${{ github.workspace }}
+      TZ: Asia/Shanghai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run merge
+        run: python super_merge.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add SuperMerge.yaml
+          if git diff --cached --quiet; then
+            echo "no changes, skip commit"
+          else
+            git commit -m "chore: auto-update $(TZ=Asia/Shanghai date +%Y-%m-%d_%H:%M)"
+            git push
+          fi

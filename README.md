@@ -78,6 +78,14 @@ payload（free-nodes/clashfree、OpenRunner、Jsnzkpg）、payload 太小（awes
 - **立刻刷新**：到仓库的 Actions 页面，手动 Run workflow（已开启 `workflow_dispatch`）。
 - **频率**：默认每 3 小时一次；想改就编辑 `build.yml` 里的 cron。
 
+> 🔴 **提交纪律（踩过坑，务必遵守）：`SuperMerge.yaml` 是机器人产出的文件，本地永远不要提交它。**
+> 它每 3 小时就被 Actions 重写一次；本地那份一旦也被提交，两边版本必然对不上，
+> 推送时就会卡在 `CONFLICT (content): Merge conflict in SuperMerge.yaml`。
+> `publish.bat` 已经改成**只提交 `super_merge.py` / `sources.txt` / `README.md` /
+> `.gitignore` / `build.yml`**，并用 `git reset --mixed origin/main` 把提交直接挂到远端最新
+> 提交之上（而不是 `rebase`），因此冲突在机制上不可能再发生。
+> 自己手动敲命令时，**不要用 `git add .` / `git add -A`**，要显式列出文件名。
+
 ## 本地测试
 ```
 set SUPER_USE_PROXY=1        # 走本机 Clash 代理抓源（raw 被墙时）

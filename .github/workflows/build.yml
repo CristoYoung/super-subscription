@@ -46,3 +46,22 @@ jobs:
           # jsDelivr caches branch refs for hours; purge so phones get the fresh file.
           curl -sf "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/SuperMerge.yaml" \
             && echo "jsDelivr cache purged" || echo "purge request failed (non-fatal)"
+      - name: Publish GitHub Pages mirror
+        run: |
+          # Why a second endpoint: jsDelivr caches a rewritten branch for up to
+          # 12h per edge node and its purge API is rate-limited (HTTP 429-ish
+          # {"throttled":true}), so a phone can receive a stale file -- which is
+          # how a bad node shipped once already. GitHub Pages is first-party,
+          # reachable from CN, and its CDN TTL is ~10 min.
+          #   https://<owner>.github.io/<repo>/SuperMerge.yaml
+          mkdir -p "$RUNNER_TEMP/ghp" && cp SuperMerge.yaml "$RUNNER_TEMP/ghp/"
+          cd "$RUNNER_TEMP/ghp"
+          git init -q -b gh-pages
+          git add SuperMerge.yaml
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "pages: build ${{ github.run_number }}"
+          git push -f -q \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
+            gh-pages
+          echo "published to https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY##*/}/SuperMerge.yaml"

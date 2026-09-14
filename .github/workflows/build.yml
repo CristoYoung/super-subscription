@@ -11,6 +11,12 @@ on:
 permissions:
   contents: write
 
+# Never let two builds push at the same time (that is how bot-vs-bot
+# conflicts on SuperMerge.yaml would happen).
+concurrency:
+  group: supermerge-build
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest

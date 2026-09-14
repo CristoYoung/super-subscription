@@ -54,15 +54,35 @@ def looks_base64(s):
     return bool(re.fullmatch(r"[A-Za-z0-9+/=]+", s))
 
 
+_DIRECT_OPENER = None
+
+
+def direct_opener(ctx):
+    """Opener that bypasses env proxies.
+
+    NOTE: urllib.request.urlopen() has NO `proxies` kwarg -- passing one raises
+    TypeError and every fetch silently fails. Disable proxies via ProxyHandler({})
+    on a custom opener instead.
+    """
+    global _DIRECT_OPENER
+    if _DIRECT_OPENER is None:
+        handlers = [urllib.request.ProxyHandler({})]
+        if ctx is not None:
+            handlers.append(urllib.request.HTTPSHandler(context=ctx))
+        _DIRECT_OPENER = urllib.request.build_opener(*handlers)
+    return _DIRECT_OPENER
+
+
 def fetch(url, ctx):
     last_err = None
-    # 1) direct
+    # 1) direct (env proxies ignored by design)
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=25, context=ctx, proxies=None) as r:
+        with direct_opener(ctx).open(req, timeout=25) as r:
             d = r.read().decode("utf-8", "ignore")
         if d.strip():
             return d
+        last_err = "empty response body"
     except Exception as e:
         last_err = e
     # 2) via host Clash proxy (only when env SUPER_USE_PROXY is set, e.g. local test)
@@ -385,6 +405,14 @@ def main():
             continue
         seen[k] = True
         uniq.append(n)
+
+    # Hard guard: never publish an empty config (a build outage must fail loudly
+    # instead of committing a node-less SuperMerge.yaml that overwrites a good one).
+    if not uniq:
+        print(f"[FATAL] 0 nodes parsed from {len(sources)} sources "
+              f"({len(skipped)} fetch failures, no offline cache). "
+              f"Aborting: existing {os.path.basename(OUT_FILE)} left untouched.")
+        sys.exit(1)
 
     # dedupe names
     name_count = {}

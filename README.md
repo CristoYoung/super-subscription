@@ -25,6 +25,11 @@
 > jsDelivr 对分支引用有数小时缓存，构建后 workflow 会自动调用 purge 接口刷新，
 > 因此手机拉到的始终是最新一版。若发现手机端仍是旧节点，手动访问一次
 > `https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml` 即可强刷。
+>
+> ⚠️ **务必只用上面那两个链接。** jsDelivr 的别名域名（`fastly.jsdelivr.net`、
+> `gcore.jsdelivr.net`、`testingcf.jsdelivr.net`、`jsdelivr.b-cdn.net`）缓存**各自独立**，
+> purge 刷不到它们。实测同一时刻：`cdn.jsdelivr.net` 已是 14045 节点的新版，
+> 而 `jsdelivr.b-cdn.net` 还在发几小时前那份旧文件（甚至含非法控制字符）。用别名域名 = 拿旧订阅。
 
 ## 文件说明
 - `super_merge.py`：合并脚本（零第三方依赖），输出 `SuperMerge.yaml`

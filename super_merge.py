@@ -477,83 +477,74 @@ def node_key(n):
             n.get("uuid") or n.get("password") or "")
 
 
-def main():
-    ctx = ssl_create()
-    cache_dir = os.path.join(WS, "cache")
-    os.makedirs(cache_dir, exist_ok=True)
-    sources = []
-    if os.path.exists(SOURCES_FILE):
-        for ln in open(SOURCES_FILE, encoding="utf-8").read().splitlines():
-            ln = ln.strip()
-            if not ln or ln.startswith("#"):
-                continue
-            sources.append(ln)
-    print(f"[info] {len(sources)} sources configured")
-    all_nodes = []
-    skipped = []
-    for i, url in enumerate(sources):
-        txt = None
-        try:
-            txt = fetch(url, ctx)
-            # persist successful fetch as offline cache for next run
-            try:
-                open(os.path.join(cache_dir, f"{i}.txt"), "w", encoding="utf-8").write(txt)
-            except Exception:
-                pass
-            ns = parse_source(txt)
-            all_nodes.extend(ns)
-            print(f"[ok]   src#{i} {len(ns)} nodes <- {url.split('/')[-1]}")
-        except Exception as e:
-            # fall back to last successful cache if live fetch failed
-            cf = os.path.join(cache_dir, f"{i}.txt")
-            if os.path.exists(cf):
-                try:
-                    txt = open(cf, encoding="utf-8").read()
-                    ns = parse_source(txt)
-                    all_nodes.extend(ns)
-                    print(f"[cache] src#{i} {len(ns)} nodes from offline cache")
-                except Exception:
-                    txt = None
-            if txt is None:
-                print(f"[FAIL] src#{i} {url.split('/')[-1]} : {e}")
-                skipped.append(url)
+# ---- lite build ---------------------------------------------------------------
+# A 14k-node subscription is technically valid but unusable on a phone: the
+# client allocates one proxy object per node, renders every one of them in the
+# proxy picker, and a url-test group re-probes ALL of them on a timer (measured:
+# 14,036 nodes sat on only 6,324 distinct /24 blocks -- one Cloudflare address
+# alone carried 344). So the count is largely redundant, not extra reach.
+#
+# Lite keeps ~1 node per network block: an order of magnitude fewer objects for
+# almost the same number of reachable networks.
 
-    # dedupe by (type, server, port, credential)
-    seen = {}
-    uniq = []
-    for n in all_nodes:
-        k = node_key(n)
-        if k in seen:
+LITE_TARGET = int(os.environ.get("SUPER_LITE_TARGET", "600"))
+LITE_NET_CAP = int(os.environ.get("SUPER_LITE_NET_CAP", "3"))
+LITE_ENABLE = os.environ.get("SUPER_LITE", "1").lower() not in ("0", "false", "no")
+
+
+def net_key(n):
+    """The network a node lives in: /24 for v4, /48 for v6, host for domains."""
+    h = (n.get("server") or "").strip("[]")
+    try:
+        ip = ipaddress.ip_address(h)
+    except ValueError:
+        return "d:" + h.lower()
+    return str(ipaddress.ip_network(f"{h}/{24 if ip.version == 4 else 48}",
+                                    strict=False))
+
+
+def make_lite(uniq, consensus):
+    """Pick a diverse, budget-sized subset of `uniq`.
+
+    Ranking first puts nodes advertised by several independent sources at the
+    front: a node three lists agree on has a track record, and it survives
+    re-ranking when any single source goes stale. The per-network cap then stops
+    one operator from filling the budget with clones, and a uniform stride keeps
+    the mix across protocols and source order.
+    """
+    order = sorted(range(len(uniq)), key=lambda i: (-consensus[i], i))
+    capped, per_net = [], {}
+    for i in order:
+        k = net_key(uniq[i])
+        if per_net.get(k, 0) >= LITE_NET_CAP:
             continue
-        seen[k] = True
-        uniq.append(n)
+        per_net[k] = per_net.get(k, 0) + 1
+        capped.append(uniq[i])
+    if LITE_TARGET and len(capped) > LITE_TARGET:
+        step = len(capped) / LITE_TARGET
+        capped = [capped[int(i * step)] for i in range(LITE_TARGET)]
+    return capped
 
-    # Hard guard: never publish an empty config (a build outage must fail loudly
-    # instead of committing a node-less SuperMerge.yaml that overwrites a good one).
-    if not uniq:
-        print(f"[FATAL] 0 nodes parsed from {len(sources)} sources "
-              f"({len(skipped)} fetch failures, no offline cache). "
-              f"Aborting: existing {os.path.basename(OUT_FILE)} left untouched.")
+
+def assert_clean(text, path):
+    """Sanitizing must leave zero illegal chars; fail loudly rather than ship."""
+    leaked = _BAD_CHARS.findall(text)
+    if leaked:
+        print(f"[FATAL] {len(leaked)} illegal control char(s) survived sanitizing; "
+              f"refusing to write {os.path.basename(path)}.")
         sys.exit(1)
 
-    # dedupe names
-    name_count = {}
-    for n in uniq:
-        base = n.get("name") or "node"
-        if base in name_count:
-            name_count[base] += 1
-            n["name"] = f"{base}-{name_count[base]}"
-        else:
-            name_count[base] = 0
 
+def build_yaml(nodes, title, interval):
     out = io.StringIO()
-    out.write("# SuperMerge - aggregated free nodes (auto-generated)\n")
+    out.write(f"# {title}\n")
+    out.write("# auto-generated - do not edit by hand\n")
     out.write("proxies:\n")
-    for n in uniq:
+    for n in nodes:
         out.write("  - name: " + yaml_str(n["name"]) + "\n")
         out.write("    type: " + n["type"] + "\n")
         out.write("    server: " + yaml_str(n["server"]) + "\n")
-        out.write("    port: " + str(int(n["port"])) + "\n")
+        out.write("    port: " + str(n["port"]) + "\n")
         for k in ("uuid", "password", "cipher"):
             if k in n:
                 out.write(f"    {k}: {yaml_str(n[k])}\n")
@@ -593,45 +584,139 @@ def main():
             for a in n["alpn"]:
                 out.write(f"      - {yaml_str(a)}\n")
 
+    names = [n["name"] for n in nodes]
     out.write("proxy-groups:\n")
     out.write("  - name: \U0001F680 NodeSelect\n")
     out.write("    type: select\n")
     out.write("    proxies:\n")
     out.write("      - \u267B\uFE0F AutoTest\n")
     out.write("      - DIRECT\n")
-    for nm in [n["name"] for n in uniq]:
+    for nm in names:
         out.write(f"      - {yaml_str(nm)}\n")
     out.write("  - name: \u267B\uFE0F AutoTest\n")
     out.write("    type: url-test\n")
     out.write("    url: https://www.gstatic.com/generate_204\n")
-    out.write("    interval: 300\n")
+    out.write(f"    interval: {interval}\n")
     out.write("    proxies:\n")
-    for nm in [n["name"] for n in uniq]:
+    for nm in names:
         out.write(f"      - {yaml_str(nm)}\n")
     out.write("rules:\n")
     out.write("  - GEOIP,CN,DIRECT\n")
     out.write("  - MATCH,\U0001F680 NodeSelect\n")
+    return out.getvalue()
 
-    text = out.getvalue()
-    # Assertion: sanitizing must leave zero illegal chars. If this ever trips,
-    # fail loudly instead of shipping a config that some clients cannot parse.
-    leaked = _BAD_CHARS.findall(text)
-    if leaked:
-        print(f"[FATAL] {len(leaked)} illegal control char(s) survived sanitizing; "
-              f"refusing to write {os.path.basename(OUT_FILE)}.")
+
+def main():
+    ctx = ssl_create()
+    cache_dir = os.path.join(WS, "cache")
+    os.makedirs(cache_dir, exist_ok=True)
+    sources = []
+    if os.path.exists(SOURCES_FILE):
+        for ln in open(SOURCES_FILE, encoding="utf-8").read().splitlines():
+            ln = ln.strip()
+            if not ln or ln.startswith("#"):
+                continue
+            sources.append(ln)
+    print(f"[info] {len(sources)} sources configured")
+    all_nodes = []
+    skipped = []
+    # key -> set of source indexes that advertised it. Cross-source agreement is
+    # the only free quality signal we have: a node three independent lists carry
+    # is far likelier to still be alive than one that appeared once.
+    key_sources = {}
+    for i, url in enumerate(sources):
+        ns = None
+        try:
+            txt = fetch(url, ctx)
+            # persist successful fetch as offline cache for next run
+            try:
+                open(os.path.join(cache_dir, f"{i}.txt"), "w", encoding="utf-8").write(txt)
+            except Exception:
+                pass
+            ns = parse_source(txt)
+            print(f"[ok]   src#{i} {len(ns)} nodes <- {url.split('/')[-1]}")
+        except Exception as e:
+            # fall back to last successful cache if live fetch failed
+            cf = os.path.join(cache_dir, f"{i}.txt")
+            if os.path.exists(cf):
+                try:
+                    ns = parse_source(open(cf, encoding="utf-8").read())
+                    print(f"[cache] src#{i} {len(ns)} nodes from offline cache")
+                except Exception:
+                    ns = None
+            if ns is None:
+                print(f"[FAIL] src#{i} {url.split('/')[-1]} : {e}")
+                skipped.append(url)
+                continue
+        for n in ns:
+            key_sources.setdefault(node_key(n), set()).add(i)
+        all_nodes.extend(ns)
+
+    # dedupe by (type, server, port, credential)
+    seen = set()
+    uniq = []
+    consensus = []
+    for n in all_nodes:
+        k = node_key(n)
+        if k in seen:
+            continue
+        seen.add(k)
+        uniq.append(n)
+        consensus.append(len(key_sources.get(k) or ()))
+
+    # Hard guard: never publish an empty config (a build outage must fail loudly
+    # instead of committing a node-less SuperMerge.yaml that overwrites a good one).
+    if not uniq:
+        print(f"[FATAL] 0 nodes parsed from {len(sources)} sources "
+              f"({len(skipped)} fetch failures, no offline cache). "
+              f"Aborting: existing {os.path.basename(OUT_FILE)} left untouched.")
         sys.exit(1)
 
+    # Node names must be unique inside a file. Lite is a subset of `uniq`, so
+    # de-duplicating once here covers both files -- and it has to happen before
+    # the subset is taken, so the lite file never inherits a collision.
+    name_count = {}
+    for n in uniq:
+        base = n.get("name") or "node"
+        if base in name_count:
+            name_count[base] += 1
+            n["name"] = f"{base}-{name_count[base]}"
+        else:
+            name_count[base] = 0
+
     os.makedirs(OUT_DIR, exist_ok=True)
+
+    def _dist(ns):
+        d = {}
+        for n in ns:
+            d[n["type"]] = d.get(n["type"], 0) + 1
+        return " ".join(f"{k}={v}" for k, v in sorted(d.items()))
+
+    # interval 600s: at 14k nodes a 300s url-test means the core is basically
+    # always probing. Halving the frequency is free and cuts battery/data use.
+    text = build_yaml(uniq, "SuperMerge - aggregated free nodes (FULL)", 600)
+    assert_clean(text, OUT_FILE)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         f.write(text)
-
-    # type distribution
-    dist = {}
-    for n in uniq:
-        dist[n["type"]] = dist.get(n["type"], 0) + 1
-    print(f"[done] total={len(uniq)} (deduped from {len(all_nodes)}) "
+    print(f"[done] full={len(uniq)} (deduped from {len(all_nodes)}) "
           f"failed_sources={len(skipped)} -> {OUT_FILE}")
-    print("[dist]", " ".join(f"{k}={v}" for k, v in sorted(dist.items())))
+    print("[dist]", _dist(uniq))
+
+    if LITE_ENABLE:
+        lite = make_lite(uniq, consensus)
+        lite_file = os.path.join(OUT_DIR, "SuperMergeLite.yaml")
+        n_nets = len({net_key(n) for n in lite})
+        ltext = build_yaml(
+            lite,
+            f"SuperMergeLite - diverse subset of SuperMerge "
+            f"({len(lite)} nodes covering {n_nets} networks)", 600)
+        assert_clean(ltext, lite_file)
+        with open(lite_file, "w", encoding="utf-8") as f:
+            f.write(ltext)
+        print(f"[lite] total={len(lite)} networks={n_nets} "
+              f"target={LITE_TARGET} net_cap={LITE_NET_CAP} -> {lite_file}")
+        print("[lite-dist]", _dist(lite))
+
     if DROP:
         print("[drop]", " ".join(f"{k}={v}" for k, v in sorted(DROP.items())))
 

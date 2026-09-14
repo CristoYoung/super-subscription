@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add SuperMerge.yaml
+          git add SuperMerge.yaml SuperMergeLite.yaml
           if git diff --cached --quiet; then
             echo "no changes, skip commit"
           else
@@ -53,15 +53,20 @@ jobs:
           # {"throttled":true}), so a phone can receive a stale file -- which is
           # how a bad node shipped once already. GitHub Pages is first-party,
           # reachable from CN, and its CDN TTL is ~10 min.
-          #   https://<owner>.github.io/<repo>/SuperMerge.yaml
-          mkdir -p "$RUNNER_TEMP/ghp" && cp SuperMerge.yaml "$RUNNER_TEMP/ghp/"
+          #   https://<owner>.github.io/<repo>/SuperMerge.yaml       (full)
+          #   https://<owner>.github.io/<repo>/SuperMergeLite.yaml   (lite)
+          # A 14k-node config makes phone and desktop clients crawl, so the lite
+          # build (~600 nodes over ~590 distinct networks) is the recommended
+          # import; the full file stays for desktop/mihomo use.
+          mkdir -p "$RUNNER_TEMP/ghp"
+          cp SuperMerge.yaml SuperMergeLite.yaml "$RUNNER_TEMP/ghp/"
           cd "$RUNNER_TEMP/ghp"
           git init -q -b gh-pages
-          git add SuperMerge.yaml
+          git add SuperMerge.yaml SuperMergeLite.yaml
           git -c user.name="github-actions[bot]" \
               -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
               commit -q -m "pages: build ${{ github.run_number }}"
           git push -f -q \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
             gh-pages
-          echo "published to https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY##*/}/SuperMerge.yaml"
+          echo "published: https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY##*/}/SuperMergeLite.yaml"

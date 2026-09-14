@@ -4,17 +4,42 @@
 手机/电脑直接拉公网链接即可，**完全不依赖本机电脑开机**。
 
 ## 手机怎么用
-在手机 Clash（Clash Meta for Android / FlClash / Stash / Shadowrocket / OpenClash 等）里，
-把下面任一链接作为「订阅链接」导入：
+
+**导入「轻量版」**（约 600 个节点 / 230 KB）——手机和桌面日常都用它：
 
 - **首选（GitHub Pages，一方域名，CDN 缓存仅 10 分钟）**：
-  `https://<用户名>.github.io/<仓库名>/SuperMerge.yaml`
+  `https://<用户名>.github.io/<仓库名>/SuperMergeLite.yaml`
 - 备用 1（ghfast.top 实时反代，实测国内直连可用、取到的就是最新文件）：
-  `https://ghfast.top/https://raw.githubusercontent.com/<用户名>/<仓库名>/main/SuperMerge.yaml`
+  `https://ghfast.top/https://raw.githubusercontent.com/<用户名>/<仓库名>/main/SuperMergeLite.yaml`
 - 备用 2（jsDelivr CDN，缓存最长 12 小时，见下方警告）：
-  `https://cdn.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml`
+  `https://cdn.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMergeLite.yaml`
+
+**完整版**（约 14000 个节点 / 5.4 MB）——留给桌面 mihomo 手动挑节点用：
+
+- `https://<用户名>.github.io/<仓库名>/SuperMerge.yaml`
+- `https://ghfast.top/https://raw.githubusercontent.com/<用户名>/<仓库名>/main/SuperMerge.yaml`
 
 导入后，想刷新节点只需在 App 里点「更新订阅」即可，无需开电脑。
+
+### 为什么需要精简版
+
+完整版 14,036 个节点其实只落在 **6,324 个独立 /24 网段**上——单个 Cloudflare 地址
+`188.114.97.6` 上就挂了 **279** 个节点，`31.58.50.200` 上有 93 个。也就是说多出来的
+近 8 千个节点绝大多数是**同一台机器的克隆**，可达性并没有变宽。
+
+但客户端的开销是按**节点数**走的：每个节点建一个 proxy 对象、在代理列表里渲染一行、
+url-test 分组还按 timer 把**全部**节点逐个测延迟。14k 节点下手机和桌面都会明显卡顿。
+
+精简版按两条规则抽样，节点数降到 **1/23**：
+
+1. **多源共识优先**——被多个独立源同时收录的节点，存活率显著更高；
+2. **每个网段最多留 3 个**，再做均匀抽取 → 600 个节点落在 593 个不同网段。
+
+对照：**同样 600 个节点，随机取样大约只能覆盖 ~500 个网段，按网段抽样能覆盖 593 个**，
+单位节点的覆盖面反而更宽。实测内核加载耗时 385 ms → **22 ms**。
+
+> 想调规模：改 `build.yml` 的环境变量 `SUPER_LITE_TARGET`（默认 600，设 `0` 表示不限制，
+> 只做每网段去重）；`SUPER_LITE_NET_CAP`（默认 3）控制单网段上限；`SUPER_LITE=0` 关闭精简版。
 
 > ❌ **不要再把 `raw.githubusercontent.com` 当手机链接**：国内直连会被重置，
 > App 里表现为 `Get "https://raw.githubusercontent.com/...": EOF`。
@@ -26,21 +51,26 @@
 > 3.0MB、3.9MB、5.2MB 三个不同版本，其中 5.2MB 那份还是旧的坏文件。
 > 所以 jsDelivr 只作备用，手机首选 GitHub Pages。
 
-> **客户端要求（重要）**：本配置含大量 `vless` 与 `hysteria2` 节点（实测 vless 约占 73%），
+> **客户端要求（重要）**：本配置含大量 `vless` 与 `hysteria2` 节点（实测完整版构成约为
+> vless 57% / ss 18% / vmess 13% / trojan 9% / hysteria2 2%），
 > **必须使用 Meta 内核（mihomo）客户端**：Clash Meta for Android (CMFA)、FlClash、
 > Clash Verge Rev、OpenClash、Stash、Shadowrocket 等。
 > **原版 Clash for Android（Dreamacro/kr328 旧内核）不支持 vless**，导入会直接报
 > `unsupport proxy type: vless`。
-> 换客户端是推荐做法；若坚持用旧内核，只能过滤出 `ss/ssr/vmess/trojan`（约 21% 节点）。
+> 换客户端是推荐做法；若坚持用旧内核，只能过滤出 `ss/ssr/vmess/trojan`（约 40% 节点）。
 
-> 构建流程：`push → Actions 重建 → 提交 SuperMerge.yaml → 发布 gh-pages → purge jsDelivr`。
+> 构建流程：`push → Actions 重建 → 提交 SuperMerge.yaml + SuperMergeLite.yaml →
+> 发布 gh-pages → purge jsDelivr`。
 > purge 只影响 `cdn.jsdelivr.net` 这一个域名，且会被限流；**别用 jsDelivr 的别名域名**
 > （`fastly.` / `gcore.` / `testingcf.` / `jsdelivr.b-cdn.net`），它们缓存各自独立、
 > purge 刷不到，实测同一时刻能发出几小时前的旧文件（甚至含非法控制字符）。
 > 想手动强刷：浏览器打开 `https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml`。
 
 ## 文件说明
-- `super_merge.py`：合并脚本（零第三方依赖），输出 `SuperMerge.yaml`
+- `super_merge.py`：合并脚本（零第三方依赖），一次产出 `SuperMerge.yaml`（全量）
+  与 `SuperMergeLite.yaml`（精简，推荐日常使用）
+- `SuperMergeLite.yaml`：由 `SuperMerge.yaml` 的节点按「多源共识 + 每网段限 3 + 均匀抽样」
+  得到，节点名的主键来自同一次去重，因此两个文件可以同时导入而不会冲突
 - `sources.txt`：订阅源列表，一行一个 URL，`#` 开头为注释
 - `.github/workflows/build.yml`：定时构建 + 自动提交 + 发布 `gh-pages`（Pages 链接的数据源）
 - `publish.bat`：首次把仓库推送到 GitHub 的一键脚本
@@ -102,7 +132,8 @@ payload（free-nodes/clashfree、OpenRunner、Jsnzkpg）、payload 太小（awes
 ## 本地测试
 ```
 set SUPER_USE_PROXY=1        # 走本机 Clash 代理抓源（raw 被墙时）
-python super_merge.py        # 生成 SuperMerge.yaml 到本目录
+set SUPER_LITE_TARGET=600    # 可选：精简版节点数上限（默认 600，0 = 不限制）
+python super_merge.py        # 生成 SuperMerge.yaml + SuperMergeLite.yaml 到本目录
 ```
 
 ## 构建期校验：拿 mihomo 内核当最严裁判

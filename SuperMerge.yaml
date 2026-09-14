@@ -1,0 +1,16 @@
+# SuperMerge - aggregated free nodes (auto-generated)
+proxies:
+proxy-groups:
+  - name: 🚀 NodeSelect
+    type: select
+    proxies:
+      - ♻️ AutoTest
+      - DIRECT
+  - name: ♻️ AutoTest
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 NodeSelect

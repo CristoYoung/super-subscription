@@ -13,7 +13,7 @@ On total failure the merge still proceeds with whatever parsed.
 
 Output: SuperMerge.yaml next to this script (or SUPER_OUT_DIR if set, e.g. CI).
 """
-import os, sys, io, base64, ssl, json, re, urllib.parse, urllib.request
+import os, sys, io, base64, ssl, json, re, time, urllib.parse, urllib.request
 
 WS = os.path.dirname(os.path.abspath(__file__))
 # In CI, github.workspace (repo root). Locally, beside this script.
@@ -54,6 +54,25 @@ def looks_base64(s):
     return bool(re.fullmatch(r"[A-Za-z0-9+/=]+", s))
 
 
+def parse_port(v, default=None):
+    """Extract a usable port from a messy value.
+
+    Free lists contain ports glued to paths or queries, e.g.
+    `ss://...@host:48172/?POST` -> "48172/". Take the leading digits and
+    range-check instead of letting int() raise and kill the whole source.
+    """
+    if isinstance(v, bool):
+        return default
+    if isinstance(v, int):
+        n = v
+    else:
+        m = re.match(r"\s*(\d{1,5})", str(v))
+        if not m:
+            return default
+        n = int(m.group(1))
+    return n if 1 <= n <= 65535 else default
+
+
 _DIRECT_OPENER = None
 
 
@@ -75,16 +94,21 @@ def direct_opener(ctx):
 
 def fetch(url, ctx):
     last_err = None
-    # 1) direct (env proxies ignored by design)
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with direct_opener(ctx).open(req, timeout=25) as r:
-            d = r.read().decode("utf-8", "ignore")
-        if d.strip():
-            return d
-        last_err = "empty response body"
-    except Exception as e:
-        last_err = e
+    # 1) direct (env proxies ignored by design) -- with retries.
+    #    raw.githubusercontent.com drops connections intermittently; with ~17
+    #    sources even a 5% per-request failure rate costs a source per build.
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with direct_opener(ctx).open(req, timeout=30) as r:
+                d = r.read().decode("utf-8", "ignore")
+            if d.strip():
+                return d
+            last_err = "empty response body"
+        except Exception as e:
+            last_err = e
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
     # 2) via host Clash proxy (only when env SUPER_USE_PROXY is set, e.g. local test)
     if os.environ.get("SUPER_USE_PROXY"):
         proxy = urllib.request.ProxyHandler({
@@ -144,7 +168,7 @@ def to_clash(link):
             "name": j.get("ps", "vmess"),
             "type": "vmess",
             "server": j.get("add", ""),
-            "port": int(j.get("port", 443)),
+            "port": parse_port(j.get("port", 443), 443) or 443,
             "uuid": j.get("id", ""),
             "alterId": int(j.get("aid", 0)),
             "cipher": j.get("scy", "auto") or "auto",
@@ -183,7 +207,10 @@ def to_clash(link):
                 return None
         if ":" in hostport:
             host, port = hostport.rsplit(":", 1)
-            port = int(port)
+            host = host.split("/")[0]
+            port = parse_port(port)
+            if port is None:
+                return None
         else:
             host, port = hostport, 443
         # Skip SS 2022 ciphers entirely: free sources often have invalid base64
@@ -315,7 +342,7 @@ def parse_source(text):
             try:
                 j = json.loads(dec)
                 if isinstance(j, list):
-                    return [n for n in (outbound_to_clash(o) for o in j) if n]
+                    return [n for n in (outbound_to_clash(o) for o in j) if n and valid_node(n)]
             except Exception:
                 pass
     # 3) line based
@@ -324,24 +351,30 @@ def parse_source(text):
         line = line.strip()
         if not line:
             continue
-        if line.startswith(PROTO_PREFIXES):
-            n = to_clash(line)
-            if n:
-                nodes.append(n)
-        elif looks_base64(line):
-            dec = b64d(line)
-            if dec:
-                if any(p in dec for p in ("://", "vmess", "vless", "trojan")):
-                    nodes.extend(parse_source(dec))
-                else:
-                    try:
-                        j = json.loads(dec)
-                        if isinstance(j, list):
-                            nodes.extend(n for n in (outbound_to_clash(o) for o in j) if n)
-                        elif isinstance(j, dict) and "outbounds" in j:
-                            nodes.extend(n for n in (outbound_to_clash(o) for o in j["outbounds"]) if n)
-                    except Exception:
-                        pass
+        # One malformed link must never abort the whole source. Free lists
+        # routinely contain garbage (ports glued to paths/queries, double
+        # schemes, truncated base64) -- skip the bad line, keep the rest.
+        try:
+            if line.startswith(PROTO_PREFIXES):
+                n = to_clash(line)
+                if n and valid_node(n):
+                    nodes.append(n)
+            elif looks_base64(line):
+                dec = b64d(line)
+                if dec:
+                    if any(p in dec for p in ("://", "vmess", "vless", "trojan")):
+                        nodes.extend(parse_source(dec))
+                    else:
+                        try:
+                            j = json.loads(dec)
+                            if isinstance(j, list):
+                                nodes.extend(n for n in (outbound_to_clash(o) for o in j) if n and valid_node(n))
+                            elif isinstance(j, dict) and "outbounds" in j:
+                                nodes.extend(n for n in (outbound_to_clash(o) for o in j["outbounds"]) if n and valid_node(n))
+                        except Exception:
+                            pass
+        except Exception:
+            continue
     return nodes
 
 
@@ -359,6 +392,21 @@ def sanitize(s):
 def yaml_str(v):
     s = sanitize(str(v))
     return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def valid_node(n):
+    """Drop nodes missing the credential their protocol requires.
+
+    They can never connect, they only bloat the file and slow client startup.
+    """
+    t = n.get("type")
+    if t in ("vless", "vmess") and not n.get("uuid"):
+        return False
+    if t in ("trojan", "hysteria2") and not n.get("password"):
+        return False
+    if t == "ss" and not (n.get("cipher") and n.get("password")):
+        return False
+    return True
 
 
 def node_key(n):
@@ -442,7 +490,7 @@ def main():
         out.write("  - name: " + yaml_str(n["name"]) + "\n")
         out.write("    type: " + n["type"] + "\n")
         out.write("    server: " + yaml_str(n["server"]) + "\n")
-        out.write("    port: " + yaml_str(n["port"]) + "\n")
+        out.write("    port: " + str(int(n["port"])) + "\n")
         for k in ("uuid", "password", "cipher"):
             if k in n:
                 out.write(f"    {k}: {yaml_str(n[k])}\n")

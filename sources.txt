@@ -1,9 +1,13 @@
 # SuperMerge sources - one URL per line, # = comment
 # All sources use base64-subscription or v2ray-link-list format (auto-detected).
 # Raw Clash-YAML-only sources are skipped (use their base64/link-list variant URL).
+#
+# Selection criteria (2026-09-14): pushed within ~1 day, stars >= 900,
+# data-only payload (no repo code is downloaded or executed - we fetch one
+# plain-text file over HTTPS per source).
 
-# --- Core (the 4 auto-fetchable repos from user's list) ---
-# Pawdroid/Free-servers - link list
+# --- Core (the 4 auto-fetchable repos from the original list) ---
+# Pawdroid/Free-servers - link list | 19.1k stars | every 6h
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 # zhuhaiuk/free-nodes - base64 subscription (~50 nodes, hourly)
 https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt
@@ -13,6 +17,43 @@ https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/con
 # Au1rxx/free-vpn-subscriptions - base64 (huge, by-country)
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt
 
-# NOTE: mermeroo/V2RAY-CLASH-BASE64-Subscription.Links only ships a 1032-link
-# third-party dump (SUB LINKS). Skipped to avoid hammering 1000+ hosts.
-# Add your own base64/link-list subs below if you want more sources.
+# --- Added 2026-09-14: 12 high-activity aggregators ---
+# free-nodes/v2rayfree | 13.7k stars | daily | base64 ~1600 nodes
+https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub
+# barry-far/V2ray-Config | 2.4k stars | every 15 min | base64 ~7900 nodes
+https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_base64_Sub.txt
+# mahdibland/V2RayAggregator | 4.0k stars | daily | base64 ~4000 nodes
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_base64.txt
+# Epodonios/v2ray-configs | 3.2k stars | every 5 min | 1000 shards x 500 nodes
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Base64/Config%20list2_base64.txt
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Base64/Config%20list6_base64.txt
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Base64/Config%20list10_base64.txt
+# ermaozi/get_subscribe | 9.3k stars | daily | link list ~250 nodes
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+# free18/v2ray | 5.4k stars | daily | base64 ~360 nodes
+https://raw.githubusercontent.com/free18/v2ray/main/v.txt
+# peasoft/NoMoreWalls | 3.5k stars | daily | base64 ~170 nodes
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt
+# roosterkid/openproxylist | 920 stars | hourly | link list ~150 nodes
+https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt
+# snakem982/proxypool | 2.1k stars | daily | base64 ~50 nodes
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt
+# Barabama/FreeNodes | 3.2k stars | daily | link list ~7200 nodes
+# NOTE: the merged payload currently lives on the repo's default branch, a
+# feature branch. If the maintainer merges it into main this URL may 404;
+# the build then just logs one failed source and continues.
+https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/merged.txt
+
+# --- Evaluated and REJECTED (kept here so we don't re-check them) ---
+# free-nodes/clashfree (16.6k)        - ships Clash YAML only, no link/base64 payload
+# chengaopan/AutoMergePublicNodes     - byte-identical to peasoft/NoMoreWalls (same project)
+# awesome-vpn/awesome-vpn (6.4k)      - only 24 nodes in the published payload
+# hwanz/SSR-V2ray-Trojan-vpn (7.3k)   - single README only, no data file
+# OpenRunner/clash-freenode (6.4k)    - Clash YAML only
+# Jsnzkpg/Jsnzkpg (4.1k)              - Clash YAML only
+# xrayfree/...-vpn-clash (1.8k)       - no link/base64 payload
+# Leon406/SubCrawler (1.6k)           - ships binaries (.exe/.bat/.jar); payload only 8 nodes
+# igareck/vpn-configs-for-russia      - RU-whitelist oriented, ~26 nodes
+# mermeroo/V2RAY-CLASH-BASE64-...     - 1032-link third-party dump (would hammer 1000+ hosts)
+# freefq/free, VPN-Subcription-Links, vxiaov/free_proxy_ss, shuaidaoya/FreeNodes,
+#   flik6/Free-Node, githubvpn007/v2rayNvpn - stale (>7 days) or paused

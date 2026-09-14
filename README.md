@@ -4,16 +4,27 @@
 手机/电脑直接拉公网链接即可，**完全不依赖本机电脑开机**。
 
 ## 手机怎么用
-在手机 Clash（Clash for Android / OpenClash / Stash / Shadowrocket 等）里，
+在手机 Clash（Clash Meta for Android / FlClash / Stash / Shadowrocket / OpenClash 等）里，
 把下面任一链接作为「订阅链接」导入：
 
-- 首选（jsDelivr CDN，国内相对稳）：
-  `https://cdn.jsdelivr.net/gh/<你的用户名>/<仓库名>@main/SuperMerge.yaml`
-- 备用（GitHub 原生 raw）：
-  `https://raw.githubusercontent.com/<你的用户名>/<仓库名>/main/SuperMerge.yaml`
+- **首选（GitHub Pages，一方域名，CDN 缓存仅 10 分钟）**：
+  `https://<用户名>.github.io/<仓库名>/SuperMerge.yaml`
+- 备用 1（ghfast.top 实时反代，实测国内直连可用、取到的就是最新文件）：
+  `https://ghfast.top/https://raw.githubusercontent.com/<用户名>/<仓库名>/main/SuperMerge.yaml`
+- 备用 2（jsDelivr CDN，缓存最长 12 小时，见下方警告）：
+  `https://cdn.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml`
 
 导入后，想刷新节点只需在 App 里点「更新订阅」即可，无需开电脑。
-（若两个链接都被墙，再考虑加一层 Cloudflare Worker 反代，按需再加。）
+
+> ❌ **不要再把 `raw.githubusercontent.com` 当手机链接**：国内直连会被重置，
+> App 里表现为 `Get "https://raw.githubusercontent.com/...": EOF`。
+> 原始 raw 只在境外网络或挂了代理时可用。
+
+> ⚠️ **jsDelivr 缓存真相（2026-09-14 实测）**：它的 purge 接口按路径限流，
+> 返回 `{"throttled":true,"throttlingReset":2623}`（约 44 分钟后才能再刷）；
+> 而且不同边缘节点各自缓存旧副本——同一分钟内连续拉取，先后拿到了
+> 3.0MB、3.9MB、5.2MB 三个不同版本，其中 5.2MB 那份还是旧的坏文件。
+> 所以 jsDelivr 只作备用，手机首选 GitHub Pages。
 
 > **客户端要求（重要）**：本配置含大量 `vless` 与 `hysteria2` 节点（实测 vless 约占 73%），
 > **必须使用 Meta 内核（mihomo）客户端**：Clash Meta for Android (CMFA)、FlClash、
@@ -22,19 +33,16 @@
 > `unsupport proxy type: vless`。
 > 换客户端是推荐做法；若坚持用旧内核，只能过滤出 `ss/ssr/vmess/trojan`（约 21% 节点）。
 
-> jsDelivr 对分支引用有数小时缓存，构建后 workflow 会自动调用 purge 接口刷新，
-> 因此手机拉到的始终是最新一版。若发现手机端仍是旧节点，手动访问一次
-> `https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml` 即可强刷。
->
-> ⚠️ **务必只用上面那两个链接。** jsDelivr 的别名域名（`fastly.jsdelivr.net`、
-> `gcore.jsdelivr.net`、`testingcf.jsdelivr.net`、`jsdelivr.b-cdn.net`）缓存**各自独立**，
-> purge 刷不到它们。实测同一时刻：`cdn.jsdelivr.net` 已是 14045 节点的新版，
-> 而 `jsdelivr.b-cdn.net` 还在发几小时前那份旧文件（甚至含非法控制字符）。用别名域名 = 拿旧订阅。
+> 构建流程：`push → Actions 重建 → 提交 SuperMerge.yaml → 发布 gh-pages → purge jsDelivr`。
+> purge 只影响 `cdn.jsdelivr.net` 这一个域名，且会被限流；**别用 jsDelivr 的别名域名**
+> （`fastly.` / `gcore.` / `testingcf.` / `jsdelivr.b-cdn.net`），它们缓存各自独立、
+> purge 刷不到，实测同一时刻能发出几小时前的旧文件（甚至含非法控制字符）。
+> 想手动强刷：浏览器打开 `https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml`。
 
 ## 文件说明
 - `super_merge.py`：合并脚本（零第三方依赖），输出 `SuperMerge.yaml`
 - `sources.txt`：订阅源列表，一行一个 URL，`#` 开头为注释
-- `.github/workflows/build.yml`：定时构建 + 自动提交
+- `.github/workflows/build.yml`：定时构建 + 自动提交 + 发布 `gh-pages`（Pages 链接的数据源）
 - `publish.bat`：首次把仓库推送到 GitHub 的一键脚本
 
 ## 订阅源（17 个，2026-09-14 扩充）
@@ -97,6 +105,30 @@ set SUPER_USE_PROXY=1        # 走本机 Clash 代理抓源（raw 被墙时）
 python super_merge.py        # 生成 SuperMerge.yaml 到本目录
 ```
 
+## 构建期校验：拿 mihomo 内核当最严裁判
+
+Clash 客户端对配置是**全有或全无**——任意一个 proxy 参数非法，整份订阅都被拒收，
+Verge Rev 里表现为「订阅配置校验失败，变更已撤销」：
+
+```
+level=error msg="proxy 2196: ss 192.0.2.1:1 cipher: i5p initialize error: unknown method: i5p"
+configuration file ...\clash-verge.yaml test failed
+```
+
+`super_merge.py` 因此在**构建期**就把这类脏节点挡掉（`valid_node()`）：
+1. `ss` cipher 白名单 + 常见别名修复（`chacha20-poly1305` → `chacha20-ietf-poly1305`）；
+2. 丢弃占位节点：RFC5737 文档段（`192.0.2.*`）、回环（`127.0.0.53`）、端口 < 2；
+3. 丢弃缺凭证（无 uuid / 无 password）的节点；
+4. 构建日志会打印 `[drop] bad-server=16 bad-port=3 ss-unknown-cipher=1`，便于核对。
+
+本地自查（用本机 mihomo 内核，秒级）：
+```
+& "D:\Program Files\Clash Verge\verge-mihomo.exe" -t -d <临时目录> -f SuperMerge.yaml
+```
+`-t` 只报**第一个**错误；要一次列出全部非法节点，就循环「取报错里的 proxy 序号 → 删掉 → 再测」。
+另外 **不要靠猜 mihomo 支持什么**：`network: xhttp` 之类看起来可疑的参数，v1.19.29 其实是接受的，
+只有真正跑一遍 `-t` 才知道。
+
 ## 排错：手机报 `yaml: control characters are not allowed`
 
 **原因**：某个节点字段里混入了 YAML 非法控制字符（C0 除 tab/LF/CR、C1 的
@@ -112,9 +144,9 @@ U+007F–U+009F、BOM、U+FFFE/FFFF）。桌面 Clash 解析宽松能忍，**安
    ```
 2. **强刷 jsDelivr**：`https://purge.jsdelivr.net/gh/<用户名>/<仓库名>@main/SuperMerge.yaml`
 3. **手机端删掉旧配置重新导入**（App 可能保留了上次失败/旧下载的副本）。
-4. **换备用链接**：`raw.githubusercontent.com` 无 CDN 缓存，内容永远是最新的；
-   jsDelivr 的多个 CDN 供应商（Cloudflare/Fastly/Gcore/Bunny）缓存相互独立，
-   个别边缘节点最长可能滞后约 12 小时才自然过期。
+4. **换备用链接**：首选 GitHub Pages（`https://<用户名>.github.io/<仓库名>/SuperMerge.yaml`，
+   缓存 10 分钟）或 `ghfast.top` 反代；`raw.githubusercontent.com` 国内直连会被重置（EOF），
+   jsDelivr 个别边缘节点最长滞后约 12 小时。
 
 > 诊断技巧：加 `?cb=时间戳` 只对同一个 URL 去重有用，**不能**用来绕过 CDN 缓存
 > （实测 jsDelivr 的缓存键不含 query string）。
